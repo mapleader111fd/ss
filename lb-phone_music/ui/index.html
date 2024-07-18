@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Music App</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <script> const resourceName = "lb-phone_music"; </script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    </head>
+    <body>
+        <div id="phone-wrapper">
+            <div class="app">
+                <div class="player">
+                    <header>
+                        <h1>vMusic Player</h1>
+                    </header>
+
+                    <div class="details">
+                        <div class="track-art"></div>
+                            <div class="track-name">Track Name</div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="playpause-track" onclick="playpauseTrack()">
+                            <i class="fa fa-play-circle fa-2x"></i>
+                        </div>
+                        <div class="stop-track" onclick="stopTrack()">
+                            <i class="fa fa-stop-circle fa-2x"></i>
+                        </div>
+                    </div>
+
+                    <div class="slider_container">
+                        <i class="fa fa-volume-down"></i>
+                        <input type="range" min="1" max="100" value="20" class="volume_slider" onchange="setVolume()">
+                        <i class="fa fa-volume-up"></i>
+                    </div>
+                    <input id ="ytlink" placeholder="Paste Youtube Link">
+                </div>
+            </div>
+        </div>
+        <script src="https://cfx-nui-lb-phone/ui/components.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

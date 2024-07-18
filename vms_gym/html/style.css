@@ -1,0 +1,213 @@
+:root {
+    --strenght-bar-color: rgb(223, 69, 69);
+    --condition-bar-color: rgb(57, 175, 63);
+    --shooting-bar-color: rgb(69, 97, 223);
+    --driving-bar-color: rgb(223, 208, 69);
+    --flying-bar-color: rgb(69, 205, 223);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    overflow: hidden;
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+}
+
+body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.helpInfo {
+    display: none;
+    position: absolute;
+    border-radius: 5px;
+    bottom: 45px;
+    right: 8px;
+}
+
+.helpInfo>span {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    display: inline-flex;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 2px;
+    color: white;
+    font-size: .95em;
+    align-items: center;
+}
+
+.helpInfo>span>.stamina-bar {
+    width: 100px;
+    border-radius: 4px;
+    border: 1px solid #ffffff87;
+    height: 20px;
+    margin-left: 6px;
+}
+
+.helpInfo>span>.stamina-bar>.stamina-value {
+    background: white;
+    height: 100%;
+    transition: 0.45s;
+}
+
+.helpButtons {
+    display: none;
+    position: absolute;
+    bottom: 6px;
+    border-radius: 5px;
+    right: 8px;
+}
+
+.helpButtons>span {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    display: inline-flex;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 2px;
+    color: white;
+    font-size: .95em;
+    align-items: center;
+}
+
+.helpButtons>span>img {
+    height: 18px;
+    width: auto;
+    margin-right: 5px;
+}
+
+.statistics-menu {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 5em
+}
+
+.statistics-menu div,
+.statistics-menu i,
+.statistics-menu p {
+    color: black;
+}
+
+.statistics-menu .stats {
+    padding: 1em 1em 1.5em 1em;
+    background: rgb(14 14 14 / 65%);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.statistics-menu .header {
+    font-size: 2.5em;
+    font-weight: 800;
+    color: rgb(245, 245, 245);
+    text-shadow: rgb(0 0 0 / 16%) 0px 3px 2px;
+    background: rgb(14 14 14 / 88%);
+    border-radius: 10px 10px 10px 10px;
+    padding-inline: 1em;
+    margin-bottom: 0.25em;
+}
+
+.statistics-menu .stat-title {
+    margin-bottom: 0.2em;
+    margin-left: 0.2em;
+}
+
+.statistics-menu i {
+    color: rgb(255, 255, 255);
+    margin-right: 0.4em;
+}
+
+.statistics-menu .stat-flex {
+    display: flex;
+    align-items: center;
+}
+
+.statistics-menu .stat-name {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    margin-right: auto;
+}
+
+.statistics-menu .stat-percent {
+    position: absolute;
+    margin-left: 0.5em;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0px 2px 3px #000000ab;
+    font-weight: 300;
+}
+
+.statistics-menu .stat-bar {
+    width: 100%;
+    height: 1.3em;
+    border-radius: 5px;
+    background: rgb(0 0 0 / 58%);
+}
+
+.statistics-menu .stat-bar-value {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s;
+}
+
+#strenght, #condition, #shooting, #driving, #flying {
+    display: none;
+}
+
+.statistics-menu #strenght .stat-bar-value {
+    background: var(--strenght-bar-color);
+}
+
+.statistics-menu #condition .stat-bar-value {
+    background: var(--condition-bar-color);
+}
+
+.statistics-menu #shooting .stat-bar-value {
+    background: var(--shooting-bar-color);
+}
+
+.statistics-menu #driving .stat-bar-value {
+    background: var(--driving-bar-color);
+}
+
+.statistics-menu #flying .stat-bar-value {
+    background: var(--flying-bar-color);
+}
+
+hr {
+    margin-block: 0.5em;
+    border-color: #b3b3b338;
+}
+
+#notification-status {
+    display: flex;
+    align-items: center;
+}
+
+#notification-status p {
+    color: rgb(255, 255, 255) !important;
+    font-weight: 500;
+    margin-right: auto;
+}
+
+.status-button {
+    font-weight: 600;
+    padding-inline: 0.5em;
+    border-radius: 5px;
+    color: rgb(245, 245, 245) !important;
+    background: rgb(10, 10, 10);
+    border: 1px solid #ffffff87;
+    width: fit-content;
+    transition: 0.2s ease;
+    margin-left: 0.25em;
+}
+
+.status-button-active {
+    color: rgb(10, 10, 10) !important;
+    background: rgb(245, 245, 245) !important;
+}

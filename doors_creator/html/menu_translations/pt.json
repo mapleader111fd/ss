@@ -1,0 +1,77 @@
+{
+    "menu:doors": "<i class=\"bi bi-door-open-fill\"></i> Portas",
+    "menu:buildings": "<i class=\"bi bi-building\"></i> Edificios",
+    "menu:settings": "<i class=\"bi bi-gear-fill\"></i> Ajustes",
+
+    "menu:door": "Porta",
+    "menu:new_door": "Porta Nova",
+    "menu:ID": "ID",
+    "menu:label": "Etiqueta",
+    "menu:doors_count": "Contagem de Portas",
+    "menu:default": "Padrao",
+    "menu:maximum_distance": "Distancia Máxima",
+    "menu:distance": "Distancia",
+    "menu:model": "Modelo",
+    "menu:choose_doors": "Escolher Portas",
+
+    "menu:delete": "Excluir",
+    "menu:close": "Pesquisar De",
+    "menu:create": "Criar",
+    "menu:save": "Salvar",
+
+    "menu:used_doors": "Portas Usadas",
+    "menu:default_doors_state": "Status da Porta",
+    "menu:unlocked": "Desbloqueado",
+    "menu:locked": "Bloqueado",
+    "menu:icon_coordinates": "Coordenadas Do Icone",
+    "menu:choose": "Escolha",
+    "menu:choose_icon_coords": "Escolher Coords",
+
+    "menu:requires_a_job": "Requer um Trabalho",
+    "menu:allowed_jobs": "Trabalhos Permitidos",
+    "menu:choose_jobs": "Escolher Jobs",
+    "menu:requires_an_item": "Requer um Item",
+    "menu:required_item": "Requer Item",
+    "menu:choose_item": "Elegir Item",
+    "menu:requires_job_and_item": "Requer Trabalho e item",
+
+    "menu:requires_a_code": "Requer um Codigo",
+    "menu:code": "Código",
+
+    "menu:auto_closure": "Fechamento Automatico",
+    "menu:seconds_before_auto_closure": "Segundos antes do fechamento automatico",
+
+    "menu:doorlock_animation": "Animaçao da fechadura",
+
+    "menu:new_building": "Nuevo Predio ",
+    "menu:building": "Edificio",
+    "menu:none": "Nenhum",
+    "menu:use_building_rules": "Usar regras de contruçao",
+    "menu:choose_building": "Elige edificio",
+
+    "menu:jobs_dialog:title": "Lista de trabalhos",
+    "menu:jobs_dialog:search_job": "Pesquisar trabalhos",
+
+    "menu:items_dialog:title": "Lista de artigos",
+    "menu:items_dialog:search_item": "Buscar elementos",
+
+    "menu:building_dialog:title": "Lista de predios",
+    "menu:building_dialog:search_building": "Pesquisar edificio",
+
+    "menu:settings:language": "Linguagem ",
+    "menu:enable_doorlock_animation": "Ativar animaçao da fechadura da porta ",
+    "menu:animation_dictionary": "Dicionario de animaçao",
+    "menu:animation_name": "Nome da animaçao",
+    "menu:animation_duration": "Duraçao da animaçao",
+    "menu:settings:doorlock_icon": "Icone da fechadura",
+    "menu:settings:icon_size": "Tamanho do icone",
+    "menu:item_to_lockpick_doors": "Item para abrir portas",
+    "menu:lockpick_name": "Lockpick ",
+    "menu:minimum_quantity": "Quantidade minima",
+    "menu:lose_on_use": "Perder ao usar",
+
+    "menu:apply_changes": "Aplicar alteraçoes",
+
+    "menu:not_allowed:you_are_not_allowed": "Nao tens permissao para usar este menu",
+    "menu:not_allowed:if_you_are_admin": "Se e um admistrador do servidor precisa de permissoes "
+}

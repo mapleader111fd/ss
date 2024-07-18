@@ -1,0 +1,79 @@
+{
+    "menu:doors": "<i class=\"bi bi-door-open-fill\"></i> Portes",
+    "menu:buildings": "<i class=\"bi bi-building\"></i> Bâtiments",
+    "menu:settings": "<i class=\"bi bi-gear-fill\"></i> Réglages",
+
+    "menu:door": "Porte",
+    "menu:new_door": "Nouvelle porte",
+    "menu:ID": "ID",
+    "menu:label": "Étiquette",
+    "menu:doors_count": "Nombre de portes",
+    "menu:default": "Défaut",
+    "menu:maximum_distance": "Distance maximale",
+    "menu:distance": "Distance",
+    "menu:model": "Modèle",
+    "menu:choose_doors": "Choisir les portes",
+
+    "menu:delete": "Supprimer",
+    "menu:close": "Fermer",
+    "menu:create": "Créer",
+    "menu:save": "Enregistrer",
+
+    "menu:used_doors": "Portes utilisées",
+    "menu:default_doors_state": "État des portes par défaut",
+    "menu:unlocked": "Déverrouillée",
+    "menu:locked": "Verrouillées",
+    "menu:icon_coordinates": "Coordonnées de l'icône",
+    "menu:choose": "Choisissez",
+    "menu:choose_icon_coords": "Choisir les coordonnées de l'icône",
+
+    "menu:requires_a_job": "Requiert un travail",
+    "menu:allowed_jobs": "Travaux autorisés",
+    "menu:choose_jobs": "Choisir un travail",
+    "menu:requires_an_item": "Nécessite un élément",
+    "menu:required_item": "Elément requis",
+    "menu:choose_item": "Choisir un poste",
+    "menu:requires_job_and_item": "Nécessite à la fois une fonction et un poste",
+
+    "menu:requires_a_code": "Nécessite un code",
+    "menu:code": "Code",
+
+    "menu:auto_closure": "Fermeture automatique",
+    "menu:seconds_before_auto_closure": "Secondes avant la fermeture automatique",
+
+    "menu:doorlock_animation": "Animation du verrouillage de la porte",
+
+    "menu:new_building": "Nouveau bâtiment",
+    "menu:building": "Bâtiment",
+    "menu:none": "Aucun",
+    "menu:use_building_rules": "Utiliser les règles de construction",
+    "menu:choose_building": "Choisir un bâtiment",
+
+    "menu:jobs_dialog:title": "Liste des emplois",
+    "menu:jobs_dialog:search_job": "Rechercher un emploi",
+
+    "menu:items_dialog:title": "Liste des postes",
+    "menu:items_dialog:search_item": "Rechercher un article",
+
+    "menu:building_dialog:title": "Liste des bâtiments",
+    "menu:building_dialog:search_building": "Rechercher un bâtiment",
+
+    "menu:settings:language": "Langue",
+    "menu:enable_doorlock_animation": "Activer l'animation du verrouillage des portes",
+    "menu:animation_dictionary": "Dictionnaire des animations",
+    "menu:animation_name": "Nom de l'animation",
+    "menu:animation_duration": "Durée de l'animation",
+    "menu:settings:doorlock_icon": "Icône de verrouillage de porte",
+    "menu:settings:icon_size": "Taille de l'icône",
+    "menu:item_to_lockpick_doors": "Objet pour verrouiller les portes",
+    "menu:lockpick_name": "Nom du crochetage",
+    "menu:minimum_quantity": "Quantité minimale",
+    "menu:lose_on_use": "Perdre à l'utilisation",
+
+    "menu:apply_changes": "Appliquer les modifications",
+
+    "menu:is_sliding_door": "Est une porte coulissante",
+
+    "menu:not_allowed:you_are_not_allowed": "Vous n'êtes pas autorisé à utiliser ce menu:",
+    "menu:not_allowed:if_you_are_admin": "Si vous êtes un administrateur de serveur, vous devez copier-coller le code suivant dans votre server.cfg"
+}

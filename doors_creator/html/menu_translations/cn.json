@@ -1,0 +1,115 @@
+{
+    "menu:doors": "<i class=\"bi bi-door-open-fill\"></i> 门",
+    "menu:buildings": "<i class=\"bi bi-building\"></i> 建筑",
+    "menu:settings": "<i class=\"bi bi-gear-fill\"></i> 设置",
+
+    "menu:door": "门",
+    "menu:new_door": "新建门",
+    "menu:ID": "ID",
+    "menu:label": "Label",
+    "menu:doors_count": "门计数",
+    "menu:default": "默认",
+    "menu:maximum_distance": "最大距离",
+    "menu:distance": "距离",
+    "menu:model": "Model",
+    "menu:choose_doors": "选择门",
+
+    "menu:delete": "删除",
+    "menu:close": "关闭",
+    "menu:create": "创建",
+    "menu:save": "保存",
+
+    "menu:used_doors": "使用过的门",
+    "menu:default_doors_state": "默认门状态",
+    "menu:unlocked": "解锁",
+    "menu:locked": "上锁",
+    "menu:icon_coordinates": "图标坐标",
+    "menu:choose": "选择",
+    "menu:choose_icon_coords": "选择图标坐标",
+
+    "menu:requires_a_job": "需要一份职业",
+    "menu:allowed_jobs": "允许的职业",
+    "menu:choose_jobs": "选择职业",
+    "menu:requires_an_item": "需要一个物品",
+    "menu:required_item": "允许的物品",
+    "menu:choose_item": "选择物品",
+    "menu:requires_job_and_item": "需要工作和物品",
+
+    "menu:requires_a_code": "需要密码",
+    "menu:code": "密码",
+
+    "menu:auto_closure": "自动关闭",
+    "menu:seconds_before_auto_closure": "几秒后自动关闭",
+
+    "menu:doorlock_animation": "门锁动画",
+
+    "menu:new_building": "新建造",
+    "menu:building": "建造",
+    "menu:none": "没有任何",
+    "menu:use_building_rules": "使用构建规则",
+    "menu:choose_building": "选择建筑",
+
+    "menu:jobs_dialog:title": "职位列表",
+    "menu:jobs_dialog:search_job": "搜索工作",
+
+    "menu:items_dialog:title": "物品清单",
+    "menu:items_dialog:search_item": "搜索物品",
+
+    "menu:building_dialog:title": "建筑列表",
+    "menu:building_dialog:search_building": "搜索建筑物",
+
+    "menu:settings:language": "语言",
+    "menu:enable_doorlock_animation": "启用门锁动画",
+    "menu:animation_dictionary": "动画选项",
+    "menu:animation_name": "动画名称",
+    "menu:animation_duration": "动画时长",
+    "menu:settings:doorlock_icon": "门锁图标",
+    "menu:settings:icon_size": "图标大小",
+    "menu:item_to_lockpick_doors": "开锁的物品",
+    "menu:lockpick_name": "开锁器名称",
+    "menu:minimum_quantity": "最小数量",
+    "menu:lose_on_use": "使用时消除",
+
+    "menu:apply_changes": "应用更改",
+
+    "menu:is_sliding_door": "是推拉门",
+
+    "menu:not_allowed:you_are_not_allowed": "您无权使用此菜单",
+    "menu:not_allowed:if_you_are_admin": "如果您是服务器管理员，则必须将以下代码复制粘贴到您的 server.cfg",
+
+    "menu:requires_an_identifier": "需要标识符",
+    "menu:identifier": "标识符",
+    "menu:choose_player": "选择市民",
+    "menu:players_list": "玩家名单",
+    "menu:search_player": "搜索玩家",
+    "menu:add_identifier": "添加标识符",
+
+    "menu:is_vault_door": "是金库门",
+    "menu:speed": "速度",
+    "menu:make_door_extremely_heavy": "让门变得非常沉重",
+    "menu:custom_angles": "自定义角度",
+    "menu:opened_angle": "打开的角度",
+    "menu:closed_angle": "闭合的角度",
+
+    "menu:use_3d_text_instead_of_icon": "使用 3D 文本代替图标",
+
+    "menu:ratio": "比例",
+    "menu:heading":"方向",
+    "menu:vault_type":"保险库类型",
+    "menu:save_door_lock_state": "保存当前门锁状态并在服务器重启后自动应用",
+    "menu:ignore_default_door_lock_state_configuration": "忽略默认锁定状态配置",
+    "menu:can_be_lockpicked": "可以开锁",
+    "menu:x": "X",
+    "menu:y": "Y",
+    "menu:z": "Z",
+    "menu:inverted_direction": "反转方向",
+    "menu:confirm": "确认",
+    "menu:alert_police_on_lockpick": "提醒警察有人开锁",
+    "menu:requires_a_gang": "需要一个帮派",
+    "menu:allowed_gangs": "允许的帮派",
+    "menu:choose_gangs": "选择帮派",
+    "menu:gangs_dialog:title": "帮派名单",
+    "menu:gangs_dialog:search_gang": "搜索帮派",
+    "menu:get_heading": "获取标题",
+    "menu:minimum_police": "最低警察人数"
+}

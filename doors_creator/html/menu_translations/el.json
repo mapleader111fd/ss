@@ -1,0 +1,77 @@
+{
+    "menu:doors": "<i class=\"bi bi-door-open-fill\"></i> Πόρτες",
+    "menu:buildings": "<i class=\"bi bi-building\"></i> Buildings",
+    "menu:settings": "<i class=\"bi bi-gear-fill\"></i> Ρυθμίσεις",
+
+    "menu:door": "Πόρτα",
+    "menu:new_door": "Νέα πόρτα",
+    "menu:ID": "ID",
+    "menu:label": "Όνομα",
+    "menu:doors_count": "Αριθμός πορτών",
+    "menu:default": "Προεπιλεγμένο-Default",
+    "menu:maximum_distance": "Μέγιστη απόσταση",
+    "menu:distance": "Απόσταση",
+    "menu:model": "Μοντέλο",
+    "menu:choose_doors": "Επιλέξτε πόρτες",
+
+    "menu:delete": "Διαγραφή",
+    "menu:close": "Κλείσιμο",
+    "menu:create": "Δημιουργία",
+    "menu:save": "Αποθήκευση",
+
+    "menu:used_doors": "Used Doords",
+    "menu:default_doors_state": "Default doors state",
+    "menu:unlocked": "Ξεκλείδωτη",
+    "menu:locked": "Κλειδωμένη",
+    "menu:icon_coordinates": "Icon coordinates",
+    "menu:choose": "Επιλογή",
+    "menu:choose_icon_coords": "Choose icon coords",
+
+    "menu:requires_a_job": "Απαιτείται δουλειά",
+    "menu:allowed_jobs": "Επιτρεπόμενες δουλειές",
+    "menu:choose_jobs": "Επιλογή δουλειάς",
+    "menu:requires_an_item": "Απαιτεί ένα item-αντικείμενο",
+    "menu:required_item": "Απαιτούμενο item-αντικείμενο",
+    "menu:choose_item": "Επιλογή item-αντικείμενο",
+    "menu:requires_job_and_item": "Απαιτείται δουλειά και item-αντικείμενο",
+
+    "menu:requires_a_code": "Απαιτεί κωδικό",
+    "menu:code": "Κωδικός",
+
+    "menu:auto_closure": "Αυτόματο κλείσιμο",
+    "menu:seconds_before_auto_closure": "Δευτερόλεπτα πριν από το αυτόματο κλείσιμο",
+
+    "menu:doorlock_animation": "Doorlock animation",
+
+    "menu:new_building": "New building",
+    "menu:building": "Building",
+    "menu:none": "Κανένα",
+    "menu:use_building_rules": "Use building rules",
+    "menu:choose_building": "Choose building",
+
+    "menu:jobs_dialog:title": "Λίστα εργασιών",
+    "menu:jobs_dialog:search_job": "Αναζήτηση δουλειάς",
+
+    "menu:items_dialog:title": "Λίστα Αντικειμένων-Items",
+    "menu:items_dialog:search_item": "Αναζήτηση Αντικειμένου-item",
+
+    "menu:building_dialog:title": "Buildings List",
+    "menu:building_dialog:search_building": "Search building",
+
+    "menu:settings:language": "Γλώσσα",
+    "menu:enable_doorlock_animation": "Ενεργοποίηση doorlock animation",
+    "menu:animation_dictionary": "Animation dictionary",
+    "menu:animation_name": "Όνομα animation",
+    "menu:animation_duration": "Διάρκεια animation",
+    "menu:settings:doorlock_icon": "Εικονίδιο Doorlock",
+    "menu:settings:icon_size": "Μέγεθος εικονιδίου",
+    "menu:item_to_lockpick_doors": "Item για τη παραβιάση πόρτας",
+    "menu:lockpick_name": "Όνομα αντικείμενου παραβιάσεις πόρτας",
+    "menu:minimum_quantity": "Ελάχιστη ποσότητα",
+    "menu:lose_on_use": "Να χάνετε κατά τη χρήση του",
+
+    "menu:apply_changes": "Εφαρμογή αλλαγών",
+
+    "menu:not_allowed:you_are_not_allowed": "Δεν έχετε δικαίωμα χρήσης αυτού του μενού",
+    "menu:not_allowed:if_you_are_admin": "Εάν είστε διαχειριστής/προγραμματιστής του διακομιστή, θα πρέπει να αντιγράψετε και να επικολλήσετε τον παρακάτω κώδικα στο δικό σας server.cfg"
+}

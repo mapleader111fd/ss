@@ -1,0 +1,317 @@
+{
+  "label_race_start_track_type_sprint": "Sprint",
+  "label_race_start_track_type_circuit":  "Ringrada",
+  "label_race_start_checkpoints": "punkti",
+  "label_race_start_lap_amount_singular":  "ring",
+  "label_race_start_lap_amount_plural":  "ringi",
+  "label_race_start_competition": "~r~VÕISTLUS",
+  "label_race_start_participation_fee": "Osalustasu",
+  "label_race_start_vehicle_class": "Sõidukiklass",
+  "label_race_start_starts": "Sõit algab",
+  "label_race_start_start_time": " s pärast",
+  "label_race_start_press": "Vajuta",
+  "label_join_button": "E",
+  "label_race_start_press_to_join": "et liituda",
+  "label_race_start_waiting": "Ootad sõidu algust..",
+
+  "label_track_creation_point": "Punkt",
+  "label_track_creation_object": "Objekt",
+
+  "text_track_preview_race_start": "Algus",
+  "text_track_preview_race_finish": "Finiš",
+
+  "notification_chat_race_end": "Võidusõit milles sa osalesid on nüüd lõppenud!",
+  "notification_chat_race_end_competition_participants": "Võistlus ei saanud alata, kuna osalejate minimaalne arv ei olnud täidetud.",
+
+  "notification_tablet_minimum_laps_required": "Kui tegu on ringrajaga, siis peab sõitma vähemalt kaks ringi.",
+  "notification_tablet_negative_participation_fee": "Sisestatud osalustasu suurus ei tohi olla negatiivne.",
+  "notification_tablet_competition_class": "Kui lood võistluse, siis peab valima klassi.",
+  "notification_tablet_race_starting": "Uus sõit loodud, algus on %d sekundi pärast..",
+
+  "notification_tablet_error_track_points": "Uue raja loomiseks peab märkima vähemalt kolm punkti.",
+  "notification_tablet_error_track_name_length": "Uue raja loomiseks peab selle nimi olema 5 - 40 tähemärki pikk.",
+  "notification_tablet_error_track_desc_length": "Raja loomiseks peab selle kirjeldus olema 10 - 50 tähemärki pikk.",
+  "notification_tablet_error_track_invalid_start": "Algusaeg praegusest hetkest peab olema vähemalt %s minutit.",
+  "notification_tablet_error_type_missing": "Raja loomiseks peab sellele valima sobiva tüübi.",
+  "notification_tablet_info_track_created": "Uus rada '%s' edukalt loodud.",
+  "notification_tablet_info_track_verified": "Rada '%s' on võistluste jaoks kinnitatud.",
+  "notification_tablet_info_track_de_verified": "Rada '%s' kinnitus eemaldatud.",
+  "notification_tablet_info_track_favorited": "Rada '%s' lisatud lemmikute hulka.",
+  "notification_tablet_info_track_unfavorited": "Rada'%s' eemaldatud lemmikute hulgast.",
+
+  "notification_tablet_info_color_changed": "Värvus edukalt vahetatud.",
+  "notification_tablet_error_no_vehicle_for_class": "Sa pead olema sõidukis, et klassi määrata.",
+  "notification_tablet_info_vehicle_class": "Sinu praegune sõiduk kuulub klassi '%s'.",
+
+  "time_weeks_singular": "nädal",
+  "time_weeks_plural": "nädalat",
+
+  "time_days_singular": "päev",
+  "time_days_plural": "päeva",
+
+  "time_hours_singular": "tund",
+  "time_hours_plural": "tundi",
+
+  "text_chat_notification_join_not_allowed": "Sul ei ole sõiduga liitumine lubatud.",
+  "text_chat_notification_finished_race": "Sõit lõppes, teenisid saavutatud koha eest $%d.",
+  "text_chat_notification_finished_race_as_winner": "Oled sõidu võitja ning teenisid $%d!",
+  "text_chat_notification_not_enough_money": "Sul ei ole sõiduga ühinemiseks piisavalt raha!",
+  "text_chat_notification_wrong_class": "Sul ei ole sõiduga ühinemiseks nõutud klassi auto!",
+  "text_chat_notification_not_identifier": "Sa ei ole ennast võidusõidu tahvlis identifitseerinud!",
+  "text_chat_notification_countdown_started": "Enam ei ole võimalik võidusõiduga liituda!",
+  "text_chat_notification_track_creation_vehicle": "Raja loomine on võimalik ainult sõidukis olles!",
+  "text_chat_notification_phasing_end": "Hajutatud start on lõppemas!",
+  "text_chat_notification_you_finished": "Sa lõpetasid [%s]",
+  "text_chat_notification_other_finished": "%s lõpetas [%s]",
+
+  "text_tablet_event_competition_won": "Võitis võistluse rajal '%s'",
+  "text_tablet_event_new_rating_tier": "Saavutas uue reitingutaseme (%s)",
+  "text_tablet_event_new_track": "Tegi uue raja '%s'",
+
+  "text_tablet_deleted_track_title": "KUSTUTATUD RADA",
+  "text_tablet_deleted_track_description": "Rada on autori poolt kustutatud.",
+  "text_tablet_time_ago": "tagasi",
+
+  "text_profile_default_name": "Sõitja %s",
+
+  "text_tablet_driver_level_1": "Cruiser",
+  "text_tablet_driver_level_1400": "Rookie",
+  "text_tablet_driver_level_1500": "Driver",
+  "text_tablet_driver_level_1600": "Racer",
+  "text_tablet_driver_level_1700": "Host",
+  "text_tablet_driver_level_1850": "Alien",
+  "text_tablet_driver_level_2000": "Superstar",
+  "text_tablet_driver_level_2100":"God Tier",
+
+  "notification_tablet_error_name_length": "Nime pikkus peab olema 3-15 tähemärki pikk.",
+  "notification_tablet_error_picture_format": "Sisestatud URL pole lubatud. Klõpsa nupule 'Lae üles', et minna meie soovitatud üleslaadimislehele.",
+
+  "notification_tablet_info_name_changed": "Nimi edukalt vahetatud.",
+  "notification_tablet_info_picture_changed": "Profiilipilt edukalt vahetatud.",
+  "notification_tablet_info_track_preview": "Raja eelvaade on 20ks sekundiks märgitud GPSile.",
+  "notification_tablet_info_track_start_point": "Raja stardipunkt märgitud GPSile.",
+  "notification_tablet_info_track_deleted": "Rada '%s' on kustutatud.",
+
+  "notification_tablet_competition_starting": "Võistlus loodud, algus on %d minuti pärast.",
+  "notification_tablet_competition_not_enough_money": "Sul ei ole auhinnafondi jaoks piisavalt raha ($%s).",
+  "notification_tablet_competition_no_result": "Võistlust ei saa alustada. Rajal '%s' ei ole ühtegi '%s' klassi tulemust (et kalkuleerida DNF taimer).",
+  "notification_tablet_competition_invalid_lap_amount": "Rajal '%s' on ebasobiv arv ringe. Ringide arv peab olema vahemikus %d-%d.",
+  "notification_tablet_competition_not_verified": "Võistlust ei saa alustada. Rada '%s' ei ole kinnitatud.",
+
+  "notification_discord_competition_title": "Toimumas on uued võistlused %s poolt!",
+  "notification_discord_competition_title_error": "Võistluste genereerimine ebaõnnestus!",
+  "notification_discord_competition_description": "Racing süsteem",
+  "notification_discord_competition_description_error": "Süsteemil pole piisavalt tulemusi võistluste loomiseks. Abi saamiseks külastage meie dokumentatsiooni: https://docs.rahe.dev/",
+  "notification_discord_competition_class": "klass",
+
+
+
+  "track_creation_title": "RAJA SALVESTAMINE",
+
+  "track_creation_point_placement": "Punkti paigutamine",
+  "track_creation_object_placement": "Objekti paigutamine",
+  "track_creation_object_distance": "Objekti kaugus",
+  "track_creation_object_rotation": "Objekti pööramine",
+  "track_creation_object_change": "Objekti muutmine",
+  "track_creation_object_deletion": "Kustutamine",
+
+  "race_position": "Koht",
+  "race_lap": "Ring",
+  "race_cp": "Punkt",
+  "race_time": "Aeg",
+
+  "race_current_lap": "Praegune ring",
+  "race_best_lap": "Parim ring",
+  "race_total_time": "Aeg kokku",
+
+
+
+  "general_header_home": "Avaleht",
+  "general_header_tracks": "Rajad",
+  "general_header_races": "Sõidud",
+  "general_header_leaderboard": "Edetabel",
+  "general_header_profile": "Kasutaja profiil",
+  "general_header_leave": "Lahku sõidust",
+
+
+  "home_tab_competitions": "Võistlused",
+  "home_tab_competitions_day": "Võistlussõidud ülepäeviti kell 19:00!",
+
+  "home_tab_welcome_text": "Tere tulemast,",
+  "home_tab_summary_first": "Sa osalesid viimati võidusõidul",
+  "home_tab_summary_second": "päeva",
+  "home_tab_summary_third": "tagasi, kus saavutasid",
+  "home_tab_summary_fourth": "koha. ",
+  "home_tab_summary_fifth": "Kokku oled sa sõitudel osalenud",
+  "home_tab_summary_sixth": "korda",
+  "home_tab_summary_seventh": "ning saavutanud reitingu",
+
+  "home_tab_events_header": "Viimased sündmused",
+  "home_tab_events_none": "Pole ühtegi sündmust mida kuvada.",
+  "home_tab_event_hours_ago": "tundi tagasi",
+  "home_tab_event_rating": "Reiting ",
+
+
+  "tracks_tab_tracks": "Rajad",
+  "tracks_tab_personal_tracks": "Minu loodud",
+  "tracks_tab_favorite_tracks": "Lemmikud",
+  "tracks_tab_verified_tracks": "Kinnitatud",
+  "tracks_tab_found_tracks": "Leitud",
+  "tracks_tab_found_tracks_amount": "rada",
+  "tracks_tab_search_track": "Raja / looja nimi..",
+
+  "tracks_tab_track_information": "Raja informatsioon",
+  "tracks_tab_new_race": "Uus sõit",
+  "tracks_tab_legendary_tag": "Legendaarne",
+  "tracks_tab_new_tag": "Uus",
+  "tracks_tab_popular_tag": "Populaarne",
+
+  "tracks_tab_details_track_information": "Raja informatsioon",
+  "tracks_tab_details_points": "punkti",
+  "tracks_tab_details_objects": "objekti",
+  "tracks_tab_details_sprint": "Sprint",
+  "tracks_tab_details_circuit": "Ringrada",
+
+  "tracks_tab_details_times_driven": "Kordi sõidetud",
+  "tracks_tab_details_finish_percentage": "Lõpetamise protsent",
+  "tracks_tab_details_people_finished": "Inimesi sõitnud",
+
+  "tracks_tab_details_filter_best_results": "Raja parimad tulemused",
+  "tracks_tab_details_filter_all": "KÕIK",
+
+  "tracks_tab_details_deletion_modal_title": "Hoiatus",
+  "tracks_tab_details_deletion_modal_description": "Kas oled kindel, et soovid seda rada kustutada?",
+  "tracks_tab_details_deletion_modal_confirm": "Kustuta",
+  "tracks_tab_details_deletion_modal_cancel": "Tühista",
+
+  "tracks_tab_details_configuration_modal_title": "Konfiguratsioon",
+  "tracks_tab_details_configuration_modal_description": "Vali raja jaoks soovitud parameetrid.",
+  "tracks_tab_details_configuration_modal_laps": "Ringide arv",
+  "tracks_tab_details_configuration_modal_confirm": "Salvesta",
+  "tracks_tab_details_configuration_modal_cancel": "Tühista",
+
+
+  "tracks_tab_new_page_header": "Uue raja loomine",
+  "tracks_tab_new_info_header": "1. Raja informatsioon",
+  "tracks_tab_new_info_description": "Sisesta raja nimi ning lühike kirjeldus, et teised sõitjad teaksid, milline sõit neid ees ootab.",
+  "tracks_tab_new_info_name_input": "Raja nimi..",
+  "tracks_tab_new_info_description_input": "Raja kirjeldus..",
+  "tracks_tab_new_info_track_type_sprint": "Sprint",
+  "tracks_tab_new_info_track_type_circuit": "Ringrada",
+  "tracks_tab_new_race_type": "Sõidu tüüp",
+  "tracks_tab_new_race_type_normal": "Tavaline",
+  "tracks_tab_new_race_type_competition": "Võistlus",
+  "tracks_tab_new_object_header": "2. Raja punktid ja objektid",
+  "tracks_tab_new_object_description": "Sõida ringi ning sisesta süsteemi punktid & objektid, mis rajal olema peaksid. Veendu, et need oleksid rajale arusaadavalt asetatud.",
+  "tracks_tab_new_object_delete_1": "Kustuta punktid ",
+  "tracks_tab_new_object_delete_2": "ja objektid",
+  "tracks_tab_new_object_mode_start": "Lülita salvestamise režiim sisse",
+  "tracks_tab_new_object_mode_pause": "Pane salvestamise režiim pausile",
+  "tracks_tab_new_create_button": "Loo uus rada",
+
+  "tracks_tab_race_title": "Uue sõidu loomine",
+  "tracks_tab_race_header": "Sõidu seaded",
+  "tracks_tab_race_description": "Sisesta algavale sõidule sobivad seaded. Võta arvesse raja pikkust ning muid parameetreid.",
+  "tracks_tab_race_start_time": "Aega alguseni (s)",
+  "tracks_tab_race_dnf_time": "DNF taimer (s)",
+  "tracks_tab_laps": "Ringide arv",
+  "tracks_tab_race_fee": "Osalustasu ($)",
+  "tracks_tab_race_prize_pool": "Auhinnafond ($)",
+  "tracks_tab_race_competition_start_time": "Algusaeg",
+  "tracks_tab_race_class": "Nõutud sõidukiklass",
+  "tracks_tab_race_class_none": "Puudub",
+  "tracks_tab_race_create_button": "Loo uus sõit",
+  "tracks_tab_found_races": "Viimased",
+  "tracks_tab_found_races_amount": "sõitu",
+  "tracks_tab_search_race": "Otsi rada..",
+
+  "tracks_tab_race_comp_header": "Võistluste seeria",
+  "tracks_tab_race_comp_description": "Loo mitu võistlust korraga.",
+  "tracks_tab_race_approximate_start": "Umbkaudne stardiaeg",
+  "tracks_tab_race_estimated_duration": "Kestvus",
+  "tracks_tab_race_estimated_duration_minutes": "min",
+  "tracks_tab_race_add_race": "Lisa järgmine võidusõit seeriasse...",
+  "tracks_tab_race_search": "Otsi rada...",
+  "tracks_tab_race_results_hidden_pre": "Korraga saab näidata kuni kuut rada.",
+  "tracks_tab_race_results_hidden_aft": "rada on hetkel peidetud.",
+  "tracks_tab_race_results_hidden_disclaimer": "Proovi täpsemat otsingufraasi paremate tulemuste saamiseks...",
+
+
+  "races_tab_header_competitions": "Korraldatud võistlused",
+  "races_tab_competitions_none": "Hetkel ei ole ühtegi korraldatud võistlust.",
+  "races_tab_comp_table_information": "RAJA INFO",
+  "races_tab_comp_table_start": "ALGUSAEG",
+  "races_tab_comp_table_prizepool": "AUHINNAFOND",
+  "races_tab_comp_table_class": "SÕIDUKI KLASS",
+  "races_tab_comp_table_organizer": "KORRALDAJA",
+
+  "races_tab_header_races": "Toimunud sõidud",
+  "races_tab_header_my_races": "Osalenud sõitudes",
+
+  "races_tab_race_table_information": "RAJA INFORMATSIOON",
+  "races_tab_race_table_top": "PAREMUSJÄRJESTUS",
+  "races_tab_race_table_organizer": "KORRALDAJA",
+  "races_tab_race_table_participation": "OSAVÕTT",
+
+  "races_tab_race_table_drivers": "sõitjat",
+  "races_tab_race_table_finished": "lõpetas",
+
+  "races_tab_race_details_header": "Sõidu tulemused",
+  "races_tab_race_details_table_driver": "Sõitja",
+  "races_tab_race_details_table_time": "Aeg",
+  "races_tab_race_details_table_vehicle": "Sõiduk",
+  "races_tab_race_details_table_rating": "Reiting",
+  "races_tab_race_details_table_money": "Raha",
+  "races_tab_race_details_table_class": "klass",
+
+
+  "leader_tab_header_leaderboard": "Sõitjate edetabel",
+  "leader_tab_header_rating": " REITING",
+
+  "leader_tab_table_driver": "SÕITJA",
+  "leader_tab_table_rating": "ELO REITING",
+  "leader_tab_normal_races": "TAVASÕITE",
+  "leader_tab_comp_races": "VÕISTLUSEID",
+  "leader_tab_avg_pos": "KESKMINE KOHT",
+
+
+  "profile_tab_header_driver": "Sõitja",
+  "profile_tab_member_since": "Liige alates",
+
+  "profile_tab_button_name": "Muuda nime",
+  "profile_tab_picture_name": "Muuda pilti",
+  "profile_tab_new_name_placeholder": "Uus nimi..",
+  "profile_tab_new_picture_placeholder": "Pildi aadress..",
+  "profile_tab_save": "Salvesta",
+  "profile_tab_upload": "Lae üles",
+
+  "profile_tab_checkpoint_color": "Checkpointide värvus",
+  "profile_tab_gps_color": "GPS värvus",
+
+  "profile_tab_faq_title": "Korduma kippuvad küsimused",
+  "profile_tab_faq_desc": "Kui sul on rakenduse kohta küsimusi tekkinud või soovid lihtsalt rohkem teada saada, siis loe allpool olevat teksti.",
+
+  "profile_tab_faq_1_q": "Kuidas oma reitingut tõsta?",
+  "profile_tab_faq_1_a": "Enda reitingut on võimalik tõsta ainult võistlustel osalemisega,\ntavasõitudega reiting ei muutu. Sõitudel tuleb anda endast parim, sest halva tulemuse korral võib\nsinu reiting ka allapoole langeda.",
+
+  "profile_tab_faq_2_q": "Kuidas arvutatakse reitingut?",
+  "profile_tab_faq_2_a": "Peale võistluse lõppu arvutab süsteem igale osalejale reitingu languse\nvõi tõusu. Süsteem töötab ELO põhimõttel, mis tähendab seda, et lisaks saavutatud kohale võetakse\narvesse ka sinu ja teiste reitinguid.",
+
+  "profile_tab_faq_3_q": "Millal toimuvad võistlused?",
+  "profile_tab_faq_3_a": "Anonüümseks jääda sooviv isik korraldab igaks päevaks võistlussõite,\nmis võtavad aset ajavahemikus 19:00 - 22:00. Antud isik sponsoreerib igat sõitu ka rahaliselt.\nSõidud lisatakse rakendusse tavaliselt kell 14:00.",
+
+  "profile_tab_faq_4_q": "Kuidas valitakse võistlustele rajad?",
+  "profile_tab_faq_4_a": "Anonüümne isik teeb oma valiku juhuslikult, sobivate radade hulgast. Rada\nkvalifitseerub teatud klassi võistlustele siis, kui selle klassi autoga on rada vähemalt korra läbi sõidetud.",
+
+  "profile_tab_faq_5_q": "Kuidas võistlustel osaleda?",
+  "profile_tab_faq_5_a": "Osalemiseks ei ole vaja eraldi registreeruda. Umbes üks minut enne\nvõistluse algust avatakse raja alguses stardipunkt, kus on võimalik liituda. Tuleb vaid veenduda\nselles, et oled kohal õige klassi autoga.",
+
+  "profile_tab_faq_6_q": "Kas võistluseid on võimalik ka ise korraldada?",
+  "profile_tab_faq_6_a": "Jah, rakendusse on võimalik ka ise võistluseid lisada. Võistluseid ei\nsaa siiski korraldada igaüks - antud võimalus on saadaval ainult sõitjatele, kes on jõudnud\nreitingutasemeni 1700. Tavasõite saab korraldada igaüks.",
+
+  "profile_tab_faq_7_q": "Sain võistlusel hea koha, aga kaotasin reitingut. Miks?",
+  "profile_tab_faq_7_a": "Nagu eelnevalt mainitud, siis ELO süsteem võtab arvesse ka teisi\nsõitjaid. Kui saavutasid hea koha ning kaotasid reitingut, siis oli ilmselt sõidu üldine tase\nmadal ning süsteem eeldas, et saavutad veelgi kõrgema koha.",
+
+  "profile_tab_faq_8_q": "Mis on sprindi ja ringraja vahe?",
+  "profile_tab_faq_8_a": "Kui teha rada tüübiga sprint, siis puudub sõidu alustamisel ringide\nmääramise võimalus. Ringraja korral on ringide valimine kohustuslik, kusjuures peab minimaalne\nringide arv olema vähemalt kaks."
+}

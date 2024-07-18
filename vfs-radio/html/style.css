@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radio {
+    position: absolute;
+    bottom: 5%;
+    right: -20%;
+    transition: 0.5s;
+    transform: translateY(150%);
+}
+
+
+.radio.show {
+    transform: translateY(0%);
+}
+
+.radio.partial {
+    transform: translateY(70%);
+}
+
+.radio img {
+    width: 40%;
+    cursor: default;
+}
+
+.root {
+    position: absolute;
+    right: 66%;
+    bottom: 24%;
+    width: 28%;
+    height: 39%;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    opacity: 0%;
+}
+
+.overlay {
+    position: absolute;
+    right: 66%;
+    bottom: 24%;
+    width: 28%;
+    height: 39%;
+    border-radius: 10px;
+    background-color: black;
+    opacity: 100%;
+}
+
+.overlay.hide {
+    z-index: -1;
+}
+
+.freq {
+    width: 100%;
+    margin: auto;
+}
+
+.freq input {
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 12%;
+    color: white;
+    font-size: 4.2vh;
+    font-family: 'Jura', sans-serif;
+}
+
+.freq input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+p.active {
+    color: #17A589;
+}
+
+.btn {
+    width: 80%;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: rgb(49, 49, 49);
+}
+
+.buttons {
+    position: absolute;
+    right: 66%;
+    bottom: 8%;
+    width: 28%;
+    height: 11%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    /* border: 1px solid white; */
+}
+
+.buttons button {
+    width: 32%;
+    height: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    opacity: 0%;
+    transition: 0.3s;
+}
+.buttons button:hover {
+    opacity: 20%;
+}
+
+.center {
+    text-align: center;
+}
+
+.infodisplay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: 0.5s;
+}
+
+.infodisplay img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.infodisplay.show {
+    transform: translateY(50%);
+}
+
+.display {
+    position: absolute;
+    bottom: 0%;
+    right: 60%;
+    width: 31%;
+    height: 85%;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Jura', sans-serif;
+    /* font-size: 5vh; */
+    font-size: 200%;
+    /* font-size: 200%; */
+    text-align: center;
+}
+
+.volume-controls {
+    position: absolute;
+    right: 67%;
+    top: 21%;
+    width: 8%;
+    height: 5.5%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* border: 1px solid white; */
+    z-index: 2;
+}
+
+.volume-controls button {
+    width: 45%;
+    height: 100%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    opacity: 0%;
+    transition: 0.3s;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.volume-controls button:hover {
+    opacity: 20%;
+}
+
+.status {
+    position: absolute;
+    right: 66%;
+    top: 32%;
+    width: 28%;
+    height: 5%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: black;
+    z-index: 3;
+    font-family: 'Jura', sans-serif;
+    font-size: medium;
+    vertical-align: middle;
+    padding: 1px;
+    border-bottom: 1px solid gray;
+    font-family: 'Jura', sans-serif;
+}
+
+.status.visible {
+    color: rgb(228, 228, 228);
+}
+
+.status span {
+    vertical-align: middle;
+}
+
+.settings {
+    position: absolute;
+    right: 66%;
+    bottom: 24%;
+    width: 28%;
+    height: 39%;
+    border-radius: 10px;
+    background-color: black;
+    opacity: 100%;
+    z-index: -2;
+    color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.settings.show {
+    z-index: 2;
+}
+
+.settings input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#step, #switchdelay {
+    background-color: black;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 50px;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Jura', sans-serif;
+}
+
+.battery {
+    position: absolute;
+    right: 66%;
+    bottom: 24%;
+    width: 28%;
+    height: 39%;
+    border-radius: 10px;
+    background-color: black;
+    color: rgb(182, 23, 23);
+    z-index: 5;
+    visibility: hidden;
+    display: none;
+    text-align: center;
+}
+
+.battery.show {
+    visibility: visible;
+    display: block;
+}
+
+.battery span {
+    font-size: 20vh;
+}
+
+#battery-status.low {
+    color: rgb(182, 23, 23);
+}
+
+#help-btn {
+    float: right;
+    font-size: 2vh;
+    color: gray;
+    bottom: 0px;
+    cursor: pointer;
+}
+
+.help-menu {
+    display: none;
+    visibility: hidden;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+.help-menu span {
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: all;
+}
+
+.help-menu button {
+    width: 30%;
+}
+
+.help-menu.visible {
+    display: block;
+    visibility: visible;
+}
+
+.help-pdf {
+    display: none;
+    visibility: hidden;
+    text-align: center;
+}
+.help-pdf.visible {
+    display: block;
+    visibility: visible;
+}
+
+.help-pdf object {
+    width: 100%;
+    height: 100vh;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #4d4d4d;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: gray;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

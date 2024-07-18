@@ -1,0 +1,213 @@
+{
+    "wallpapers": [
+        "IOS16_2",
+        "IOS16_3",
+        "IOS16_4",
+        "IOS16_5",
+        "BlueSabers",
+        "GreenSabers",
+        "NeonSabers",
+        "OrangeSabers",
+        "PurpleSabers",
+        "Bubble",
+        "BubbleB",
+        "BubbleC",
+        "TwistBlack",
+        "TwistBlue",
+        "TwistGreen",
+        "TwistPink",
+        "TwistRed",
+        "TwistWhite",
+        "IOS15",
+        "IOS16",
+        "Beach",
+        "Beach2",
+        "ClownFish",
+        "OrbsPurple",
+        "Globe",
+        "GlobeNight",
+        "Moon",
+        "Boat",
+        "Lester",
+        "Lester2",
+        "Lift",
+        "Police",
+        "Wheel"
+    ],
+    "sounds": {
+        "ringtone": {
+            "default": "default.mp3",
+            "harp": "harp.mp3",
+            "apex": "apex.mp3",
+            "radar": "radar.mp3",
+            "sencha": "sencha.mp3",
+            "silk": "silk.mp3",
+            "summit": "summit.mp3"
+        },
+        "appNotifications": {}
+    },
+    "apps": {
+        "Phone": {
+            "name": "Phone",
+            "removable": false,
+            "size": 1900
+        },
+        "Messages": {
+            "name": "Messages",
+            "removable": false,
+            "size": 4400
+        },
+        "Notes": {
+            "name": "Notes",
+            "removable": false,
+            "size": 18600
+        },
+        "Settings": {
+            "name": "Settings",
+            "removable": false,
+            "size": 2300
+        },
+        "Photos": {
+            "name": "Photos",
+            "removable": false,
+            "size": 9000
+        },
+        "Camera": {
+            "name": "Camera",
+            "removable": false,
+            "size": 1200
+        },
+        "Weather": {
+            "name": "Weather",
+            "removable": false,
+            "size": 9400
+        },
+        "Calculator": {
+            "name": "Calculator",
+            "removable": false,
+            "size": 831
+        },
+        "AppStore": {
+            "name": "Apps",
+            "removable": false,
+            "size": 84000
+        },
+        "Clock": {
+            "name": "Clock",
+            "removable": false,
+            "size": 1200
+        },
+        "Maps": {
+            "name": "Maps",
+            "removable": false,
+            "size": 63400
+        },
+        "YellowPages": {
+            "name": "Pages",
+            "description": "Find local businesses and services",
+            "removable": true,
+            "size": 84400
+        },
+        "MarketPlace": {
+            "name": "MarketPlace",
+            "description": "Buy and sell items",
+            "removable": true,
+            "size": 84400
+        },
+        "Wallet": {
+            "name": "Wallet",
+            "removable": false,
+            "size": 2000
+        },
+        "Home": {
+            "name": "Home",
+            "removable": false,
+            "size": 19200
+        },
+        "Garage": {
+            "name": "Garage",
+            "removable": false,
+            "size": 17400
+        },
+        "Music": {
+            "name": "Music",
+            "description": "Listen to your favorite music",
+            "removable": true,
+            "size": 17400
+        },
+        "DarkChat": {
+            "name": "Dark Chat",
+            "description": "Anonymous chat rooms",
+            "removable": true,
+            "size": 98500,
+            "images": ["1.png", "2.png"]
+        },
+        "Twitter": {
+            "name": "Birdy",
+            "icon": "./assets/img/icons/apps/Birdy.jpg",
+            "description": "Live news, sports and chat",
+            "removable": true,
+            "size": 256700,
+            "images": ["1.png", "2.png", "3.png", "4.png"]
+        },
+        "Crypto": {
+            "name": "Crypto",
+            "description": "Track your crypto portfolio",
+            "removable": true,
+            "size": 256700
+        },
+        "Mail": {
+            "name": "Mail",
+            "removable": false,
+            "size": 23200
+        },
+        "Services": {
+            "name": "Services",
+            "removable": false,
+            "size": 23200
+        },
+        "VoiceMemo": {
+            "name": "Voice Memos",
+            "removable": false,
+            "size": 28200
+        },
+        "Instagram": {
+            "name": "InstaPic",
+            "icon": "./assets/img/icons/apps/InstaPic.jpg",
+            "description": "Share photos and videos",
+            "removable": true,
+            "size": 223000,
+            "images": ["1.png", "2.png", "3.png", "4.png", "5.png"]
+        },
+        "Tinder": {
+            "name": "Spark",
+            "icon": "./assets/img/icons/apps/Spark.jpg",
+            "description": "Meet new people",
+            "removable": true,
+            "size": 187500,
+            "images": ["1.png", "2.png", "3.png", "4.png", "5.png"]
+        },
+        "TikTok": {
+            "name": "Trendy",
+            "icon": "./assets/img/icons/apps/Trendy.jpg",
+            "description": "Share photos and videos",
+            "removable": true,
+            "size": 223000
+        }
+    },
+    "world_clock_locations": {
+        "New York": "America/New_York",
+        "London": "Europe/London",
+        "Paris": "Europe/Paris",
+        "Tokyo": "Asia/Tokyo",
+        "Sydney": "Australia/Sydney",
+        "Los Angeles": "America/Los_Angeles",
+        "New Delhi": "Asia/Kolkata",
+        "Hong Kong": "Asia/Hong_Kong",
+        "Rio de Janeiro": "America/Sao_Paulo",
+        "Mexico City": "America/Mexico_City",
+        "Cape Town": "Africa/Johannesburg",
+        "Stockholm": "Europe/Stockholm",
+        "Hawaii": "Pacific/Honolulu"
+    }
+}

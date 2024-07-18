@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+
+<head>
+	<title>Doors Creator</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<!-- Script CSS -->
+	<link href="index.css" rel="stylesheet" type="text/css" />
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+	<link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@700&display=swap" rel="stylesheet"> 	
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Bootstrap icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+	<!-- Datatables -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.css"/>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.js"></script>
+
+	<!-- Notifications -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+	<!-- Rating -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rater-js@1.0.1/lib/style.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/rater-js@1.0.1/index.min.js"></script>
+
+	<!-- Theme -->
+	<link rel="stylesheet" href="./assets/css/theme.bundle.css" id="stylesheetLTR">
+</head>
+
+<body style="background-color: transparent !important;">
+	<div id="doors_creator" class="container-lg bg-white position-absolute top-50 start-50 translate-middle rounded" style="display: none;">
+        <div id="main-bar" class="d-inline-block col-12 text-center">
+			<p id="doors-creator-label" class="d-inline script-name">Doors Creator - <span id="doors-creator-version" class="d-inline script-name"></span></p>
+			
+			<button id="close-main-btn" type="button" class="btn-close btn-close-white float-end mt-2"></button>
+		</div>
+
+		<div class="d-flex align-items-start my-2">
+			<div class="nav flex-column nav-pills me-3" role="tablist" aria-orientation="vertical">
+				<button class="nav-link active" data-translation-id="menu:doors" data-is-default="1" id="doors-tab" data-bs-toggle="pill" data-bs-target="#doors" type="button" role="tab"><i class="bi bi-door-open-fill"></i> Doors</button>
+				<button class="nav-link" data-translation-id="menu:buildings" id="buildings-tab" data-bs-toggle="pill" data-bs-target="#buildings" type="button" role="tab"><i class="bi bi-door-open-fill"></i> Doors</button>
+				<button class="nav-link" id="nexus-tab" data-bs-toggle="pill" data-bs-target="#nexus" type="button" role="tab"><i class="bi bi-rocket-takeoff-fill"></i> Nexus</button>
+				<button class="nav-link" data-translation-id="menu:settings" id="settings-tab" data-bs-toggle="pill" data-bs-target="#settings" type="button" role="tab"><i class="bi bi-gear-fill"></i> Settings</button>
+			</div>
+
+			<div class="tab-content container" style="max-height: 70vh; overflow-y:auto">
+				<div class="tab-pane fade show active" data-is-default="1" id="doors" role="tabpanel">
+					<div class="d-inline-block col-12 my-2">
+						<button id="new-door-btn" type="button" class="btn btn-success float-end" data-translation-id="menu:new_door">New door</button>
+						<button id="register-bulk-doors-btn" type="button" class="btn btn-info float-end me-2" data-translation-id="menu:register_bulk_doors">Register bulk doors</button>
+					</div>
+					
+					<table id="doors-container" class="table table-hover fs-4 mb-2">
+						<thead>
+							<tr>
+                                <th scope="col" data-translation-id="menu:distance">Distance</th>
+                                <th scope="col" data-translation-id="menu:ID">ID</th>
+                                <th scope="col" data-translation-id="menu:label">Label</th>
+                                <th scope="col" data-translation-id="menu:doors_count">Doors count</th>
+                                <th scope="col" data-translation-id="menu:building">Building</th>
+                                <th scope="col" data-translation-id="menu:other">Other</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+						</tbody>
+					</table>	
+				</div>
+
+				<div class="tab-pane fade" id="buildings" role="tabpanel">
+					<div class="d-inline-block col-12 my-2">
+						<button id="new-building-btn" type="button" class="btn btn-success float-end" data-translation-id="menu:new_building">New building</button>
+					</div>
+					
+					<table id="buildings-container" class="table table-hover fs-4 mb-2">
+						<thead>
+							<tr>
+                                <th scope="col" data-translation-id="menu:ID">ID</th>
+                                <th scope="col" data-translation-id="menu:label">Label</th>
+								<th scope="col" data-translation-id="menu:default">Default</th>
+								<th scope="col" data-translation-id="menu:lock_status">Lock status</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+						</tbody>
+					</table>	
+				</div>
+
+                <div class="tab-pane fade container" id="nexus" role="tabpanel" style="max-height: 80vh; overflow-y: auto;">
+					<div class="d-flex justify-content-center align-items-center" style="min-height:40vh">
+						<div id="nexus-login">
+							<button type="button" id="enter-in-nexus-btn" class="btn btn-success btn-lg">
+								<span class="spinner-border spinner-border-sm" style="display: none;"></span>
+								<span id="enter-in-nexus-label">Enter in nexus</span>
+							</button>						  
+						</div>
+	
+						<div id="nexus-container" class="container" style="display: none;">
+							<div class="d-inline-block col-12 my-2">
+								<button id="upload-to-nexus-btn" type="button" class="btn btn-success float-end" data-translation-id="menu:nexus:share">Share</button>
+							</div>
+		
+							<table id="nexus-table" class="table table-hover fs-4">
+								<thead>
+									<tr>
+										<th scope="col" data-translation-id="menu:nexus:name">Name</th>
+										<th scope="col" data-translation-id="menu:nexus:description">Description</th>
+										<th scope="col" data-translation-id="menu:nexus:doors_amount">Doors amount</th>
+										<th scope="col" data-translation-id="menu:nexus:rating">Rating</th>
+										<th scope="col" data-translation-id="menu:nexus:votes">Votes</th>
+										<th scope="col" data-translation-id="menu:nexus:author">Author</th>
+									</tr>
+								</thead>
+					
+								<tbody id="nexus-container-body">
+					
+								</tbody>
+							</table>			
+						</div>
+					</div>
+				</div>		
+
+				<form class="tab-pane fade needs-validation" id="settings" role="tabpanel" novalidate>
+					<div class="container my-2 scrollbar" style="max-height: 60vh; overflow-y: auto">
+						<div class="mb-2">
+							<h2 class="text-center" data-translation-id="menu:settings:language">Language</h2>
+	
+							<select class="form-select" id="settings_locale" data-select>
+								<option value="en">English</option>
+								<option value="it">Italiano</option>
+								<option value="de">Deutsch</option>
+								<option value="nl">Nederlands</option>
+								<option value="es">Español</option>
+								<option value="cs">Czech</option>
+								<option value="el">Ελληνικά</option>
+								<option value="fr">Français</option>
+								<option value="da">Dansk</option>
+								<option value="pt">Português</option>
+								<option value="pl">Polski</option>
+								<option value="lt">Lietuvių</option>
+								<option value="lt">Lietuvių</option>
+								<option value="hu">Magyar</option>
+								<option value="cn">中国人</option>
+							</select>
+						</div>
+
+                        <hr>
+
+						<h2 class="text-center" data-translation-id="menu:generic">Generic</h2>
+
+						<div class="input-group my-1 fs-4">
+							<span class="input-group-text">ACE permission</span>
+							<input id="settings_acePermission" type="text" class="form-control" required>
+						</div>
+
+						<div class="form-check form-switch fs-3 my-4" data-bs-toggle="tooltip" data-bs-placement="auto" data-translation-id="menu:ignore_default_door_lock_state_configuration">
+							<input class="form-check-input" type="checkbox" role="switch" id= "settings_saveDoorStateAfterRestart">
+							<label class="form-check-label" data-translation-id="menu:save_door_lock_state" for="settings_saveDoorStateAfterRestart">Save current door lock state and auto apply it after server restart</label>
+						</div>
+
+						<div class="row align-items-center mt-3" data-translation-id="menu:probably_requires_script_restart" data-bs-toggle="tooltip" data-bs-placement="top">
+							<p class="text-center fs-4 my-auto" data-translation-id="menu:settings:targeting_script" style="width:auto">Targeting script</p>
+							
+							<select id="settings-targeting-script" class="form-select w-25" data-select>
+								<option data-translation-id="menu:none" value="none">None</option>
+								<option value="ox_target">OX Target</option>
+								<option value="qb_target">QB Target</option>
+							</select>
+						</div>
+						
+						<div class="d-flex gap-3 justify-content-center mt-4">
+							<div class="form-floating col-3">
+								<input id="settings-key-to-toggle-door-status" type="number" data-dialog-type='control' class="form-control clickable" placeholder="Press to choose" required readonly>
+								<label data-translation-id="menu:key_to_toggle_closest_door"></label>
+							</div>
+
+							<div class="form-floating col-3">
+								<input id="settings-confirm-key" type="number" data-dialog-type='control' class="form-control clickable" placeholder="Press to choose" required readonly>
+								<label data-translation-id="menu:confirm_key"></label>
+							</div>
+						</div>
+
+						<hr>
+
+						<div>
+							<h2 class="text-center mb-1" data-translation-id="menu:import">Import</h2>
+							<p class="text-center" data-translation-id="menu:import_info">Import info...</p>
+
+							<div class="d-flex gap-3 justify-content-center">
+								<button id="import-from-ox-doorlock-btn" type="button" class="btn btn-primary" data-translation-id="menu:import_from_ox_doorlock">Import from OX Doorlock</button>
+								<button id="import-from-qb-doorlock-btn" type="button" class="btn btn-primary" data-translation-id="menu:import_from_qb_doorlock">Import from QB Doorlock</button>
+							</div>
+						</div>
+
+						<hr>
+
+						<div>
+							<h2 class="text-center" data-translation-id="menu:doorlock_animation">Door lock animation</h2>
+
+							<div class="form-check form-switch fs-3 mt-2">
+								<input class="form-check-input" type="checkbox" role="switch" id="settings_enableDoorlockAnimation">
+								<label class="form-check-label" data-translation-id="menu:enable_doorlock_animation" for="settings_enableDoorlockAnimation">Enable doorlock animation</label>
+							</div>
+
+							<div class="row g-2 row-cols-3 mt-2" id="doorlock-animation-div">
+								<div class="form-floating">
+									<input type="text" class="form-control" id="settings_doorlockAnimationDictionary" placeholder="Animation dictionary">
+									<label data-translation-id="menu:animation_dictionary" for="settings_doorlockAnimationDictionary">Animation dictionary</label>
+								</div>
+
+								<div class="form-floating">
+									<input type="text" class="form-control" id="settings_doorlockAnimationName" placeholder="Animation name">
+									<label data-translation-id="menu:animation_name" for="settings_doorlockAnimationName">Animation name</label>
+								</div>
+
+								<div class="form-floating">
+									<input type="number" class="form-control" id="settings_doorlockAnimationDuration" placeholder="Animation duration">
+									<label data-translation-id="menu:animation_duration" for="settings_doorlockAnimationDuration">Animation duration</label>
+								</div>
+							</div>
+						</div>
+
+						<hr>
+
+						<div>
+							<h2 class="text-center" data-translation-id="menu:settings:doorlock_icon">Door lock icon</h2>
+							
+							<div class="input-group my-1 fs-4">
+								<span class="input-group-text" data-translation-id="menu:settings:icon_size">Icon size</span>
+								<input id="settings_doorlockIconSize" type="number" min="0.1" step="0.1" class="form-control" required>
+							</div>		
+
+							<div class="form-check form-switch fs-3 mt-2">
+								<input class="form-check-input" type="checkbox" role="switch" id="settings_exclusiveDoorIcon">
+								<label class="form-check-label" data-translation-id="menu:display_door_icon_only_to_players_with_the_correct_job" for="settings_exclusiveDoorIcon">Display door icon only to players with the correct job</label>
+							</div>
+						</div>
+
+						<div>
+							<hr>
+
+							<h2 class="text-center" data-translation-id="menu:item_to_lockpick_doors">Item to lockpick doors</h2>
+
+							<div class="row g-2 row-cols-3 mt-2">
+								<div class="form-floating">
+									<input type="text" class="form-control" id="settings_lockpickName" placeholder="Lockpick name" required>
+									<label data-translation-id="menu:lockpick_name" for="settings_lockpickName">Lockpick name</label>
+								</div>
+
+								<div class="form-floating">
+									<input type="number" class="form-control" id="settings_lockpickMinimumQuantity" placeholder="Minimum quantity" required>
+									<label data-translation-id="menu:minimum_quantity" for="settings_lockpickMinimumQuantity">Minimum quantity</label>
+								</div>
+
+								<div class="form-floating">
+									<input type="number" class="form-control" id="settings_lockpickMinimumPolice" placeholder="Minimum police" required>
+									<label data-translation-id="menu:minimum_police" for="settings_lockpickMinimumPolice">Minimum police</label>
+								</div>
+							</div>
+
+							<div class="form-check form-switch fs-3 mt-2">
+								<input class="form-check-input" type="checkbox" role="switch" id="settings_lockpickLoseOnUse">
+								<label data-translation-id="menu:lose_on_use" class="form-check-label" for="settings_lockpickLoseOnUse">Lose on use</label>
+							</div>
+
+							<hr>
+
+							<div class="form-check form-switch fs-3 mt-2">
+								<input class="form-check-input" type="checkbox" role="switch" id="settings_use3dTextInsteadOfIcon">
+								<label data-translation-id="menu:use_3d_text_instead_of_icon" class="form-check-label" for="settings_use3dTextInsteadOfIcon">Use 3D text instead of icon</label>
+							</div>
+
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-success float-end" data-translation-id="menu:apply_changes">Apply changes</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="door-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <form id="door-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:door">Door</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body scrollbar">
+					<div class="form-floating mb-1">
+						<input type="text" class="form-control" id="door-label" placeholder="Default">
+						<label for="door-label" data-translation-id="menu:label">Label</label>
+					</div>
+
+					<div class="row g-2 row-cols-2 my-3 fs-3">
+						<div>
+							<div class="form-check" id="sliding-door-div">
+								<input class="form-check-input" type="checkbox" role="switch" id="is-sliding-door">
+								<label class="form-check-label" data-translation-id="menu:is_sliding_door" for="is-sliding-door">Is sliding door</label>
+							</div>
+
+							<div class="form-check" id="display-door-icon-div">
+								<input class="form-check-input" type="checkbox" role="switch" id="display-door-icon">
+								<label class="form-check-label" data-translation-id="menu:display_door_icon" for="display-door-icon">Display door icon</label>
+							</div>
+						</div>
+	
+						<div id="can-be-lockpicked-div">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" id="can-be-lockpicked">
+								<label class="form-check-label" data-translation-id="menu:can_be_lockpicked">Can be lockpicked</label>
+							</div>
+	
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" id="alert-police-on-lockpick">
+								<label class="form-check-label" data-translation-id="menu:alert_police_on_lockpick">Alert police on lockpick</label>
+							</div>
+						</div>
+					</div>
+					
+					<div class="my-1" id="use-building-rules-div">
+						<hr>
+
+						<div class="form-check form-switch fs-4 mb-2">
+							<input class="form-check-input" type="checkbox" role="switch" id="use-building-rules">
+							<label class="form-check-label" data-translation-id="menu:use_building_rules" for="use-building-rules">Use building rules</label>
+						</div>
+
+						<div class="d-flex gap-3 align-items-center">
+							<div class="form-floating col-9">
+								<input type="text" class="form-control" id="parent-building" disabled>
+								<label data-translation-id="menu:building" for="parent-building">Building</label>
+							</div>	
+
+							<button id="choose-building-btn" type="button" class="btn btn-secondary col" data-translation-id="menu:choose_building">Choose building</button>
+                        </div>
+					</div>
+
+					<div class="text-center my-1" id="used-doors-div">
+						<hr>
+
+						<h2 class="text-center" data-translation-id="menu:used_doors">Used doors</h2>
+
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">X</th>
+									<th scope="col">Y</th>
+									<th scope="col">Z</th>
+									<th data-translation-id="menu:model" scope="col">Model</th>
+								</tr>
+							</thead>
+
+							<tbody id="used-doors-table"></tbody>
+						</table>
+
+						<div class="text-end">
+							<button id="select-doors-btn" type="button" class="btn btn-secondary" data-translation-id="menu:choose_doors">Choose doors</button>
+						</div>
+					</div>
+
+					<div class="row">
+						<hr>
+
+						<div class="text-center col" id="default-doors-state-div">
+							<p class="fs-3" data-translation-id="menu:default_doors_state">Default doors state</p>
+	
+							<div class="form-check form-check-inline fs-4">
+								<input class="form-check-input" type="radio" name="doors-default-state" value="0" required>
+								<label class="form-check-label" data-translation-id="menu:unlocked">Unlocked</label>
+							</div>
+	
+							<div class="form-check form-check-inline fs-4">
+								<input class="form-check-input" type="radio" name="doors-default-state" value="1" required>
+								<label class="form-check-label" data-translation-id="menu:locked">Locked</label>
+							</div>
+						</div>
+		
+						<div class="col" id="maximum-distance-div">
+							<p class="fs-4 text-center" data-translation-id="menu:maximum_distance">Maximum distance</p>
+	
+							<div class="row g-2">
+								<div class="form-floating col-8">
+									<input type="number" step="0.01" class="form-control max-two-decimals" id="maximum-distance" placeholder="Maximum distance" required>
+									<label for="maximum-distance" data-translation-id="menu:maximum_distance">Maximum distance</label>
+								</div>
+	
+								<button id="choose-maximum-distance-btn" type="button" class="btn btn-secondary col-4" data-translation-id="menu:choose">Choose</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="my-3" id="icon-coordinates-div">
+						<hr>
+
+						<h2 class="text-center" data-translation-id="menu:icon_coordinates">Icon coordinates</h2>
+
+						<div class="row g-2 row-cols-4">
+                            <div class="form-floating">
+                                <input type="number" step="0.01" class="form-control max-two-decimals" id="icon-coords-x" placeholder="X" required>
+                                <label for="field-coords-x" data-translation-id="menu:x">X</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="number" step="0.01" class="form-control max-two-decimals" id="icon-coords-y" placeholder="Y" required>
+                                <label for="field-coords-y" data-translation-id="menu:y">Y</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="number" step="0.01" class="form-control max-two-decimals" id="icon-coords-z" placeholder="Z" required>
+                                <label for="field-coords-z" data-translation-id="menu:z">Z</label>
+                            </div>
+
+							<button id="choose-icon-coords-btn" type="button" class="btn btn-secondary" data-translation-id="menu:choose_icon_coords">Choose icon coords</button>
+                        </div>
+					</div>
+
+					<div class="my-3" id="sound-data-div">
+						<hr>
+
+						<h2 class="text-center" data-translation-id="menu:sounds"></h2>
+
+						<div class="d-flex gap-3 justify-content-center">
+							<div class="col">
+								<p class="text-center mb-0" data-translation-id="menu:unlock_sound"></p>
+								
+								<select class="form-select" data-select id="unlock-sound">
+									<option selected value="none">None</option>
+									<option value="fence.mp3">Fence</option>
+									<option value="light_sound.mp3">Light sound</option>
+								</select>	
+							</div>
+							<div class="col">
+								<p class="text-center mb-0" data-translation-id="menu:lock_sound"></p>
+
+								<select class="form-select" data-select id="lock-sound">
+									<option selected value="none">None</option>
+									<option value="fence.mp3">Fence</option>
+									<option value="light_sound.mp3">Light sound</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="my-1" id="requires-job-div">
+						<hr>
+
+						<div class="form-check form-switch fs-4 mb-2">
+							<input class="form-check-input" type="checkbox" role="switch" id="requires-job">
+							<label class="form-check-label" data-translation-id="menu:requires_a_job" for="requires-job">Requires a job</label>
+						</div>
+
+						<div class="d-flex gap-3 align-items-center">
+							<div class="form-floating col-9">
+								<input type="text" class="form-control" id="allowed-jobs" placeholder="Allowed jobs" disabled>
+								<label data-translation-id="menu:allowed_jobs" for="allowed-jobs">Allowed jobs</label>
+							</div>	
+
+							<button id="choose-jobs-btn" type="button" class="btn btn-secondary col" data-translation-id="menu:choose_jobs">Choose jobs</button>
+                        </div>
+					</div>
+
+					<div class="my-1" id="requires-gang-div" style="display: none">
+						<hr>
+
+						<div class="form-check form-switch fs-4 mb-2">
+							<input class="form-check-input" type="checkbox" role="switch" id="requires-gang">
+							<label class="form-check-label" data-translation-id="menu:requires_a_gang" for="requires-gang">Requires a gang</label>
+						</div>
+
+						<div class="d-flex gap-3 align-items-center">
+							<div class="form-floating col-9">
+								<input type="text" class="form-control" id="allowed-gangs" placeholder="Allowed gangs" disabled>
+								<label data-translation-id="menu:allowed_gangs" for="allowed-gangs">Allowed gangs</label>
+							</div>	
+
+							<button id="choose-gangs-btn" type="button" class="btn btn-secondary col" data-translation-id="menu:choose_gangs">Choose gangs</button>
+                        </div>
+
+						<hr>
+					</div>
+
+					<div class="my-1" id="requires-item-div">
+						<div class="form-check form-switch fs-4 mb-2">
+							<input class="form-check-input" type="checkbox" role="switch" id="requires-item">
+							<label class="form-check-label" data-translation-id="menu:requires_an_item" for="requires-item">Requires an item</label>
+						</div>
+
+						<div class="d-flex gap-3 align-items-center">
+							<div class="form-floating col-9">
+								<input type="text" class="form-control" id="required-item" placeholder="Required item">
+								<label data-translation-id="menu:required_item" for="required-item">Required item</label>
+							</div>	
+
+							<button id="choose-item-btn" type="button" class="btn btn-secondary col" data-translation-id="menu:choose_item">Choose item</button>
+                        </div>
+					</div>
+
+					<div id="requires-job-and-item-div" class="form-check form-switch fs-4 mt-2">
+						<input class="form-check-input" type="checkbox" role="switch" id="requires-job-and-item">
+						<label class="form-check-label" data-translation-id="menu:requires_job_and_item" for="requires-job-and-item">Requires job and item</label>
+					</div>
+
+					<div class="my-1" id="requires-code-div">
+						<hr>
+
+						<div class="form-check form-switch fs-4 mb-2">
+							<input class="form-check-input" type="checkbox" role="switch" id="requires-code">
+							<label class="form-check-label" data-translation-id="menu:requires_a_code" for="requires-code">Requires a code</label>
+						</div>
+
+						<div class="form-floating">
+							<input type="text" class="form-control" id="required-code" placeholder="Required code">
+							<label data-translation-id="menu:code" for="required-code">Code</label>
+						</div>
+
+						<hr>
+					</div>
+
+					<div id="requires-identifier-div">
+						<div class="form-check form-switch fs-4 mb-2">
+							<input class="form-check-input" type="checkbox" role="switch" id="requires-identifier">
+							<label class="form-check-label" data-translation-id="menu:requires_an_identifier" for="requires-identifier">Requires an identifier</label>
+						</div>
+	
+						<div id="identifiers-div">
+							<div id="allowed-identifiers">
+	
+							</div>
+	
+							<div class="input-group mt-2">
+								<span class="input-group-text" data-trnasl="menu:identifier">Identifier</span>
+								<input id="identifier-to-add" type="text" class="form-control">
+								<button id="choose-player-btn" type="button" class="btn btn-secondary" data-translation-id="menu:choose_player">Choose player</button>
+								<button id="add-identifier-btn" type="button" class="btn btn-success" data-translation-id="menu:add_identifier">Add identifier</button>
+							</div>
+						</div>
+						
+						<hr>
+					</div>
+
+					<div class="my-1" id="auto-closure-div">
+						<div class="form-check form-switch fs-4 mb-2">
+							<input class="form-check-input" type="checkbox" role="switch" id="auto-closure-switch">
+							<label class="form-check-label" data-translation-id="menu:auto_closure" for="auto-closure-switch">Auto closure</label>
+						</div>
+
+						<div class="form-floating">
+							<input type="number" min="1" class="form-control" id="auto-closure" placeholder="Auto closure">
+							<label data-translation-id="menu:seconds_before_auto_closure" for="auto-closure">Seconds before auto closure</label>
+						</div>	
+					</div>
+
+					<div class="my-1" id="vault-door-div">
+						<hr>
+						
+						<div class="form-check form-switch fs-4 mb-2">
+							<input class="form-check-input" type="checkbox" role="switch" id="is-vault-door">
+							<label class="form-check-label" data-translation-id="menu:is_vault_door">Is vault door</label>
+						</div>
+
+
+						<div id="vault-door-options">
+							<div class="input-group my-3">
+								<span class="input-group-text" data-translation-id="menu:speed">Speed</span>
+								<input id="vault-speed" type="number" step="0.1" class="form-control">
+							</div>
+							
+							<div class="row g-2 row-cols-2">	
+								<div class="form-check form-switch fs-4 mb-2">
+									<input class="form-check-input" type="checkbox" role="switch" id="vault-make-door-extremely-heavy">
+									<label class="form-check-label" data-translation-id="menu:make_door_extremely_heavy">Make door extremely heavy</label>
+								</div>
+	
+								
+								<div class="form-check form-switch fs-4 mb-2">
+									<input class="form-check-input" type="checkbox" role="switch" id="vault-inverted-direction">
+									<label class="form-check-label" data-translation-id="menu:inverted_direction">Inverted direction</label>
+								</div>
+							</div>
+
+							<hr>
+
+							<div class="fs-4 text-center my-3">
+								<p data-translation-id="menu:vault_type">Vault type</p>
+								
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="vault-type" value="heading">
+									<label class="form-check-label" data-translation-id="menu:heading">Heading</label>
+								</div>
+
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="vault-type" value="ratio">
+									<label class="form-check-label" data-translation-id="menu:ratio">Ratio</label>
+								</div>
+							</div>
+
+							<hr>
+
+							<div class="mt-2">
+								<p class="text-center fs-4" data-translation-id="menu:custom_angles">Custom angles (OPTIONAL)</p>
+
+								<div class="row g-2 row-cols-2">
+									<div class="input-group w-50">
+										<span class="input-group-text" data-translation-id="menu:opened_angle">Opened angle</span>
+										<input id="vault-opened-angle" type="number" step="0.01" class="form-control" placeholder="Usually 1.0 or -1.0">
+										<button id="vault-get-opened-heading" type="button" class="btn btn-secondary col-auto" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:get_heading"><i class="bi bi-arrow-repeat"></i></button>	
+									</div>
+	
+									<div class="input-group w-50">
+										<span class="input-group-text" data-translation-id="menu:closed_angle">Closed angle</span>
+										<input id="vault-closed-angle" type="number" step="0.01" class="form-control" placeholder="Usually 0.0">
+										<button id="vault-get-closed-heading" type="button" class="btn btn-secondary col-auto" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:get_heading"><i class="bi bi-arrow-repeat"></i></button>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+                    <button id="delete-door-btn" type="button" class="btn btn-danger me-auto" data-translation-id="menu:delete" data-bs-dismiss="modal">Delete</button>
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="save-door-btn" type="submit" class="btn btn-success" data-translation-id="menu:create">Create</button>
+				</div>
+			</form>
+        </div>
+    </div>
+
+	<!-- Gangs input dialog -->
+	<div class="modal fade" id="input-gangs-dialog-modal" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:gangs_dialog:title">Gangs List</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body" style="max-height: 60vh; overflow-y: auto">
+					<div class="input-group">
+						<span class="input-group-text" data-translation-id="menu:gangs_dialog:search_gang">Search gang</span>
+						<input id="input-gang-search" type="text" class="form-control">
+					</div>
+
+					<div id="gangs-list" class="mt-2">
+
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="input-gangs-confirm-btn" type="button" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</div>
+		</div>
+	</div>
+
+	<!-- Building input dialog -->
+	<div class="modal fade" id="input-building-dialog-modal" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:building_dialog:title">Buildings List</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body scrollbar" style="max-height: 80vh; overflow-y: scroll">
+					<div class="input-group">
+						<span class="input-group-text" data-translation-id="menu:building_dialog:search_building">Search building</span>
+						<input id="input-building-search" type="text" class="form-control">
+					</div>
+
+					<ul id="buildings-list" class="list-group mt-2">
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+	
+    <!-- Players input dialog -->
+	<div class="modal fade" id="players-dialog-modal" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:players_list">Players List</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body" style="max-height: 80vh; overflow-y: scroll">
+					<div class="input-group">
+						<span class="input-group-text" data-translation-id="menu:search_player">Search player</span>
+						<input id="input-players-search" type="text" class="form-control">
+					</div>
+
+					<ul id="players-list" class="list-group mt-2">
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="notification" class="toast mx-auto mt-3" role="alert">
+		<div class="toast-header">
+			<strong class="me-auto">Doors Creator</strong>
+		</div>
+		<div id="notification-message" class="toast-body fs-3 fw-bold">
+
+		</div>
+	</div>
+
+	<form id="input-div" class="container position-absolute bottom-0 start-50 translate-middle-x col-3 my-3 bg-white p-2 rounded bg-opacity-75 needs-validation" novalidate style="display: none;">
+		<div class="form-floating ">
+			<input type="password" class="form-control" id="code-input" placeholder="Code">
+			<label>Code</label>
+		</div>
+
+		<div class="mt-2 float-end">
+			<button class="btn btn-danger" id="code-input-cancel-btn" type="button">Cancel</button>	
+			<button class="btn btn-success" type="submit">Confirm</button>
+		</div>
+	</form>
+
+	<!-- Nexus modal -->
+	<div class="modal fade" id="nexus-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+			<div id="animations-modal-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" id="nexus-modal-title-text"></h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body scrollbar">
+					<h1 class="text-center" id="nexus-modal-instance-listing-label"></h1>
+					
+					<div class="row mt-4">
+						<div class="container col-7">							
+							<div class="mt-3">
+								<h5>Description:</h5>
+								<p id="nexus-modal-instance-description"></p>
+							</div>
+						</div>
+
+						<div class="container col-5 fs-4">
+							<p>
+								<span id="nexus-modal-instance-average-rating"></span>
+								| 
+								<span><span id="nexus-modal-instance-total-votes"></span> <span data-translation-id="menu:nexus:votes"></span></span>
+							</p>
+
+							<p> <span class="fw-bold">Created by: </span> <span id="nexus-modal-instance-author"></span> </p>
+						</div>
+					</div>
+
+					<hr/>
+
+					<p class="text-center"><span class="fw-bold" data-translation-id="menu:nexus:building_name">Building name</span> - <span id="nexus-instance-building-name" class="font-monospace"></span></p>
+
+					<h3 class="text-center" data-translation-id="menu:nexus:doors"></h3>
+
+					<ol id="nexus-modal-instance-content" class="list-group list-group-numbered col-6 text-center mx-auto">
+
+					</ol>
+
+				</div>
+				<div class="modal-footer d-inline-block col-12">
+					<div class="float-start" id="vote-instance-rater"></div>
+					<button id="nexus-import-instance-btn" type="button" class="btn btn-primary float-end" data-translation-id="menu:nexus:import">Import</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="nexus-modal-upload" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<form id="nexus-upload-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:nexus:share"></h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+
+				<div class="modal-body">
+					<div class="mb-3">
+						<label class="form-label" data-translation-id="menu:nexus:name"></label>
+						<input type="text" class="form-control" id="nexus-upload-label" required>
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label" data-translation-id="menu:nexus:description"></label>
+						<textarea class="form-control" id="nexus-upload-description" rows="3" minlength="5" required></textarea>
+					</div>
+
+					<div class="form-check mt-3">
+						<input type="checkbox" id="nexus-upload-accept-tos" class="form-check-input" required>
+						<label class="form-check-label">I agree to the   <a href="https://documentation.jaksam-scripts.com/jaksams-scripts/nexus-terms" target="_blank" onclick='window.invokeNative("openUrl", "https://documentation.jaksam-scripts.com/jaksams-scripts/nexus-terms")'>Nexus Terms and Privacy Policy</a></label>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-translation-id="menu:close"></button>
+					<button type="submit" class="btn btn-success" data-translation-id="menu:nexus:upload"></button>
+				</div>    
+			</form>
+		</div>
+	</div>	
+
+	<script src="./assets/js/theme.bundle.js"></script>
+	<script src="index.js"></script>
+	<script src="../utils/dialogs/dialogs.js"></script>
+</body>
+
+</html>

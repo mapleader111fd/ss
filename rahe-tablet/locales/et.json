@@ -1,0 +1,19 @@
+{
+  "footer_custom_picture": "Custom pilt..",
+
+  "modal_custom_picture_title": "Custom pildi kasutamine",
+  "modal_custom_picture_description": "Taustana on võimalik kasutada ka enda valitud pilti.",
+  "modal_custom_picture_format": "Soovituslikult võiks pilt olla 16:9 formaadis.",
+  "modal_custom_picture_example": "https://media.rahe.dev/img/9FkGZM8AySz6oj1XNV7pZk.jpg",
+  "modal_custom_picture_url": "Sisesta pildi URL",
+  "modal_custom_picture_save": "Salvesta",
+  "modal_custom_picture_upload": "Vajadusel saad pildi oma arvutist üles laadida",
+  "modal_custom_picture_button": "Ava soovitatud üleslaadimisleht",
+
+  "settings_dark_mode": "Tume režiim",
+  "settings_transparent_background": "Läbipaistev taust",
+
+  "installing_application": "Installid programmi..",
+  "application_already_installed": "See programm on juba tahvelarvutisse installitud!",
+  "installation_cancelled": "Katkestasid installeerimise."
+}

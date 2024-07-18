@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVehicleModelInfoVariation>
+	<variationData>
+		<Item>
+			<modelName>polcaracara</modelName>
+			<colors>
+				<Item>
+					<indices content="char_array">
+						0
+						112
+						0
+						0
+						0
+						0
+						0
+					</indices>
+					<liveries />
+				</Item>
+			</colors>
+			<kits>
+				<Item>5000_polcara_modkit</Item>
+			</kits>
+			<windowsWithExposedEdges />
+			<plateProbabilities>
+				<Probabilities>
+					<Item>
+						<Name>Police guv plate</Name>
+						<Value value="100" />
+					</Item>
+				</Probabilities>
+			</plateProbabilities>
+			<lightSettings value="450" />
+			<sirenSettings value="2220" />
+		</Item>
+	</variationData>
+</CVehicleModelInfoVariation>

@@ -1,0 +1,316 @@
+{
+  "label_race_start_track_type_sprint": "Sprint",
+  "label_race_start_track_type_circuit":  "Circuito",
+  "label_race_start_checkpoints": "puntos",
+  "label_race_start_lap_amount_singular":  "vuelta",
+  "label_race_start_lap_amount_plural":  "vueltas",
+  "label_race_start_competition": "~r~COMPETICION",
+  "label_race_start_participation_fee": "Entrada por",
+  "label_race_start_vehicle_class": "Clase del vehiculo",
+  "label_race_start_starts": "La carrera comenzara en",
+  "label_race_start_start_time": " Segundos",
+  "label_race_start_press": "Presiona",
+  "label_join_button": "E",
+  "label_race_start_press_to_join": "Para entrar",
+  "label_race_start_waiting": "Esperando la cuenta atras..",
+
+  "label_track_creation_point": "Punto",
+  "label_track_creation_object": "Objeto",
+
+  "text_track_preview_race_start": "Inicio",
+  "text_track_preview_race_finish": "Final",
+
+  "notification_chat_race_end": "La arreraen la que participas ha terminado",
+  "notification_chat_race_end_competition_participants": "La competencia no pudo comenzar porque no se alcanzó el número mínimo de participantes.",
+
+  "notification_tablet_minimum_laps_required": "Cuando intentas crear una carrera de circuito el minimo de vueltas a elegir es 2.",
+  "notification_tablet_negative_participation_fee": "La apuesta de entrada no puede ser negativa.",
+  "notification_tablet_competition_class": "Para iniciar una competicion primero deberas elegir la clase del vehiculo.",
+  "notification_tablet_race_starting": "Nueva carrera creada, El comienzo sera en %d segundos.",
+
+  "notification_tablet_error_track_points": "Para crear una carrera debes colocar al menos 3 puntos .",
+  "notification_tablet_error_track_name_length": "El nombre de la pista debe tener entre 5 y 40 caracteres de longitud",
+  "notification_tablet_error_track_desc_length": "La descripcion de la pista debe tener entre 10 y 50 caracteres de longitud.",
+  "notification_tablet_error_track_invalid_start": "El tiempo minimo para el comienzo de la competicion debe ser minido de '%s' minutes.",
+  "notification_tablet_error_type_missing": "Para crear la pista primero debes seleccionar el tipo.",
+  "notification_tablet_info_track_created": "Nueva pista '%s' creada con exito.",
+  "notification_tablet_info_track_verified": "Pista '%s' esta ahora verificada para el generador automatico de competiciones.",
+  "notification_tablet_info_track_de_verified": "Pista '%s' ha sido desverificada.",
+  "notification_tablet_info_track_favorited": "Pista '%s' es ahora favorita.",
+  "notification_tablet_info_track_unfavorited": "Pista '%s' ha sido removida de favoritos.",
+
+  "notification_tablet_info_color_changed": "Color cambiado con exito.",
+  "notification_tablet_error_no_vehicle_for_class": "Tienes que estar en un vehiculo para poder determinar su clase",
+  "notification_tablet_info_vehicle_class": "El vehiculo actual pertenece a la clase '%s'.",
+
+  "time_weeks_singular": "semana",
+  "time_weeks_plural": "semanas",
+
+  "time_days_singular": "dia",
+  "time_days_plural": "dias",
+
+  "time_hours_singular": "hora",
+  "time_hours_plural": "horas",
+
+  "text_chat_notification_join_not_allowed": "No puedes unirte a la carrera.",
+  "text_chat_notification_finished_race": "Carrera terminada, has ganado $%d para tu posicion final.",
+  "text_chat_notification_finished_race_as_winner": "Eres el ganador de la carrera y has ganado $%d!",
+  "text_chat_notification_not_enough_money": "No tienes suficiente dinero para participar en la carrera!",
+  "text_chat_notification_wrong_class": "No tienes el vehiculo de la clase requerida para unirte a la carrera!",
+  "text_chat_notification_not_identifier": "No te has identificado en la tablet de carreras!",
+  "text_chat_notification_countdown_started": "La cuenta regresiva ha comenzado, no puedes unirte a la carrera.",
+  "text_chat_notification_track_creation_vehicle": "El modo de creacion de pistas solo es posible cuando estas en montado en un vehiculo",
+  "text_chat_notification_phasing_end": "La fase esta apunto de terminar!",
+  "text_chat_notification_you_finished": "Tu terminaste [%s]",
+  "text_chat_notification_other_finished": "%s Finalizada [%s]",
+
+  "text_tablet_event_competition_won": "Ganador de la competicion en la pista '%s'",
+  "text_tablet_event_new_rating_tier": "Alcanzaste un nuevo nivel de clasificacion (%s)",
+  "text_tablet_event_new_track": "Crear una nueva pista '%s'",
+
+  "text_tablet_deleted_track_title": "BORRAR PISTA",
+  "text_tablet_deleted_track_description": "Pista borrada por el autor.",
+  "text_tablet_time_ago": "hace",
+
+  "text_profile_default_name": "Conductor %s",
+
+  "text_tablet_driver_level_1": "Cruiser",
+  "text_tablet_driver_level_1400": "Rookie",
+  "text_tablet_driver_level_1500": "Conductor",
+  "text_tablet_driver_level_1600": "Corredor",
+  "text_tablet_driver_level_1700": "Anfitrion",
+  "text_tablet_driver_level_1850": "Alien",
+  "text_tablet_driver_level_2000": "Super Estrella",
+  "text_tablet_driver_level_2100":"Solo dios puede alcanzarme",
+
+  "notification_tablet_error_name_length": "El nombre tiene que tener entre 3 - 15 caracteres.",
+  "notification_tablet_error_picture_format": "La URL ingresada no está permitida. Haz clic en el botón 'Subir' para dirigirte a nuestra página de carga recomendada.",
+  "notification_tablet_info_name_changed": "Nombre cambiado con exito.",
+  "notification_tablet_info_picture_changed": "Imagen de perfil cambiada con éxito.",
+  "notification_tablet_info_track_preview": "Se ha marcado una vista previa de la pista en tu gps por 20 segundos.",
+  "notification_tablet_info_track_start_point": "El punto de salida de la pista se ha marcado en tu gps.",
+  "notification_tablet_info_track_deleted": "Pista '%s' ha sido eliminada.",
+
+  "notification_tablet_competition_starting": "Competicion creada, el comienzo es en %d minuto a partir de ahora.",
+  "notification_tablet_competition_not_enough_money": "Tu no tienes suficiente dinero ($%s) para poner en el fondo de apuestas.",
+  "notification_tablet_competition_no_result": "La competicion no puede ser creada. Pista '%s' no tiene '%s' resultados de clase (para calcular el tiempo DNF).",
+  "notification_tablet_competition_invalid_lap_amount": "La pista '%s' Tiene un numero invalido de vueltas. la cantidad de vueltas debe ser entre %d-%d.",
+  "notification_tablet_competition_not_verified": "La competicion no puede ser creada. Pista '%s' no esta verificada.",
+
+  "notification_discord_competition_title": "Nueva competicion creada %s!",
+  "notification_discord_competition_title_error": "Fallo al generar la competicion!",
+  "notification_discord_competition_description": "Sistema de carreras",
+  "notification_discord_competition_description_error": "El sistema no tiene suficientes resultados para generar una competicion, para mas informacion: https://docs.rahe.dev/",
+  "notification_discord_competition_class": "Clase",
+
+
+
+  "track_creation_title": "Grabando pista",
+
+  "track_creation_point_placement": "Colocacion de puntos",
+  "track_creation_object_placement": "Colocacion de objetos",
+  "track_creation_object_distance": "Distancia de objetos",
+  "track_creation_object_rotation": "Rotacion de objetos",
+  "track_creation_object_change": "Cambiar objetos",
+  "track_creation_object_deletion": "Borrar",
+
+  "race_position": "Pos",
+  "race_lap": "Vuelta",
+  "race_cp": "Punto",
+  "race_time": "Tiempo",
+
+  "race_current_lap": "Vuelta acutal",
+  "race_best_lap": "Mejor vuelta",
+  "race_total_time": "Tiempo total",
+
+
+
+  "general_header_home": "Inicio",
+  "general_header_tracks": "Pistas",
+  "general_header_races": "Carreras",
+  "general_header_leaderboard": "Clasificacion",
+  "general_header_profile": "Perfil de usuario",
+  "general_header_leave": "Salir de la carrera",
+
+
+  "home_tab_competitions": "Competiciones",
+  "home_tab_competitions_day": "La competicion comenzara cada dia a partir de las 19:00hrs!",
+
+  "home_tab_welcome_text": "Bienvenido,",
+  "home_tab_summary_first": "La ultima vez participaste en una competicion",
+  "home_tab_summary_second": "dias",
+  "home_tab_summary_third": "hace, alcanzaste la posicion de",
+  "home_tab_summary_fourth": "",
+  "home_tab_summary_fifth": "En total tu has completado",
+  "home_tab_summary_sixth": "Veces",
+  "home_tab_summary_seventh": "Y has ganado un ratio de",
+
+  "home_tab_events_header": "Eventos recientes",
+  "home_tab_events_none": "No hay eventos para mostrar.",
+  "home_tab_event_hours_ago": "horas atras",
+  "home_tab_event_rating": "Ratio ",
+
+
+  "tracks_tab_tracks": "Pistas",
+  "tracks_tab_personal_tracks": "Personales",
+  "tracks_tab_favorite_tracks": "Favoritas",
+  "tracks_tab_verified_tracks": "Verificadas",
+  "tracks_tab_found_tracks": "Encontradas",
+  "tracks_tab_found_tracks_amount": "pistas",
+  "tracks_tab_search_track": "Pista / nombre del creador..",
+
+  "tracks_tab_track_information": "Informacion de la pista",
+  "tracks_tab_new_race": "Nueva carrera",
+  "tracks_tab_legendary_tag": "Legendario",
+  "tracks_tab_new_tag": "Nueva",
+  "tracks_tab_popular_tag": "Popular",
+
+  "tracks_tab_details_track_information": "Informacion de pista",
+  "tracks_tab_details_points": "puntos",
+  "tracks_tab_details_objects": "objetos",
+  "tracks_tab_details_sprint": "Sprint",
+  "tracks_tab_details_circuit": "Circuito",
+
+  "tracks_tab_details_times_driven": "Veces pilotada",
+  "tracks_tab_details_finish_percentage": "Porcentaje de finalización",
+  "tracks_tab_details_people_finished": "Pilotos",
+
+  "tracks_tab_details_filter_best_results": "Mejores resultados de pista",
+  "tracks_tab_details_filter_all": "TODO",
+
+  "tracks_tab_details_deletion_modal_title": "Peligro",
+  "tracks_tab_details_deletion_modal_description": "Estas seguro de que deseas eliminar esta pista?",
+  "tracks_tab_details_deletion_modal_confirm": "Eliminar",
+  "tracks_tab_details_deletion_modal_cancel": "Cancelar",
+
+  "tracks_tab_details_configuration_modal_title": "Configurar",
+  "tracks_tab_details_configuration_modal_description": "Elija los parámetros deseados para la pista.",
+  "tracks_tab_details_configuration_modal_laps": "Cantidad de vueltas",
+  "tracks_tab_details_configuration_modal_confirm": "Guardar",
+  "tracks_tab_details_configuration_modal_cancel": "Cancelar",
+
+
+  "tracks_tab_new_page_header": "Nueva creacion de pistas",
+  "tracks_tab_new_info_header": "1. Informacion de pista",
+  "tracks_tab_new_info_description": "Ingrese un nombre y una descripción para la pista, para que otros conductores sepan las caracteristicas.",
+  "tracks_tab_new_info_name_input": "Nombre de pista..",
+  "tracks_tab_new_info_description_input": "Descripcion de pista..",
+  "tracks_tab_new_info_track_type_sprint": "Sprint",
+  "tracks_tab_new_info_track_type_circuit": "Circuito",
+  "tracks_tab_new_race_type": "Tipo de carrera",
+  "tracks_tab_new_race_type_normal": "Normal",
+  "tracks_tab_new_race_type_competition": "Competicion",
+  "tracks_tab_new_object_header": "2. Seguimientos de puntos y objetos",
+  "tracks_tab_new_object_description": "Conduce y coloca puntos y objetos en el sistema. Asegúrate de que todo esté colocado lógicamente para los corredores..",
+  "tracks_tab_new_object_delete_1": "Borrar puntos  ",
+  "tracks_tab_new_object_delete_2": "Y objetos",
+  "tracks_tab_new_object_mode_start": "Encender el modo de cracion de pista",
+  "tracks_tab_new_object_mode_pause": "Pausar el modo de creacion de pista",
+  "tracks_tab_new_create_button": "Crear pista",
+
+  "tracks_tab_race_title": "Crear una carrera",
+  "tracks_tab_race_header": "Opciones de la carrera",
+  "tracks_tab_race_description": "Introduzca la configuración deseada para la carrera. Tenga en cuenta la longitud de la pista y otros parámetros.",
+  "tracks_tab_race_start_time": "Tiempo hasta el inicio (s)",
+  "tracks_tab_race_dnf_time": "Temporizador DNF despues del ganador(s)",
+  "tracks_tab_laps": "Cantidad de vueltas",
+  "tracks_tab_race_fee": "Comprar en ($)",
+  "tracks_tab_race_prize_pool": "Precio ($)",
+  "tracks_tab_race_competition_start_time": "Hora de inicio",
+  "tracks_tab_race_class": "Clase requerida",
+  "tracks_tab_race_class_none": "Ninguna",
+  "tracks_tab_race_create_button": "Crear carrera",
+  "tracks_tab_found_races": "Ultima",
+  "tracks_tab_found_races_amount": "Carreras",
+  "tracks_tab_search_race": "Buscar pista.",
+
+  "tracks_tab_race_comp_header": "Serie de competiciones",
+  "tracks_tab_race_comp_description": "Crear una competicion con varias carreras a la vez.",
+  "tracks_tab_race_approximate_start": "Inicio aproximado",
+  "tracks_tab_race_estimated_duration": "Est. duration",
+  "tracks_tab_race_estimated_duration_minutes": "min",
+  "tracks_tab_race_add_race": "Añade otra carrera a la serie...",
+  "tracks_tab_race_search": "Buscar una pista...",
+  "tracks_tab_race_results_hidden_pre": "Solo se pueden mostrar hasta seis pistas a la vez.",
+  "tracks_tab_race_results_hidden_aft": "las pistas están actualmente ocultas.",
+  "tracks_tab_race_results_hidden_disclaimer": "Pruebe una frase de búsqueda más específica para obtener mejores resultados...",
+
+
+  "races_tab_header_competitions": "Organiza competiciones",
+  "races_tab_competitions_none": "Actualmente no hay competiciones disponibles.",
+  "races_tab_comp_table_information": "Informacion de pista",
+  "races_tab_comp_table_start": "TIEMPO PARA EL COMIENZO",
+  "races_tab_comp_table_prizepool": "FONDO DE PREMIOS",
+  "races_tab_comp_table_class": "CLASE DEL VEHICULO",
+  "races_tab_comp_table_organizer": "ORGANIZADOR",
+
+  "races_tab_header_races": "Carreras completadas",
+  "races_tab_header_my_races": "Mis carreras",
+
+  "races_tab_race_table_information": "yO",
+  "races_tab_race_table_top": "RANKING",
+  "races_tab_race_table_organizer": "ORGANIZADOR",
+  "races_tab_race_table_participation": "PARTICIPACION",
+
+  "races_tab_race_table_drivers": "conductores",
+  "races_tab_race_table_finished": "finilistas",
+
+  "races_tab_race_details_header": "Resultados de la carrera",
+  "races_tab_race_details_table_driver": "Conductor",
+  "races_tab_race_details_table_time": "Tiempo",
+  "races_tab_race_details_table_vehicle": "Vehiculos",
+  "races_tab_race_details_table_rating": "Ratio",
+  "races_tab_race_details_table_money": "Dinero",
+  "races_tab_race_details_table_class": "Clase",
+
+
+  "leader_tab_header_leaderboard": "Clasificacion de conductores",
+  "leader_tab_header_rating": " RATING",
+
+  "leader_tab_table_driver": "CONDUCTOR",
+  "leader_tab_table_rating": "RATIO DE ELO",
+  "leader_tab_normal_races": "CARRERAS NORMALES",
+  "leader_tab_comp_races": "COMPETICIONES",
+  "leader_tab_avg_pos": "MEDIA DE POSICION",
+
+
+  "profile_tab_header_driver": "Conductor",
+  "profile_tab_member_since": "Usando la aplicacion desde",
+
+  "profile_tab_button_name": "Cambiar nombre",
+  "profile_tab_picture_name": "Cambiar foto",
+  "profile_tab_new_name_placeholder": "Nuevo nombre..",
+  "profile_tab_new_picture_placeholder": "Url de la foto..",
+  "profile_tab_save": "Guardar",
+  "profile_tab_upload": "Subir",
+
+  "profile_tab_checkpoint_color": "Color de los checkpoints",
+  "profile_tab_gps_color": "Color del GPS",
+
+  "profile_tab_faq_title": "Preguntas frecuentes",
+  "profile_tab_faq_desc": "Si tiene preguntas sobre la aplicación o simplemente desea obtener más información, lea las preguntas respondidas a continuación.",
+
+  "profile_tab_faq_1_q": "Como subir mi clacificacion?",
+  "profile_tab_faq_1_a": "Tu clasificiacion solo podra subir participando en competiciones oficiales.\nConducir en carreras normales no te otorgará ninguna calificación. Da lo mejor de ti en las competencias, porque un mal resultado\n tambin puede bajar su clacificacion.",
+
+  "profile_tab_faq_2_q": "¿Cómo se calcula la calificación?",
+  "profile_tab_faq_2_a": "El sistema calcula un cambio de calificación para cada participante en una competicion , \n Usando el principio del ELO. Esto significa que además de su posición final,\notros jugadores y sus valoraciones también se tienen en cuenta.",
+
+  "profile_tab_faq_3_q": "¿Cuándo se realizan las competencias?",
+  "profile_tab_faq_3_a": "Una persona anónima organiza concursos para cada\ndia, que tienen lugar de 19:00 a 22:00. La persona también patrocina cada carrera con un premio.\nLas competiciones se insertan en la aplicación todos los días a las 14:00.",
+
+  "profile_tab_faq_4_q": "¿Cómo se seleccionan las pistas para las competiciones?",
+  "profile_tab_faq_4_a": "El hombre anónimo hace su elección al azar. Una pista califica para un determinada\n competicion de clase solo cuando ha sido completada al menos una vez por un vehículo que pertenece a la clase especificada.",
+
+  "profile_tab_faq_5_q": "¿Cómo participar en competencias?",
+  "profile_tab_faq_5_a": "No es necesario registrarse previamente para las competiciones. alrededor de un minuto \nantes del inicio, se abre el punto de partida y todos pueden unirse. Usted debe\ntenga en cuenta que necesita un vehículo de la misma clase.",
+
+  "profile_tab_faq_6_q": "Puedo organizar competiciones yo mismo?",
+  "profile_tab_faq_6_a": "Si bien todos pueden iniciar carreras normales, la organización de competencias no está disponible para todos.\nLa opción solo está disponible para los conductores que\nhan alcanzado una calificación de al menos 1700.",
+
+  "profile_tab_faq_7_q": "Logré una posición alta, pero aun así perdí algo de rating. ¿Por qué?",
+  "profile_tab_faq_7_a": "El sistema ELO tiene en cuenta\notros factores también. Si lograste una buena posición y no ganaste ELO, entonces probablemente el\nel nivel general era bajo y el sistema predijo una mejor posición para usted.",
+
+  "profile_tab_faq_8_q": "¿Cuál es la diferencia entre un sprint y un circuito?",
+  "profile_tab_faq_8_a": "Si creas una carrera de velocidad, entonces no tendrás la oportunidad de\nelegir la cantidad de vueltas. en el caso del circcuito, Tu estas obligado a elegir la cantdad de vueltas.\nLa cantidad mínima de vueltas debe ser de al menos dos."
+}

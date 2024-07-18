@@ -1,0 +1,19 @@
+{
+  "footer_custom_picture": "Custom picture..",
+
+  "modal_custom_picture_title": "Using a custom picture",
+  "modal_custom_picture_description": "It's possible to use a custom picture as the background.",
+  "modal_custom_picture_format": "We recommend that the picture is in a 16:9 format.",
+  "modal_custom_picture_example": "https://media.rahe.dev/img/9FkGZM8AySz6oj1XNV7pZk.jpg",
+  "modal_custom_picture_url": "Enter the image URL",
+  "modal_custom_picture_save": "Save",
+  "modal_custom_picture_upload": "If needed, upload a picture from your computer",
+  "modal_custom_picture_button": "Open our recommended upload website",
+
+  "settings_dark_mode": "Dark mode",
+  "settings_transparent_background": "Transparent background",
+
+  "installing_application": "Installing application..",
+  "application_already_installed": "The application is already installed!",
+  "installation_cancelled": "Installation cancelled."
+}

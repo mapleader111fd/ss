@@ -1,0 +1,115 @@
+{
+    "menu:doors": "<i class=\"bi bi-door-open-fill\"></i> Ajtók",
+    "menu:buildings": "<i class=\"bi bi-building\"></i> Épületek",
+    "menu:settings": "<i class=\"bi bi-gear-fill\"></i> Beállitások",
+
+    "menu:door": "Ajtó",
+    "menu:new_door": "Új ajtó",
+    "menu:ID": "ID",
+    "menu:label": "Név",
+    "menu:doors_count": "Ajtó mennyiség",
+    "menu:default": "Alap",
+    "menu:maximum_distance": "Max távolság!",
+    "menu:distance": "Távolság",
+    "menu:model": "Modell",
+    "menu:choose_doors": "Közeli ajtók",
+
+    "menu:delete": "Törlés",
+    "menu:close": "Bezárás",
+    "menu:create": "Készités",
+    "menu:save": "Mentés",
+
+    "menu:used_doors": "Használt ajtók",
+    "menu:default_doors_state": "Az ajtók alapértelmezett állapota",
+    "menu:unlocked": "Mindig Nyitva (Szerver restart után)",
+    "menu:locked": "Mindig Zárva (Szerver restart után)",
+    "menu:icon_coordinates": "Ikon Kordináta",
+    "menu:choose": "Kiválaszt",
+    "menu:choose_icon_coords": "Ikon kordinátájinak kiválasztása",
+
+    "menu:requires_a_job": "Szükséges hozzá munka?",
+    "menu:allowed_jobs": "Engedélyezett munkák",
+    "menu:choose_jobs": "Válaszd ki a munkákat!",
+    "menu:requires_an_item": "Kell hozzá item?",
+    "menu:required_item": "Hozzá kellö item!",
+    "menu:choose_item": "Válaszd ki az itemet!",
+    "menu:requires_job_and_item": "Munka és tárgy egyaránt szükséges",
+
+    "menu:requires_a_code": "Szükséged hozzá kód?",
+    "menu:code": "Kód",
+
+    "menu:auto_closure": "Automatikus zárás",
+    "menu:seconds_before_auto_closure": "Ajtó zárás elötti másodpercek!",
+
+    "menu:doorlock_animation": "Ajtózár animáció",
+
+    "menu:new_building": "Új Épület",
+    "menu:building": "Épület",
+    "menu:none": "semmi",
+    "menu:use_building_rules": "Használja az Épület szabályait",
+    "menu:choose_building": "Válaszd ki az Épületet!",
+
+    "menu:jobs_dialog:title": "Munkák Listája",
+    "menu:jobs_dialog:search_job": "Munkák keresése",
+
+    "menu:items_dialog:title": "Item lista!",
+    "menu:items_dialog:search_item": "Item keresése!",
+
+    "menu:building_dialog:title": "Épületek listája!",
+    "menu:building_dialog:search_building": "Épület keresése!",
+
+    "menu:settings:language": "Nyelv",
+    "menu:enable_doorlock_animation": "Ajtónyitási zár animáció!",
+    "menu:animation_dictionary": "Animáció lexikon",
+    "menu:animation_name": "Animáció neve",
+    "menu:animation_duration": "Animáció hossza",
+    "menu:settings:doorlock_icon": "Ajtózár ikonja",
+    "menu:settings:icon_size": "ikon mérete",
+    "menu:item_to_lockpick_doors": "Item a feltöréshez",
+    "menu:lockpick_name": "Zárfeltörés neve",
+    "menu:minimum_quantity": "Minimális mennyiség",
+    "menu:lose_on_use": "Használatkor elvesszen?",
+
+    "menu:apply_changes": "Változtatások alkalmazása",
+
+    "menu:is_sliding_door": "Tolóajtó?",
+
+    "menu:not_allowed:you_are_not_allowed": "Ezt a menüt nem használhatja",
+    "menu:not_allowed:if_you_are_admin": "Ha Ön szerver adminisztrátor, akkor másolja be a következő kódot a server.cfg fájlba",
+
+    "menu:requires_an_identifier": "Kell hozzá identifier?",
+    "menu:identifier": "Identifier",
+    "menu:choose_player": "Játékos választása",
+    "menu:players_list": "Játékos lista",
+    "menu:search_player": "Játékos keresése",
+    "menu:add_identifier": "Identifier hozzáadása",
+
+    "menu:is_vault_door": "Boltozat ajtaja?",
+    "menu:speed": "Sebesség",
+    "menu:make_door_extremely_heavy": "Tegye rendkívül nehézzé az ajtót",
+    "menu:custom_angles": "Egyedi szögek",
+    "menu:opened_angle": "Nyitott szög",
+    "menu:closed_angle": "Zárt Szög",
+
+    "menu:use_3d_text_instead_of_icon": "Use 3D text instead of icon",
+
+    "menu:ratio": "Hányados",
+    "menu:heading":"Irányszög",
+    "menu:vault_type":"Boltozat tipusa",
+    "menu:save_door_lock_state": "Mentse az ajtózár aktuális állapotát, és automatikusan alkalmazza azt a szerver újraindítása után",
+    "menu:ignore_default_door_lock_state_configuration": "Figyelmen kívül hagyja az alapértelmezett zárolási állapot konfigurációt",
+    "menu:can_be_lockpicked": "Feltörhetö?",
+    "menu:x": "X",
+    "menu:y": "Y",
+    "menu:z": "Z",
+    "menu:inverted_direction": "Fordított irány",
+    "menu:confirm": "Megerösités",
+    "menu:alert_police_on_lockpick": "Rendvédelem értesitése feltöréskor",
+    "menu:requires_a_gang": "Banda kell hozzá",
+    "menu:allowed_gangs": "Engedélyezett bandák.",
+    "menu:choose_gangs": "Bandák kiválasztása",
+    "menu:gangs_dialog:title": "Banda Lista",
+    "menu:gangs_dialog:search_gang": "Banda Keresése",
+    "menu:get_heading": "Irány lekérése",
+    "menu:minimum_police": "Minimum Rendvédelmis személyek száma!"
+}

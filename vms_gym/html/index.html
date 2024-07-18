@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="../config/translation.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="statistics-menu">
+        <div class="header"><span></span></div>
+        <div class="stats">
+            <div id="strenght">
+                <div class="stat-flex stat-title">
+                    <i class="fa-solid fa-dumbbell"></i>
+                    <p class="stat-name"></p>
+                </div>
+                <div class="stat-flex">
+                    <p class="stat-percent">0.0%</p>
+                    <div class="stat-bar">
+                        <div class="stat-bar-value"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="condition">
+                <hr>
+                <div class="stat-flex stat-title">
+                    <i class="fa-solid fa-lungs"></i>
+                    <p class="stat-name"></p>
+                </div>
+                <div class="stat-flex">
+                    <p class="stat-percent">0.0%</p>
+                    <div class="stat-bar">
+                        <div class="stat-bar-value"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="shooting">
+                <hr>
+                <div class="stat-flex stat-title">
+                    <i class="fa-solid fa-gun"></i>
+                    <p class="stat-name"></p>
+                </div>
+                <div class="stat-flex">
+                    <p class="stat-percent">0.0%</p>
+                    <div class="stat-bar">
+                        <div class="stat-bar-value"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="driving">
+                <hr>
+                <div class="stat-flex stat-title">
+                    <i class="fa-solid fa-car"></i>
+                    <p class="stat-name"></p>
+                </div>
+                <div class="stat-flex">
+                    <p class="stat-percent">0.0%</p>
+                    <div class="stat-bar">
+                        <div class="stat-bar-value"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="flying">
+                <hr>
+                <div class="stat-flex stat-title">
+                    <i class="fa-solid fa-plane-up"></i>
+                    <p class="stat-name"></p>
+                </div>
+                <div class="stat-flex">
+                    <p class="stat-percent">0.0%</p>
+                    <div class="stat-bar">
+                        <div class="stat-bar-value"></div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div id="notification-status">
+                <p class="status-name"></p>
+                <div class="status-button enabled-status-name" data-value=0></div>
+                <div class="status-button disabled-status-name" data-value=1></div>
+            </div>
+        </div>
+    </div>
+    <div class="helpInfo">
+        <span>
+            <div class="stamina-text"></div>
+            <div class="stamina-bar">
+                <div class="stamina-value"></div>
+            </div>
+        </span>
+    </div>
+    <div class="helpButtons">
+        <span><img src="buttons/space.png"><span class="key-space"></span></span>
+        <span><img src="buttons/x.png"><span class="key-x"></span></span>
+    </div>
+    <script src="questions.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+    <script src="app.js" type="text/javascript" defer="defer"></script>
+</body>
+
+</html>

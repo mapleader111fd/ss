@@ -1,0 +1,50 @@
+[x-cloak] { display: none !important; }
+
+body {
+    background: transparent;
+}
+
+html {
+    display: block;
+}
+
+.temphidden {
+    display: none;
+}
+
+:root {
+    --avatar-size: 4rem;
+    /* change this value anything, e.g., 100px, 10rem, etc. */
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+#scoreboard {
+    width: 200px;
+    background: #00000088;
+    position: fixed;
+    bottom: 10em;
+    right: 0;
+    border-radius: 4px 0px 0px 4px;
+}
+
+#recordingDiv {
+    width: 250px;
+    background: #00000088;
+    position: fixed;
+    bottom: 10em;
+    right: 0;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.Blink {
+    animation: blinker 1.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;
+}
+@keyframes blinker {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+

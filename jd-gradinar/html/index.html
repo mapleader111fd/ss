@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mission Menu</title>
+</head>
+<body>
+<div class="menu">
+    <button class="close-btn">Close Menu</button>
+    <div class="progressCircle" data-progress="36"></div>
+    <h1>Select a Mission</h1>
+    <p class="experience">Experience: <span class="exp-number">0</span>/100</p>
+    
+    <div class="progress">
+        <div class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <div class="missions">
+        <button class="mission" data-mission="rakeGarden" data-exp="0">
+            <span class="mission-label">Rake Garden</span>
+            <p class="mission-desc">Rake the garden to keep it clean.</p>
+             <span class="exp-required">0 XP Required</span>
+            <div class="image"></div>
+        </button>
+        <button class="mission" data-mission="lawnMowing" data-exp="25">
+            <span class="mission-label">Lawn Mowing</span>
+            <p class="mission-desc">Mow the lawn to maintain its beauty.</p>
+             <span class="exp-required">0 XP Required</span>
+            <div class="image"></div>
+        </button>
+        <button class="mission" data-mission="treePlanting" data-exp="50">
+            <span class="mission-label">Tree Planting</span>
+            <p class="mission-desc">Plant trees and contribute to the environment.</p>
+             <span class="exp-required">0 XP Required</span>
+            <div class="image"></div>
+        </button>
+        <button class="mission" data-mission="wateringPlants" data-exp="75">
+            <span class="mission-label">Watering Plants</span>
+            <p class="mission-desc">Water the plants to keep them hydrated.</p>
+             <span class="exp-required">0 XP Required</span>
+            <div class="image"></div>
+        </button>
+        <button class="mission" data-mission="weedCleans" data-exp="100">
+            <span class="mission-label">Weed cleans</span>
+            <p class="mission-desc">Water the plants to keep them hydrated.</p>
+             <span class="exp-required">0 XP Required</span>
+            <div class="image"></div>
+        </button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

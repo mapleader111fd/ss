@@ -1,0 +1,91 @@
+{
+    "menu:doors": "<i class=\"bi bi-door-open-fill\"></i> Türen",
+    "menu:buildings": "<i class=\"bi bi-building\"></i> Gebäude",
+    "menu:settings": "<i class=\"bi bi-gear-fill\"></i> Einstellungen",
+
+    "menu:door": "Tür",
+    "menu:new_door": "Neue Tür",
+    "menu:ID": "ID",
+    "menu:label": "Name",
+    "menu:doors_count": "Anzahl Türen",
+    "menu:default": "Standart",
+    "menu:maximum_distance": "Maximale Distanz",
+    "menu:distance": "Distanz",
+    "menu:model": "Model",
+    "menu:choose_doors": "Türen auswählen",
+    "menu:can_be_lockpicked": "Kann aufgebrochen werden",
+
+    "menu:delete": "Löschen",
+    "menu:close": "Schließen",
+    "menu:create": "Erstellen",
+    "menu:save": "Speichern",
+
+    "menu:used_doors": "Benutzte Türen",
+    "menu:default_doors_state": "Standart Status",
+    "menu:unlocked": "Offen",
+    "menu:locked": "Abgeschlossen",
+    "menu:icon_coordinates": "Icon Position",
+    "menu:choose": "Auswählen",
+    "menu:choose_icon_coords": "Icon Position bestimmen",
+
+    "menu:requires_a_job": "Benötigt einen Job",
+    "menu:allowed_jobs": "Erlaubte Jobs",
+    "menu:choose_jobs": "Job auswählen",
+    "menu:requires_an_item": "Benötigt Item",
+    "menu:required_item": "Benötigtes Item",
+    "menu:choose_item": "Item auswählen",
+    "menu:requires_job_and_item": "Benötigt Job und Item",
+
+    "menu:requires_a_code": "Benötigt Code",
+    "menu:code": "Code",
+
+    "menu:auto_closure": "Automatisches abschließen",
+    "menu:seconds_before_auto_closure": "Sekunden bis zum abschließen",
+
+    "menu:doorlock_animation": "Abschließen Animation",
+
+    "menu:new_building": "Neues Gebäude",
+    "menu:building": "Gebäude",
+    "menu:none": "Keins",
+    "menu:use_building_rules": "Gebäude Einstellungen verwenden",
+    "menu:choose_building": "Gebäude auswählen",
+
+    "menu:jobs_dialog:title": "Job Liste",
+    "menu:jobs_dialog:search_job": "Job suchen",
+
+    "menu:items_dialog:title": "Items Liste",
+    "menu:items_dialog:search_item": "Item suchen",
+
+    "menu:building_dialog:title": "Gebäude Liste",
+    "menu:building_dialog:search_building": "Gebäude suchen",
+
+    "menu:settings:language": "Sprache",
+    "menu:enable_doorlock_animation": "Abschließen Animation",
+    "menu:animation_dictionary": "Animations Kategorie",
+    "menu:animation_name": "Animations Name",
+    "menu:animation_duration": "Animations Dauer",
+    "menu:settings:doorlock_icon": "Abgeschlossen Icon",
+    "menu:settings:icon_size": "Icon größe",
+    "menu:item_to_lockpick_doors": "Item zum einbrechen",
+    "menu:lockpick_name": "Einbrechwerkzeug ID",
+    "menu:minimum_quantity": "Mindestanzahl",
+    "menu:lose_on_use": "Bei nutzung verlieren",
+
+    "menu:apply_changes": "Anwenden",
+	
+	"menu:is_sliding_door": "Ist eine Schiebetür",
+
+    "menu:not_allowed:you_are_not_allowed": "Du hast nicht die benötigten Rechte um dieses Menü nutzen zu können!",
+    "menu:not_allowed:if_you_are_admin": "Solltest du ein Server-Admin sein musst du folgende Zeile in deine server.cfg einfügen:",
+    "menu:save_door_lock_state": "Speichern Sie den aktuellen Status der Türverriegelung und wenden Sie ihn nach einem Neustart des Servers an.",
+    "menu:use_3d_text_instead_of_icon": "3D-Text anstelle eines Symbols verwenden",
+    "menu:requires_an_identifier": "Erfordert eine Kennung",
+
+    "menu:choose_player": "Spieler auswählen",
+    "menu:add_identifier": "Identifier auswählen",
+    "menu:is_vault_door": "Ist eine Tresorraumtür",
+
+    "menu:x": "X",
+    "menu:y": "Y",
+    "menu:z": "Z"
+}

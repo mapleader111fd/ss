@@ -1,0 +1,77 @@
+{
+    "menu:doors": "<i class=\"bi bi-door-open-fill\"></i> Deuren",
+    "menu:buildings": "<i class=\"bi bi-building\"></i> Gebouwen",
+    "menu:settings": "<i class=\"bi bi-gear-fill\"></i> Instellingen",
+
+    "menu:door": "Deur",
+    "menu:new_door": "NieuweDeur",
+    "menu:ID": "ID",
+    "menu:label": "Naam",
+    "menu:doors_count": "Hoeveelheid Deuren",
+    "menu:default": "Standaart",
+    "menu:maximum_distance": "Maximale Afstand",
+    "menu:distance": "Afstand",
+    "menu:model": "Deur id",
+    "menu:choose_doors": "Kies Deur",
+
+    "menu:delete": "Verwijder",
+    "menu:close": "Sluit",
+    "menu:create": "Maak",
+    "menu:save": "Opslaan",
+
+    "menu:used_doors": "Gebruikte Deur",
+    "menu:default_doors_state": "Standaard Deuren Staat",
+    "menu:unlocked": "Geopend",
+    "menu:locked": "Gesloten",
+    "menu:icon_coordinates": "Plaatje Coördinaten",
+    "menu:choose": "Kies",
+    "menu:choose_icon_coords": "Kies Plaatje Coördinaten",
+
+    "menu:requires_a_job": "Vereist een Banen",
+    "menu:allowed_jobs": "Toegestaande Banen",
+    "menu:choose_jobs": "Kies Banen",
+    "menu:requires_an_item": "Vereist een Item",
+    "menu:required_item": "Vereist Item",
+    "menu:choose_item": "Kies Item",
+    "menu:requires_job_and_item": "Vereist zowel baan als item",
+
+    "menu:requires_a_code": "Vereist een code",
+    "menu:code": "Code",
+
+    "menu:auto_closure": "Automatische Sluiting",
+    "menu:seconds_before_auto_closure": "Seconden voor dat de deuren automatisch sluiten",
+
+    "menu:doorlock_animation": "Deurslot Animatie",
+
+    "menu:new_building": "Nieuw Gebouw",
+    "menu:building": "Gebouw",
+    "menu:none": "Geen",
+    "menu:use_building_rules": "Gebruik Gebouw Settings",
+    "menu:choose_building": "Kies Gebouw",
+
+    "menu:jobs_dialog:title": "Banen Lijst",
+    "menu:jobs_dialog:search_job": "Zoek Baan",
+
+    "menu:items_dialog:title": "Items Lijst",
+    "menu:items_dialog:search_item": "Zoek Item",
+
+    "menu:building_dialog:title": "Gebouw Lijst",
+    "menu:building_dialog:search_building": "Zoek Gebouw",
+
+    "menu:settings:language": "Taal",
+    "menu:enable_doorlock_animation": "Animatie Deurslot Inschakelen",
+    "menu:animation_dictionary": "Animatie Lijst",
+    "menu:animation_name": "Animatie Naam",
+    "menu:animation_duration": "Animation Looptijd",
+    "menu:settings:doorlock_icon": "Deurslot Plaatje",
+    "menu:settings:icon_size": "Plaatje Grote",
+    "menu:item_to_lockpick_doors": "Item Om Deuren Te Lockpicken",
+    "menu:lockpick_name": "Lockpick Naam",
+    "menu:minimum_quantity": "Minimale Hoeveelheid",
+    "menu:lose_on_use": "Raak Kwijt Naar Gebruik",
+
+    "menu:apply_changes": "Settings Opslaan",
+
+    "menu:not_allowed:you_are_not_allowed": "Dit mag je nie doen",
+    "menu:not_allowed:if_you_are_admin": "doei"
+}

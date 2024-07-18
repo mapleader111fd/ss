@@ -1,0 +1,113 @@
+{
+    "menu:doors": "<i class=\"bi bi-door-open-fill\"></i> Puertas",
+    "menu:buildings": "<i class=\"bi bi-building\"></i> Edificios",
+    "menu:settings": "<i class=\"bi bi-gear-fill\"></i> Ajustes",
+
+    "menu:door": "Puerta",
+    "menu:new_door": "Puerta Nueva",
+    "menu:ID": "ID",
+    "menu:label": "Nombre",
+    "menu:doors_count": "Número de puertas",
+    "menu:default": "Defecto",
+    "menu:maximum_distance": "Distancia Máxima",
+    "menu:distance": "Distancia",
+    "menu:model": "Modelo",
+    "menu:choose_doors": "Elegir Puertas",
+
+    "menu:delete": "Borrar",
+    "menu:close": "Cerrar",
+    "menu:create": "Crear",
+    "menu:save": "Guardar",
+
+    "menu:used_doors": "Puertas Usadas",
+    "menu:default_doors_state": "Estado De Las Puertas Por Defecto",
+    "menu:unlocked": "Desbloqueado",
+    "menu:locked": "Bloqueado",
+    "menu:icon_coordinates": "Coordenadas Del Icono",
+    "menu:choose": "Escoger",
+    "menu:choose_icon_coords": "Elija Las Coordenadas Del Icono",
+
+    "menu:requires_a_job": "Requiere Un Trabajo",
+    "menu:allowed_jobs": "Trabajos Permitidos",
+    "menu:choose_jobs": "Elige Trabajos",
+    "menu:requires_an_item": "Requiere Un Artículo",
+    "menu:required_item": "Elemento Requerido",
+    "menu:choose_item": "Elegir Artículo",
+    "menu:requires_job_and_item": "Requiere Trabajo y artículo",
+
+    "menu:requires_a_code": "Requiere Un Código",
+    "menu:code": "Código",
+
+    "menu:auto_closure": "Cierre Automático",
+    "menu:seconds_before_auto_closure": "Segundos antes del cierre automático",
+
+    "menu:doorlock_animation": "Animación de cerradura de puerta",
+
+    "menu:new_building": "Nuevo edificio",
+    "menu:building": "Edificio",
+    "menu:none": "Ninguna",
+    "menu:use_building_rules": "Usar reglas de edificio",
+    "menu:choose_building": "Elige edificio",
+
+    "menu:jobs_dialog:title": "Lista de trabajo",
+    "menu:jobs_dialog:search_job": "Buscar trabajo",
+
+    "menu:items_dialog:title": "Lista de articulos",
+    "menu:items_dialog:search_item": "buscar elementos",
+
+    "menu:building_dialog:title": "Lista de edificios",
+    "menu:building_dialog:search_building": "Buscar edificio",
+
+    "menu:settings:language": "Idioma",
+    "menu:enable_doorlock_animation": "Habilitar animación de cerradura de puerta",
+    "menu:animation_dictionary": "Diccionario de animaciones",
+    "menu:animation_name": "Nombre de la animación",
+    "menu:animation_duration": "Duración de la animación",
+    "menu:settings:doorlock_icon": "Icono de cerradura",
+    "menu:settings:icon_size": "Tamaño de icono",
+    "menu:item_to_lockpick_doors": "Artículo para forzar puertas",
+    "menu:lockpick_name": "Nombre del item",
+    "menu:minimum_quantity": "Cantidad mínima",
+    "menu:lose_on_use": "Perder después de ser usado",
+
+    "menu:apply_changes": "Aplicar cambios",
+
+    "menu:not_allowed:you_are_not_allowed": "No tienes permiso para usar este menú.",
+    "menu:not_allowed:if_you_are_admin": "Si es un administrador del servidor, debe copiar y pegar el siguiente código en su server.cfg",
+	
+    "menu:requires_an_identifier": "Requiere identifier",
+    "menu:identifier": "Identifier",
+    "menu:choose_player": "Seleccionar jugador",
+    "menu:players_list": "Lista de jugadores",
+    "menu:search_player": "Buscar jugador",
+    "menu:add_identifier": "Añadir identifier",
+
+    "menu:is_vault_door": "¿Es una puerta de cámara?",
+    "menu:speed": "Velocidad",
+    "menu:make_door_extremely_heavy": "Hacer la puerta extremadamente pesada",
+    "menu:custom_angles": "Ángulos personalizadps",
+    "menu:opened_angle": "Ángulo de apertura",
+    "menu:closed_angle": "Ángulo de cierre",
+
+    "menu:use_3d_text_instead_of_icon": "Usar texto 3D en vez de icono.",
+
+    "menu:ratio": "Radio",
+    "menu:heading":"Heading",
+    "menu:vault_type":"Vault tipo",
+    "menu:save_door_lock_state": "Guarde el estado actual de bloqueo de la puerta y aplíquelo automáticamente después de reiniciar el servidor",
+    "menu:ignore_default_door_lock_state_configuration": "Ignorar el estado default de cierre.",
+    "menu:can_be_lockpicked": "Puede ser forzada",
+    "menu:x": "X",
+    "menu:y": "Y",
+    "menu:z": "Z",
+    "menu:inverted_direction": "Dirección invertida",
+    "menu:confirm": "Confirmar",
+    "menu:alert_police_on_lockpick": "Avisar a la policía al ser forzada.",
+    "menu:requires_a_gang": "Require una banda",
+    "menu:allowed_gangs": "Bandas permitidas",
+    "menu:choose_gangs": "Seleccionar bandas",
+    "menu:gangs_dialog:title": "Lista de bandas",
+    "menu:gangs_dialog:search_gang": "Buscar banda",
+    "menu:get_heading": "Obtener heading",
+    "menu:minimum_police": "Policía mínima"
+}

@@ -1,0 +1,317 @@
+{
+  "label_race_start_track_type_sprint": "Sprint",
+  "label_race_start_track_type_circuit":  "Circuit",
+  "label_race_start_checkpoints": "points",
+  "label_race_start_lap_amount_singular":  "lap",
+  "label_race_start_lap_amount_plural":  "laps",
+  "label_race_start_competition": "~r~COMPETITION",
+  "label_race_start_participation_fee": "Entry fee",
+  "label_race_start_vehicle_class": "Vehicle class",
+  "label_race_start_starts": "Race starts in",
+  "label_race_start_start_time": " seconds",
+  "label_race_start_press": "Press",
+  "label_join_button": "E",
+  "label_race_start_press_to_join": "to join",
+  "label_race_start_waiting": "Waiting for the start..",
+
+  "label_track_creation_point": "Point",
+  "label_track_creation_object": "Object",
+
+  "text_track_preview_race_start": "Start",
+  "text_track_preview_race_finish": "Finish",
+
+  "notification_chat_race_end": "The race you participated in has finished!",
+  "notification_chat_race_end_competition_participants": "The competition couldn't start because the minimum number of participants wasn't met.",
+
+  "notification_tablet_minimum_laps_required": "When trying to start a circuit race, then the minimum is at least two laps.",
+  "notification_tablet_negative_participation_fee": "The entry fee must not be negative.",
+  "notification_tablet_competition_class": "When starting a competition, the class must be selected.",
+  "notification_tablet_race_starting": "New race created, the start is in %d seconds.",
+
+  "notification_tablet_error_track_points": "To create a new track, you must place at least three points.",
+  "notification_tablet_error_track_name_length": "The track name must be 5 - 40 characters long.",
+  "notification_tablet_error_track_desc_length": "The track description must be 10 - 50 characters long.",
+  "notification_tablet_error_track_invalid_start": "The minimum start time from now must be at least %s minutes.",
+  "notification_tablet_error_type_missing": "To create the track, you must select the type.",
+  "notification_tablet_info_track_created": "New track '%s' successfully created.",
+  "notification_tablet_info_track_verified": "Track '%s' is now verified for the automatic competition generator.",
+  "notification_tablet_info_track_de_verified": "Track '%s' has been deverified.",
+  "notification_tablet_info_track_favorited": "Track '%s' is now favorited.",
+  "notification_tablet_info_track_unfavorited": "Track '%s' has been unfavorited.",
+
+  "notification_tablet_info_color_changed": "Color successfully changed.",
+  "notification_tablet_error_no_vehicle_for_class": "You must be in a vehicle to determine the vehicle class.",
+  "notification_tablet_info_vehicle_class": "Your current vehicle belongs to class '%s'.",
+
+  "time_weeks_singular": "week",
+  "time_weeks_plural": "weeks",
+
+  "time_days_singular": "day",
+  "time_days_plural": "days",
+
+  "time_hours_singular": "hour",
+  "time_hours_plural": "hours",
+
+  "text_chat_notification_join_not_allowed": "You are not allowed to join the race.",
+  "text_chat_notification_finished_race": "Race ended, you earned $%d for your finish position.",
+  "text_chat_notification_finished_race_as_winner": "You are the race winner and earned $%d!",
+  "text_chat_notification_not_enough_money": "You don't have enough money to join the race!",
+  "text_chat_notification_wrong_class": "You don't have the required class vehicle to join the race!",
+  "text_chat_notification_not_identifier": "You haven't identified yourself in the racing tablet!",
+  "text_chat_notification_countdown_started": "The countdown has started, can't join the race.",
+  "text_chat_notification_track_creation_vehicle": "Track creation is only possible when in a vehicle!",
+  "text_chat_notification_phasing_end": "Phasing is about to end!",
+  "text_chat_notification_you_finished": "You finished [%s]",
+  "text_chat_notification_other_finished": "%s finished [%s]",
+
+  "text_tablet_event_competition_won": "Competition winner on track '%s'",
+  "text_tablet_event_new_rating_tier": "Achieved a new rating level (%s)",
+  "text_tablet_event_new_track": "Created a new track '%s'",
+
+  "text_tablet_deleted_track_title": "DELETED TRACK",
+  "text_tablet_deleted_track_description": "Track deleted by the author.",
+  "text_tablet_time_ago": "ago",
+
+  "text_profile_default_name": "Driver %s",
+
+  "text_tablet_driver_level_1": "Cruiser",
+  "text_tablet_driver_level_1400": "Rookie",
+  "text_tablet_driver_level_1500": "Driver",
+  "text_tablet_driver_level_1600": "Racer",
+  "text_tablet_driver_level_1700": "Host",
+  "text_tablet_driver_level_1850": "Alien",
+  "text_tablet_driver_level_2000": "Superstar",
+  "text_tablet_driver_level_2100":"God Tier",
+
+  "notification_tablet_error_name_length": "The name length must be between 3 - 15 characters.",
+  "notification_tablet_error_picture_format": "The entered URL format isn't allowed. Click the 'Upload' button to head to our recommended image upload website.",
+
+  "notification_tablet_info_name_changed": "Name successfully changed.",
+  "notification_tablet_info_picture_changed": "Profile picture successfully changed.",
+  "notification_tablet_info_track_preview": "Track preview marked on your GPS for 20 seconds.",
+  "notification_tablet_info_track_start_point": "Track starting point marked on your GPS.",
+  "notification_tablet_info_track_deleted": "Track '%s' has been deleted.",
+
+  "notification_tablet_competition_starting": "Competition created, the start is in %d minutes from now.",
+  "notification_tablet_competition_not_enough_money": "You don't have enough money ($%s) to put up the prize pool.",
+  "notification_tablet_competition_no_result": "Competition can't be created. Track '%s' has no '%s' class results (to calculate the DNF timer).",
+  "notification_tablet_competition_invalid_lap_amount": "The track '%s' has an invalid amount of laps. The amount of laps must be between %d-%d.",
+  "notification_tablet_competition_not_verified": "Competition can't be created. Track '%s' is not verified.",
+
+  "notification_discord_competition_title": "New competitions created by %s!",
+  "notification_discord_competition_title_error": "Failed to generate competitions!",
+  "notification_discord_competition_description": "Racing system",
+  "notification_discord_competition_description_error": "The system does not have enough results to generate competitions. Please visit our documentation site for help: https://docs.rahe.dev/",
+  "notification_discord_competition_class": "class",
+
+
+
+  "track_creation_title": "TRACK RECORDING",
+
+  "track_creation_point_placement": "Point placing",
+  "track_creation_object_placement": "Object placing",
+  "track_creation_object_distance": "Object distance",
+  "track_creation_object_rotation": "Object rotation",
+  "track_creation_object_change": "Object changing",
+  "track_creation_object_deletion": "Delete",
+
+  "race_position": "Pos",
+  "race_lap": "Lap",
+  "race_cp": "Point",
+  "race_time": "Time",
+
+  "race_current_lap": "Current lap",
+  "race_best_lap": "Best lap",
+  "race_total_time": "Total time",
+
+
+
+  "general_header_home": "Home",
+  "general_header_tracks": "Tracks",
+  "general_header_races": "Races",
+  "general_header_leaderboard": "Leaderboard",
+  "general_header_profile": "User profile",
+  "general_header_leave": "Leave race",
+
+
+  "home_tab_competitions": "Competitions",
+  "home_tab_competitions_day": "Competitions every day at 19:00!",
+
+  "home_tab_welcome_text": "Welcome,",
+  "home_tab_summary_first": "You last participated in a competition",
+  "home_tab_summary_second": "days",
+  "home_tab_summary_third": "ago, where you achieved position",
+  "home_tab_summary_fourth": "",
+  "home_tab_summary_fifth": "In total you have competed",
+  "home_tab_summary_sixth": "times",
+  "home_tab_summary_seventh": "and achieved a rating of",
+
+  "home_tab_events_header": "Recent events",
+  "home_tab_events_none": "No events to display.",
+  "home_tab_event_hours_ago": "hours ago",
+  "home_tab_event_rating": "Rating ",
+
+
+  "tracks_tab_tracks": "Tracks",
+  "tracks_tab_personal_tracks": "Personal",
+  "tracks_tab_favorite_tracks": "Favorite",
+  "tracks_tab_verified_tracks": "Verified",
+  "tracks_tab_found_tracks": "Found",
+  "tracks_tab_found_tracks_amount": "tracks",
+  "tracks_tab_search_track": "Track / creator name..",
+
+  "tracks_tab_track_information": "Track information",
+  "tracks_tab_new_race": "New race",
+  "tracks_tab_legendary_tag": "Legendary",
+  "tracks_tab_new_tag": "New",
+  "tracks_tab_popular_tag": "Popular",
+
+  "tracks_tab_details_track_information": "Track information",
+  "tracks_tab_details_points": "points",
+  "tracks_tab_details_objects": "objects",
+  "tracks_tab_details_sprint": "Sprint",
+  "tracks_tab_details_circuit": "Circuit",
+
+  "tracks_tab_details_times_driven": "Times driven",
+  "tracks_tab_details_finish_percentage": "Finish percentage",
+  "tracks_tab_details_people_finished": "People driven",
+
+  "tracks_tab_details_filter_best_results": "Track best results",
+  "tracks_tab_details_filter_all": "ALL",
+
+  "tracks_tab_details_deletion_modal_title": "Warning",
+  "tracks_tab_details_deletion_modal_description": "Are you sure you wish to delete the track?",
+  "tracks_tab_details_deletion_modal_confirm": "Delete",
+  "tracks_tab_details_deletion_modal_cancel": "Cancel",
+
+  "tracks_tab_details_configuration_modal_title": "Configure",
+  "tracks_tab_details_configuration_modal_description": "Choose the wanted parameters for the track.",
+  "tracks_tab_details_configuration_modal_laps": "Amount of laps",
+  "tracks_tab_details_configuration_modal_confirm": "Save",
+  "tracks_tab_details_configuration_modal_cancel": "Cancel",
+
+
+  "tracks_tab_new_page_header": "New track creation",
+  "tracks_tab_new_info_header": "1. Track information",
+  "tracks_tab_new_info_description": "Enter a name and a description for the track, so other drivers would know what to expect.",
+  "tracks_tab_new_info_name_input": "Track name..",
+  "tracks_tab_new_info_description_input": "Track description..",
+  "tracks_tab_new_info_track_type_sprint": "Sprint",
+  "tracks_tab_new_info_track_type_circuit": "Circuit",
+  "tracks_tab_new_race_type": "Race type",
+  "tracks_tab_new_race_type_normal": "Normal",
+  "tracks_tab_new_race_type_competition": "Competition",
+  "tracks_tab_new_object_header": "2. Track points and objects",
+  "tracks_tab_new_object_description": "Drive around and place points & objects into the system. Make sure that everything is placed logically for the racers.",
+  "tracks_tab_new_object_delete_1": "Delete points  ",
+  "tracks_tab_new_object_delete_2": "and objects",
+  "tracks_tab_new_object_mode_start": "Turn on track creation mode",
+  "tracks_tab_new_object_mode_pause": "Pause track creation mode",
+  "tracks_tab_new_create_button": "Create track",
+
+  "tracks_tab_race_title": "Creating a race",
+  "tracks_tab_race_header": "Race settings",
+  "tracks_tab_race_description": "Enter desired settings for the race. Take the track length and other parameters into account.",
+  "tracks_tab_race_start_time": "Time until start (s)",
+  "tracks_tab_race_dnf_time": "DNF timer after winner (s)",
+  "tracks_tab_laps": "Lap amount",
+  "tracks_tab_race_fee": "Buy-in ($)",
+  "tracks_tab_race_prize_pool": "Total prize ($)",
+  "tracks_tab_race_competition_start_time": "Start time",
+  "tracks_tab_race_class": "Required class",
+  "tracks_tab_race_class_none": "None",
+  "tracks_tab_race_create_button": "Create race",
+  "tracks_tab_found_races": "Last",
+  "tracks_tab_found_races_amount": "races",
+  "tracks_tab_search_race": "Search track..",
+
+  "tracks_tab_race_comp_header": "Competition series",
+  "tracks_tab_race_comp_description": "Create multiple competition races at once.",
+  "tracks_tab_race_approximate_start": "Approximate start",
+  "tracks_tab_race_estimated_duration": "Est. duration",
+  "tracks_tab_race_estimated_duration_minutes": "min",
+  "tracks_tab_race_add_race": "Add another race into the series..",
+  "tracks_tab_race_search": "Search for a track..",
+  "tracks_tab_race_results_hidden_pre": "Only up to six track can be displayed at once.",
+  "tracks_tab_race_results_hidden_aft": "tracks are currently hidden.",
+  "tracks_tab_race_results_hidden_disclaimer": "Try a more specific search phrase for better results..",
+
+
+  "races_tab_header_competitions": "Organized competitions",
+  "races_tab_competitions_none": "Currently no available competitions.",
+  "races_tab_comp_table_information": "TRACK INFORMATION",
+  "races_tab_comp_table_start": "START TIME",
+  "races_tab_comp_table_prizepool": "PRIZE POOL",
+  "races_tab_comp_table_class": "VEHICLE CLASS",
+  "races_tab_comp_table_organizer": "ORGANIZER",
+
+  "races_tab_header_races": "Completed races",
+  "races_tab_header_my_races": "My races",
+
+  "races_tab_race_table_information": "TRACK INFORMATION",
+  "races_tab_race_table_top": "RANKING",
+  "races_tab_race_table_organizer": "ORGANIZER",
+  "races_tab_race_table_participation": "PARTICIPATION",
+
+  "races_tab_race_table_drivers": "drivers",
+  "races_tab_race_table_finished": "finished",
+
+  "races_tab_race_details_header": "Race results",
+  "races_tab_race_details_table_driver": "Driver",
+  "races_tab_race_details_table_time": "Time",
+  "races_tab_race_details_table_vehicle": "Vehicle",
+  "races_tab_race_details_table_rating": "Rating",
+  "races_tab_race_details_table_money": "Money",
+  "races_tab_race_details_table_class": "class",
+
+
+  "leader_tab_header_leaderboard": "Driver leaderboard",
+  "leader_tab_header_rating": " RATING",
+
+  "leader_tab_table_driver": "DRIVER",
+  "leader_tab_table_rating": "ELO RATING",
+  "leader_tab_normal_races": "NORMAL RACES",
+  "leader_tab_comp_races": "COMPETITIONS",
+  "leader_tab_avg_pos": "AVERAGE POSITION",
+
+
+  "profile_tab_header_driver": "Driver",
+  "profile_tab_member_since": "Application user since",
+
+  "profile_tab_button_name": "Change name",
+  "profile_tab_picture_name": "Change picture",
+  "profile_tab_new_name_placeholder": "New name..",
+  "profile_tab_new_picture_placeholder": "Picture address..",
+  "profile_tab_save": "Save",
+  "profile_tab_upload": "Upload",
+
+  "profile_tab_checkpoint_color": "Checkpoint color",
+  "profile_tab_gps_color": "GPS color",
+
+  "profile_tab_faq_title": "Frequently asked questions",
+  "profile_tab_faq_desc": "If you have questions about the application or just want to learn more, then read the questions answered below.",
+
+  "profile_tab_faq_1_q": "How to raise my rating?",
+  "profile_tab_faq_1_a": "You can raise your rating only by participating in official competitions.\nDriving in normal races will not give you any rating. Give your best at the competitions, because a bad result\nmay also lower your rating.",
+
+  "profile_tab_faq_2_q": "How is the rating calculated?",
+  "profile_tab_faq_2_a": "The system calculates a rating change for every participant in a competition, \nusing the ELO principle. This means that in addition to your final position,\nother players and their ratings are taken into account too.",
+
+  "profile_tab_faq_3_q": "When do competitions take place?",
+  "profile_tab_faq_3_a": "An anonymous person organizes competitions for each\nday, which take place 19:00 - 22:00. The person also sponsors each race with a prize.\nThe competitions are inserted into the application every day at 14:00.",
+
+  "profile_tab_faq_4_q": "How are tracks selected for the competitions?",
+  "profile_tab_faq_4_a": "The anonymous man makes his choice randomly. A track qualifies for a certain\nclass competition only when it has been completed at least once by a vehicle which belongs to the specified class.",
+
+  "profile_tab_faq_5_q": "How to participate in competitions?",
+  "profile_tab_faq_5_a": "There is no need to pre-register for competitions. About one minute\nbefore the start, the starting point is opened and everyone can join. You must\nkeep in mind that you need a vehicle of the same class.",
+
+  "profile_tab_faq_6_q": "Can I organize competitions myself?",
+  "profile_tab_faq_6_a": "While normal races can be started by everyone, organizing competitions is not available for all.\nThe option is only available for drivers who\nhave reached a rating of at least 1700.",
+
+  "profile_tab_faq_7_q": "I achieved a high position, but still lost some rating. Why?",
+  "profile_tab_faq_7_a": "The ELO system takes into account\nother factors too. If you achieved a good position and did not gain ELO, then probably the\noverall level was low and the system predicted a better position for you.",
+
+  "profile_tab_faq_8_q": "What's the difference between a sprint and a circuit?",
+  "profile_tab_faq_8_a": "If you create a sprint race, then you won't have the chance to\nset the amount of laps. In case of a circuit, you are obliged to choose the amount of laps.\nThe minimum amount of laps must be at least two."
+}

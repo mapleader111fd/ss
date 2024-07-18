@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mission and Minigame</title>
+</head>
+<body>
+    <div id="fuseBoxContainer">
+        <img src="image/fuse_box.png" id="fuseBox">
+        <audio id="switchOnSound" src="sounds/switch_on.mp3" preload="auto"></audio>
+        <audio id="switchOffSound" src="sounds/switch_off.mp3" preload="auto"></audio>
+        <div class="switch" onclick="turnOffSwitch(this, 'light1')" style="top: 60%; left: 12%;"></div>
+        <div class="switch" onclick="turnOffSwitch(this, 'light2')" style="top: 60%; left: 22%;"></div>
+        <div class="switch" onclick="turnOffSwitch(this, 'light3')" style="top: 60%; left: 32%;"></div>
+        <div class="switch" onclick="turnOffSwitch(this, 'light4')" style="top: 60%; left: 42%;"></div>
+        <div class="light" id="light1" style="top: 59.6%; left: 12.2%;"></div>
+        <div class="light" id="light2" style="top: 59.6%; left: 22.2%;"></div>
+        <div class="light" id="light3" style="top: 59.6%; left: 32.2%;"></div>
+        <div class="light" id="light4" style="top: 59.6%; left: 42.2%;"></div>
+        <div id="numbers">
+            <div class="number-container" id="digit1"><div class="number"><div class="current">0</div><div class="next">1</div></div></div>
+            <div class="number-container" id="digit2"><div class="number"><div class="current">0</div><div class="next">1</div></div></div>
+            <div class="number-container" id="digit3"><div class="number"><div class="current">0</div><div class="next">1</div></div></div>
+            <div class="number-container" id="digit4"><div class="number"><div class="current">0</div><div class="next">1</div></div></div>
+            <div class="number-container" id="digit5"><div class="number"><div class="current">0</div><div class="next">1</div></div></div>
+            <div class="number-container" id="digit6"><div class="number"><div class="current">0</div><div class="next">1</div></div></div>
+        </div>    
+    </div>
+    <div id="clipboardWrapper">
+        <audio id="checkSound" src="sounds/check.mp3" preload="auto"></audio>
+        <img src="image/clipboard.png" id="clipboardImage">
+        <button id="closeClipboard">CLOSE</button>
+        <div id="clipboardText">
+            <div class="checkbox-container">
+                <p id="lightsText">LIGHTS 0/2</p>
+                <input type="checkbox" id="lightsCheckbox" disabled>
+            </div>
+            <div class="checkbox-container">
+                <p id="switchesText">SWITCHES 0/2</p>
+                <input type="checkbox" id="switchesCheckbox" disabled>
+            </div>
+            <div class="checkbox-container">
+                <p id="outletsText">OUTLETS 0/0</p>
+                <input type="checkbox" id="outletsCheckbox" disabled>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <button class="close-btn">Close Menu</button>
+        <div class="progressCircle" data-progress="36"></div>
+        <h1>Select a Mission</h1>
+        <p class="experience">Experience: <span class="exp-number">0</span>/100</p>
+        <div class="progress">
+            <div class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="missions">
+            <button class="mission" data-mission="public-job" data-exp="0">
+                <span class="mission-label">Public Job</span>
+                <p class="mission-desc">Fix city blackout.</p>
+                <span class="exp-required">0 XP Required</span>
+                <div class="image"></div>
+            </button>
+            <button class="mission" data-mission="house-fuse-box" data-exp="25">
+                <span class="mission-label">House Fuse Box</span>
+                <p class="mission-desc">Install fuse boxes into private residences.</p>
+                <span class="exp-required">50 XP Required</span>
+                <div class="image"></div>
+            </button>
+            <button class="mission" data-mission="house-accessories" data-exp="50">
+                <span class="mission-label">House Accessories</span>
+                <p class="mission-desc">Install outlets, lights, switches into customer house.</p>
+                <span class="exp-required">100 XP Required</span>
+                <div class="image"></div>
+            </button>
+            <div class="tier-buttons" style="display: none;">
+                <button class="close-btn back-btn" style="display: none;">Back</button>
+                <button class="mission tier-mission" data-tier="1" data-exp="25">
+                    <span class="mission-label">Tier 1</span>
+                    <p class="mission-desc">Description for Tier 1.</p>
+                    <span class="exp-required">25 XP Required</span>
+                    <div class="image tier1-image"></div>
+                </button>
+                <button class="mission tier-mission" data-tier="2" data-exp="50">
+                    <span class="mission-label">Tier 2</span>
+                    <p class="mission-desc">Description for Tier 2.</p>
+                    <span class="exp-required">50 XP Required</span>
+                    <div class="image tier2-image"></div>
+                </button>
+                <button class="mission tier-mission" data-tier="3" data-exp="75">
+                    <span class="mission-label">Tier 3</span>
+                    <p class="mission-desc">Description for Tier 3.</p>
+                    <span class="exp-required">75 XP Required</span>
+                    <div class="image tier3-image"></div>
+                </button>
+            </div>  
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+{
+    "menu:doors": "<i class=\"bi bi-door-open-fill\"></i> Porte",
+    "menu:buildings": "<i class=\"bi bi-building\"></i> Edifici",
+    "menu:settings": "<i class=\"bi bi-gear-fill\"></i> Impostazioni",
+
+    "menu:door": "Porta",
+    "menu:new_door": "Nuova porta",
+    "menu:ID": "ID",
+    "menu:label": "Nome",
+    "menu:doors_count": "Numero porte",
+    "menu:default": "Predefinito",
+    "menu:maximum_distance": "Distanza massima",
+    "menu:distance": "Distanza",
+    "menu:model": "Modello",
+    "menu:choose_doors": "Scegli porte",
+
+    "menu:delete": "Elimina",
+    "menu:close": "Chiudi",
+    "menu:create": "Crea",
+    "menu:save": "Salva",
+
+    "menu:used_doors": "Porte utilizzate",
+    "menu:default_doors_state": "Stato predefinito porte",
+    "menu:unlocked": "Aperte",
+    "menu:locked": "Chiuse",
+    "menu:icon_coordinates": "Coordinate icona",
+    "menu:choose": "Scegli",
+    "menu:choose_icon_coords": "Scegli coordinate icona",
+
+    "menu:requires_a_job": "Richiede un lavoro",
+    "menu:allowed_jobs": "Lavori autorizzati",
+    "menu:choose_jobs": "Scegli lavori",
+    "menu:requires_an_item": "Richiede un oggetto",
+    "menu:required_item": "Oggetto richiesto",
+    "menu:choose_item": "Scegli oggetto",
+    "menu:requires_job_and_item": "Richiede sia il lavoro che l'oggetto",
+
+    "menu:requires_a_code": "Richiede un codice",
+    "menu:code": "Codice",
+
+    "menu:auto_closure": "Chiusura automatica",
+    "menu:seconds_before_auto_closure": "Secondi prima della chiusura automatica",
+
+    "menu:doorlock_animation": "Animazione chiusura porta",
+
+    "menu:new_building": "Nuovo edificio",
+    "menu:building": "Edificio",
+    "menu:none": "Nessuno",
+    "menu:use_building_rules": "Usa regole edificio",
+    "menu:choose_building": "Scegli edificio",
+
+    "menu:jobs_dialog:title": "Lista lavori",
+    "menu:jobs_dialog:search_job": "Cerca lavoro",
+
+    "menu:items_dialog:title": "Lista oggetti",
+    "menu:items_dialog:search_item": "Cerca oggetto",
+
+    "menu:building_dialog:title": "Lista edifici",
+    "menu:building_dialog:search_building": "Cerca edificio",
+
+    "menu:settings:language": "Lingua",
+    "menu:enable_doorlock_animation": "Abilita animazione chiusura porta",
+    "menu:animation_dictionary": "Dizionario animazione",
+    "menu:animation_name": "Nome animazione",
+    "menu:animation_duration": "Durata animazione",
+    "menu:settings:doorlock_icon": "Icona porta",
+    "menu:settings:icon_size": "Dimensione icona",
+    "menu:item_to_lockpick_doors": "Oggetto per scassinare le porte",
+    "menu:lockpick_name": "Nome oggetto",
+    "menu:minimum_quantity": "Quantità minima",
+    "menu:lose_on_use": "Perdi con l'utilizzo",
+
+    "menu:apply_changes": "Applica cambiamenti",
+
+    "menu:not_allowed:you_are_not_allowed": "Non sei autorizzato ad usare questo menu",
+    "menu:not_allowed:if_you_are_admin": "Se sei un admin, devi copiare e incollare il seguente codice nel tuo server.cfg"
+}

@@ -1,0 +1,22 @@
+.swal-overlay--show-modal .swal-modal {
+    will-change: unset !important;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.script-name {
+    color: #ff0000;
+    
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2.5rem!important;
+
+    line-height: 10vh
+}
+
+.thick-hr {
+    height: 3px !important;
+    color: black;
+    opacity: 1;
+}

@@ -1,0 +1,335 @@
+:root {
+    --primary-color: #55778d;
+    --secondary-color: #1f394b;
+    --disabled-color: #cf0000;
+    /* --background-color: #2222228f; */
+    --background-color: #222222;
+    --text-color: #fff;
+    --text-secondary-color: black;
+    --menu-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    --menu-background-color: #1a1c1f; 
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: transparent;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem; /* Larger font size for prominence */
+    color: var(--primary-color); /* Primary color for the font */
+    font-weight: 700; /* Bold font weight for emphasis */
+    text-align: center;
+    margin: 0;
+    margin-bottom: 0.5rem; /* Space below the header */
+    text-transform: uppercase; /* Uppercase letters for a modern look */
+    letter-spacing: 1px; /* Spacing between letters */
+    padding-top: 1rem; /* Padding at the top for whitespace */
+    position: relative; /* For pseudo-element positioning */
+    background-image: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Gradient background */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Makes the text transparent to allow the background to show through */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15); /* Subtle text shadow for depth */
+}
+
+
+.exp-required {
+    display: none; /* Initially hidden, will be shown by JS if needed */
+    font-size: 0.8rem; /* Smaller font size for the experience requirement */
+    color: var(--text-color); /* Use the primary text color for readability */
+    margin-top: 0.5rem; /* Space from the description */
+    font-weight: normal; /* Less emphasis compared to the mission label */
+    text-align: center; /* Centered text to fit with the rest of the mission info */
+    width: 100%; /* Full width to ensure center alignment */
+}
+
+
+.progress {
+    background-color: var(--secondary-color);
+    height: 25px; 
+    margin: 10px 0;
+    border-radius: 15px; 
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+    height: 100%;
+    width: 0%;
+    border-radius: 15px; /* Match parent's border-radius */
+    box-shadow: 0 0 10px var(--primary-color); /* Glowing effect */
+    transition: width 1s ease-in-out; /* Smooth transition for the bar loading */
+    /* Create striped effect using linear-gradient */
+    background-color: var(--primary-color);
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.15) 25%,
+      var(--primary-color) 25%,
+      var(--primary-color) 50%,
+      rgba(255, 255, 255, 0.15) 50%,
+      rgba(255, 255, 255, 0.15) 75%,
+      var(--primary-color) 75%
+    );
+    background-size: 40px 40px; /* Ensure the size matches with the gradient to prevent cuts */
+    animation: moveStripes 1s linear infinite;
+}
+
+@keyframes moveStripes {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 40px 0; /* This should match the background-size to prevent cuts */
+    }
+}
+
+
+/* Add a keyframe animation for the progress bar to slide in */
+@keyframes loadProgress {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Apply the animation when the progress bar gets the 'animate' class */
+.progress-bar.animate {
+    animation: loadProgress 2s ease-out forwards;
+}
+
+.experience {
+    text-align: center;
+    margin-top: 0; /* Remove margin at the top */
+    margin-bottom: 2rem; /* Add more space at the bottom */
+    font-size: 1.2rem; /* Slightly larger font size */
+    text-transform: uppercase; /* Uppercase letters for a modern look */
+    color: rgb(233, 233, 233); /* Secondary color for the font */
+    letter-spacing: 1px; /* Spacing between letters */
+}
+
+.menu {
+    display: none;
+    position: relative;
+    background-color: var(--menu-background-color); 
+    padding: 40px;
+    border-radius: 12px; /* Rounded corners for modern look */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    width: 1200px;
+    max-width: 95%; /* Ensure it doesn't touch the window edges */
+    margin: 2rem auto; /* Center the menu and add space around it */
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for open/close */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for subtle definition */
+}
+
+.menu.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Make sure the menu is in the correct position when visible */
+}
+
+.close-btn {
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 0.9rem;
+    z-index: 1;
+    outline: none;
+    transition: transform 0.3s ease, background-color 0.3s, color 0.3s; /* Add transform to the transition */
+}
+
+.close-btn:hover {
+    transform: translateY(-3px); /* Move the button up 3 pixels on hover */
+    background-color: var(--primary-color); /* Change background color on hover for better visual feedback */
+    color: #fff; /* Change text color on hover for better visual feedback */
+}
+
+.missions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+button.mission {
+    font-family: 'Roboto', sans-serif;
+}
+
+.mission {
+    position: relative;
+    /* background-color: var(--secondary-color); */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--text-color);
+    border: none;
+    padding: 200px 20px;
+    max-height: 552px;
+    height: 552px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex: 1;
+    font-size: 1rem;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.mission-label {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.mission-desc {
+    color: var(--text-secondary-color);
+    font-size: 1rem; 
+    font-style: italic;
+    text-align: center;
+    position: absolute; 
+    bottom: 20px; 
+    left: 0;
+    right: 0;
+    margin: 0 auto; /* Center it horizontally */
+    background-color: rgba(91, 91, 91, 0.515); 
+    padding: 5px; 
+    border-radius: 5px; 
+    z-index: 2; 
+    width: 90%; 
+    color: rgb(198, 198, 198);
+    max-height: 100px; 
+    overflow: hidden;
+}
+
+
+.mission[disabled] {
+    background-color: var(--disabled-color);
+    border: solid #ea0707 1px;
+    cursor: not-allowed;
+}
+
+
+/* .mission:hover:not(.locked) {
+    background-color: var(--primary-color);
+} */
+
+.mission > .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    filter: blur(0.1rem);
+    background-position: center;
+}
+
+.mission > *:not(.image) {
+    z-index: 1;
+}
+
+.mission[data-mission="rakeGarden"] > .image {
+    background: url("test.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.mission[data-mission="lawnMowing"] > .image {
+    background: url("test2.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.mission[data-mission="treePlanting"] > .image {
+    background: url("treeimage.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.mission[data-mission="wateringPlants"] > .image {
+    background: url("wateringimage.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.mission[data-mission="weedCleans"] > .image {
+    background: url("weedcleansimage.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.mission:hover:not(.locked) > .image {
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+    animation: rotateCard 500ms forwards;
+}
+
+.mission:hover:not(.locked) {
+    max-height: 570px;
+    height: 570px;
+    width: 10rem;
+    margin: 0px;
+    border: solid white 2.5px;
+    box-shadow: 0px 0px 18px white;
+}
+
+.mission:hover > .mission:not(:hover) {
+    filter: brightness(0.50);
+}
+
+.mission:hover:not(.locked) > .mission-desc {
+    font-size: 1rem;
+    color: white;
+    transition: all 300ms;
+    
+}
+
+@keyframes rotateCard {
+    0% {
+        transform: scale(1);
+        filter: blur(0.1rem);
+    }
+    100% {
+        transform: scale(1.02);
+        filter: blur(0rem) brightness(0.9); /* Less contrast and brightness change */
+    }
+}
+
+.locked .mission-label::before {
+    content: "🔒"; 
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.mission.locked {
+    background-color: var(--disabled-color);
+    cursor: not-allowed;
+}
+    
+@media (max-width: 768px) {
+    .missions {
+        flex-direction: column;
+    }
+}

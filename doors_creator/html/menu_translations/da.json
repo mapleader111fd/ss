@@ -1,0 +1,79 @@
+{
+    "menu:doors": "<i class=\"bi bi-door-open-fill\"></i> Døre",
+    "menu:buildings": "<i class=\"bi bi-building\"></i> Bygninger",
+    "menu:settings": "<i class=\"bi bi-gear-fill\"></i> Indstillinger",
+
+    "menu:door": "Dør",
+    "menu:new_door": "Ny dør",
+    "menu:ID": "ID",
+    "menu:label": "Mærke",
+    "menu:doors_count": "Dør antal",
+    "menu:default": "Standard",
+    "menu:maximum_distance": "Maximum distance",
+    "menu:distance": "Distance",
+    "menu:model": "Model",
+    "menu:choose_doors": "Vælg døre",
+
+    "menu:delete": "Slet",
+    "menu:close": "Luk",
+    "menu:create": "Opret",
+    "menu:save": "Gem",
+
+    "menu:used_doors": "Brugte døre",
+    "menu:default_doors_state": "Standard dør position",
+    "menu:unlocked": "Åben",
+    "menu:locked": "Låst",
+    "menu:icon_coordinates": "Ikon kordinater",
+    "menu:choose": "Vælg",
+    "menu:choose_icon_coords": "Sæt ikon kordinater",
+
+    "menu:requires_a_job": "Kræver et job",
+    "menu:allowed_jobs": "Tilladte jobs",
+    "menu:choose_jobs": "Vælg job",
+    "menu:requires_an_item": "Kræver et item",
+    "menu:required_item": "Krævende item",
+    "menu:choose_item": "Vælg item",
+    "menu:requires_job_and_item": "Kræver både job og item",
+
+    "menu:requires_a_code": "Kræver en kode",
+    "menu:code": "kode",
+
+    "menu:auto_closure": "Auto luk",
+    "menu:seconds_before_auto_closure": "Sekunder før auto luk",
+
+    "menu:doorlock_animation": "Dørluk animation",
+
+    "menu:new_building": "Ny bygning",
+    "menu:building": "Bygning",
+    "menu:none": "Ingen",
+    "menu:use_building_rules": "Brug bygning regler",
+    "menu:choose_building": "Vælg bygning",
+
+    "menu:jobs_dialog:title": "Job liste",
+    "menu:jobs_dialog:search_job": "Søg job",
+
+    "menu:items_dialog:title": "Item liste",
+    "menu:items_dialog:search_item": "Søg item",
+
+    "menu:building_dialog:title": "Bygnings liste",
+    "menu:building_dialog:search_building": "Søg bygning",
+
+    "menu:settings:language": "Sprog",
+    "menu:enable_doorlock_animation": "Aktivér dørlås animation",
+    "menu:animation_dictionary": "Animation lokation",
+    "menu:animation_name": "Animation navn",
+    "menu:animation_duration": "Animation længde",
+    "menu:settings:doorlock_icon": "Dørlås ikon",
+    "menu:settings:icon_size": "Ikon størrelse",
+    "menu:item_to_lockpick_doors": "Item til at lockpicke døre",
+    "menu:lockpick_name": "Lockpick dør",
+    "menu:minimum_quantity": "Minimum antal",
+    "menu:lose_on_use": "Tab ved brug",
+
+    "menu:apply_changes": "Anvend ændringer",
+
+    "menu:is_sliding_door": "Er skydedør",
+
+    "menu:not_allowed:you_are_not_allowed": "Du må ikke bruge denne menu",
+    "menu:not_allowed:if_you_are_admin": "Hvis du er serveradministrator, skal du kopiere og indsætte følgende kode i din server.cfg"
+}

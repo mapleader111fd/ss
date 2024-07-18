@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="./scripts/main.js" defer></script>
+    <script src="./scripts/events.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VFS-RADIO</title>
+</head>
+
+<body>
+    <div class="radio">
+        <img src="./media/radio.png" alt="">
+        <div class="root">
+            <form id="connect-form">
+                <p id="p1">(P1) PRIMARY</p>
+                <div class="freq">
+                    <input type="number" name="f1n1" id="f1n1" maxlength="1">
+                    <input type="number" name="f1n2" id="f1n2" maxlength="1">
+                    <input type="number" name="f1n3" id="f1n3" maxlength="1">
+                    <span style="font-size: 1vh; font-weight: 900;">.</span>
+                    <input type="number" name="f1n4" id="f1n4" maxlength="1">
+                    <input type="number" name="f1n5" id="f1n5" maxlength="1">
+                    <input type="number" name="f1n6" id="f1n5" maxlength="1">
+                </div>
+                <br>
+                <hr color="gray">
+                <p id="p2">(P2) SECONDARY</p>
+                <div class="freq">
+                    <input type="number" name="f2n1" id="f2n1" maxlength="1">
+                    <input type="number" name="f2n2" id="f2n2" maxlength="1">
+                    <input type="number" name="f2n3" id="f2n3" maxlength="1">
+                    <span style="font-size: 1vh; font-weight: 900;">.</span>
+                    <input type="number" name="f2n4" id="f2n4" maxlength="1">
+                    <input type="number" name="f2n5" id="f2n5" maxlength="1">
+                    <input type="number" name="f2n6" id="f2n5" maxlength="1">
+                </div>
+                <br>
+                <div class="center">
+                    <button type="submit" class="btn"><span class="material-icons">rss_feed</span></button>
+                </div>
+                <span id="help-btn" class="material-icons" onclick="toggleHelp()">help_outline</span>
+            </form>
+        </div>
+        <div class="buttons">
+            <button onclick="toggleSettings()"></button>
+            <button onclick="channelUp()"></button>
+            <button onclick="togglePower(event)"></button>
+            <button onclick="connectP1()"></button>
+            <button onclick="channelDown()"></button>
+            <button onclick="connectP2()"></button>
+        </div>
+        <div class="volume-controls">
+            <button onclick="volumeUp()"></button>
+            <button onclick="volumeDown()"></button>
+        </div>
+        <div class="status">
+            <p><span><span class="material-icons">volume_up</span> <span id="volume">50</span>% <span id="battery-status" style="float: right;"><span id="battery">100</span>% <span class="material-symbols-outlined">battery_full_alt</span></span></span></p>
+        </div>
+        <div class="settings">
+            <form id="settings-form">
+                <p>Beep Sounds <input type="checkbox" name="beepsounds" id="beepsounds" checked> </p>
+                <p>Beep Volume <span id="sysvolval">100</span>%</p>
+                <input type="range" name="beepvolume" id="beepvolume" style="width: 95%;" min="0" max="100" step="1"
+                    oninput="updateSysVolVal(event)" value="100">
+                <hr color="gray">
+                <p>Channel Step <input type="text" name="step" id="step" value="1"></p>
+                <p>Auto switch channels <input type="checkbox" name="autoswitch" id="autoswitch"></p>
+                <p>Switch back channels <input type="checkbox" name="switchback" id="switchback" checked></p>
+                <p>Switch after: <input type="number" name="switchdelay" id="switchdelay" value="0">sec</p>
+                <div class="center">
+                    <button type="submit" class="btn"><span class="material-icons">save</span></button>
+                </div>
+            </form>
+        </div>
+        <div class="overlay"></div>
+        <div class="battery">
+            <span class="material-symbols-outlined">battery_alert</span>
+        </div>
+    </div>
+    <div class="infodisplay">
+        <img src="./media/infodisplay.jpg" alt="">
+        <div class="display"></div>
+    </div>
+    <div class="help-menu">
+        <button class="btn" onclick="showPdf('en')">Read PDF (EN)</button>
+        <button class="btn" onclick="showPdf('bg')">Прочети PDF (BG)</button>
+        <div class="help-pdf" id="help-pdf-en">
+            <object data="./assets/help.pdf" type="application/pdf"></object>
+        </div>
+        <div class="help-pdf" id="help-pdf-bg">
+            <object data="./assets/help-bg.pdf" type="application/pdf"></object>
+        </div>
+        <p>Watch video: <span>https://youtu.be/dP84zu6j0ac</span></p>
+    </div>
+</body>
+
+</html>

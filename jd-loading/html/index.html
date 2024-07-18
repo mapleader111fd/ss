@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Screen</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #notification {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            color: white;
+            animation: flickerAnimation 1.5s infinite;
+        }
+
+        @keyframes flickerAnimation {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Video element -->
+    <video id="background-video" autoplay muted loop>
+        <source id="video-source" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Audio element -->
+    <audio id="leson" src="assets/music.mp3" autoplay="true" hidden="true" loop="true"></audio>
+
+    <!-- Notification text box -->
+    <div id="notification">Press SPACE to mute music</div>
+
+    <script>
+        // Video swap function when adding new don't forget to add it into the fxmanifest
+        const videos = ["assets/bgvideo.mp4", "assets/bgvideo2.mp4"];
+
+        const selectedVideo = videos[Math.floor(Math.random() * videos.length)];
+
+        document.getElementById('video-source').src = selectedVideo;
+
+        document.getElementById('background-video').load();
+
+        var play = false;
+        var myAudio = document.getElementById("leson");
+
+        // Spacebar mute function
+        function onKeyDown(event) {
+            switch (event.keyCode) {
+                case 32: // SpaceBar                    
+                    if (play) {
+                        myAudio.pause();
+                        play = false;
+                    } else {
+                        myAudio.play();
+                        play = true;
+                    }
+                    break;
+            }
+            return false;
+        }
+
+        window.addEventListener("keydown", onKeyDown, false);
+
+        // Lower the volume for the first 3 seconds
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                const audioElement = document.getElementById('leson');
+
+                audioElement.volume = 0.5;
+
+                setTimeout(() => {
+                    audioElement.volume = 0.8;
+                    console.log('Audio element volume restored.');
+                }, 3000);
+            } catch (error) {
+                console.error('Error setting up audio:', error);
+            }
+        });
+
+        // Show/hide notification every 2 seconds
+        setInterval(function () {
+            // If notification is hidden, show it for 2 seconds
+            if (notification.style.display === 'none') {
+                notification.style.display = 'block';
+                setTimeout(function () {
+                    notification.style.display = 'none';
+                }, 3000); // Hide after 2 seconds
+            } else {
+                // If notification is visible, hide it for 1 second
+                notification.style.display = 'none';
+                setTimeout(function () {
+                    notification.style.display = 'block';
+                }, 500); // Show after 1 second
+            }
+        }, 3000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+{
+    "menu:doors": "<i class=\"bi bi-door-open-fill\"></i> Drzwi",
+    "menu:buildings": "<i class=\"bi bi-building\"></i> Budynki",
+    "menu:settings": "<i class=\"bi bi-gear-fill\"></i> Ustawienia",
+
+    "menu:door": "Drzwi",
+    "menu:new_door": "Nowe drzwi",
+    "menu:ID": "ID",
+    "menu:label": "Nazwa",
+    "menu:doors_count": "Ilość drzwi",
+    "menu:default": "Podstawowy",
+    "menu:maximum_distance": "Maksymalna odległość",
+    "menu:distance": "Odległość",
+    "menu:model": "Model",
+    "menu:choose_doors": "Wybierz drzwi",
+
+    "menu:delete": "Usuń",
+    "menu:close": "Zamknij",
+    "menu:create": "Stwórz",
+    "menu:save": "Zapisz",
+
+    "menu:used_doors": "Używane drzwi",
+    "menu:default_doors_state": "Domyślny stan drzwi",
+    "menu:unlocked": "Odblokowane",
+    "menu:locked": "Zablokowane",
+    "menu:icon_coordinates": "Współrzędne ikony",
+    "menu:choose": "Wybierz",
+    "menu:choose_icon_coords": "Wybierz współrzędne ikon",
+
+    "menu:requires_a_job": "Wymaga pracy",
+    "menu:allowed_jobs": "Dozwolone prace",
+    "menu:choose_jobs": "Wybierz prace",
+    "menu:requires_an_item": "Wymaga przedmiotu",
+    "menu:required_item": "Wymagany przedmiot",
+    "menu:choose_item": "Wybierz przedmiot",
+    "menu:requires_job_and_item": "Wymaga zarówno pracy jak i przedmiotu",
+
+    "menu:requires_a_code": "Wymaga kodu",
+    "menu:code": "Kod",
+
+    "menu:auto_closure": "Automatyczne zamykanie",
+    "menu:seconds_before_auto_closure": "Sekundy przed automatycznym zamknięciem",
+
+    "menu:doorlock_animation": "Animacja zamykania drzwi",
+
+    "menu:new_building": "Nowy budynek",
+    "menu:building": "Budynek",
+    "menu:none": "Brak",
+    "menu:use_building_rules": "Użyj reguł budowania",
+    "menu:choose_building": "Wybierz budynek",
+
+    "menu:jobs_dialog:title": "Lista prac",
+    "menu:jobs_dialog:search_job": "Szukaj pracy",
+
+    "menu:items_dialog:title": "Lista przedmiotów",
+    "menu:items_dialog:search_item": "Szukaj przedmiotów",
+
+    "menu:building_dialog:title": "Lista budynków",
+    "menu:building_dialog:search_building": "Wyszukaj budynek",
+
+    "menu:settings:language": "Język",
+    "menu:enable_doorlock_animation": "Włącz animację blokady drzwi",
+    "menu:animation_dictionary": "Słownik animacji",
+    "menu:animation_name": "Nazwa animacji",
+    "menu:animation_duration": "Czas trwania animacji",
+    "menu:settings:doorlock_icon": "Ikona kłódki",
+    "menu:settings:icon_size": "Rozmiar ikony",
+    "menu:item_to_lockpick_doors": "Przedmiot do otwarcia drzwi",
+    "menu:lockpick_name": "Nazwa wytrycha",
+    "menu:minimum_quantity": "Minimalna ilość",
+    "menu:lose_on_use": "Stracisz przy użyciu",
+
+    "menu:apply_changes": "Zastosuj zmiany",
+
+    "menu:is_sliding_door": "To drzwi przesuwne",
+
+    "menu:not_allowed:you_are_not_allowed": "Nie możesz korzystać z tego menu",
+    "menu:not_allowed:if_you_are_admin": "Jeśli jesteś administratorem serwera, musisz skopiować i wkleić następujący kod do pliku server.cfg",
+
+    "menu:requires_an_identifier": "Wymaga identyfikatora",
+    "menu:identifier": "Identyfikator",
+    "menu:choose_player": "Wybierz gracza",
+    "menu:players_list": "Lista graczy",
+    "menu:search_player": "Wyszukaj gracza",
+    "menu:add_identifier": "Dodaj identyfikator",
+
+    "menu:is_vault_door": "To drzwi skarbca",
+    "menu:speed": "Prędkość",
+    "menu:make_door_extremely_heavy": "Spraw, by drzwi były wyjątkowo ciężkie",
+    "menu:custom_angles": "Kąty niestandardowe",
+    "menu:opened_angle": "Kąt otwarcia",
+    "menu:closed_angle": "Kąt zamknięcia",
+
+    "menu:use_3d_text_instead_of_icon": "Użyj tekstu 3D zamiast ikony",
+
+    "menu:ratio": "Stosunek",
+    "menu:heading":"Nagłówek",
+    "menu:vault_type":"Typ skarbca",
+    "menu:save_door_lock_state": "Zapisz aktualny stan blokady drzwi i zastosuj go automatycznie po restarcie serwera",
+    "menu:ignore_default_door_lock_state_configuration": "ignoruj ​​domyślną konfigurację stanu blokady",
+    "menu:can_be_lockpicked": "Można otworzyć wytrychem",
+    "menu:x": "X",
+    "menu:y": "Y",
+    "menu:z": "Z",
+    "menu:inverted_direction": "Odwrócony kierunek",
+    "menu:confirm": "Potwierdż",
+    "menu:alert_police_on_lockpick": "Zaalarmuj policję przed wytrychem",
+    "menu:requires_a_gang": "Wymaga gangu",
+    "menu:allowed_gangs": "Dozwolone gangi",
+    "menu:choose_gangs": "Wybierz gangi",
+    "menu:gangs_dialog:title": "Lista gangów",
+    "menu:gangs_dialog:search_gang": "Wyszukaj gang",
+    "menu:get_heading": "Pobierz nagłówek"
+}

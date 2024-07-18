@@ -1,0 +1,77 @@
+{
+    "menu:doors": "<i class=\"bi bi-door-open-fill\"></i> Dveře",
+    "menu:buildings": "<i class=\"bi bi-building\"></i> Budovy",
+    "menu:settings": "<i class=\"bi bi-gear-fill\"></i> Nastavení",
+
+    "menu:door": "Dveře",
+    "menu:new_door": "Nové dveře",
+    "menu:ID": "ID",
+    "menu:label": "Označení",
+    "menu:doors_count": "Dveře se počítají",
+    "menu:default": "Default",
+    "menu:maximum_distance": "Maximální vzdálenost",
+    "menu:distance": "Vzdálenost",
+    "menu:model": "Model",
+    "menu:choose_doors": "Vybrat dveře",
+
+    "menu:delete": "Vymazat",
+    "menu:close": "Zavřít",
+    "menu:create": "Vytvořit",
+    "menu:save": "Uložit",
+
+    "menu:used_doors": "Použitý dveře",
+    "menu:default_doors_state": "Výchozí stav dveří",
+    "menu:unlocked": "Odemčený",
+    "menu:locked": "Zamčeno",
+    "menu:icon_coordinates": "Souřadnice ikony",
+    "menu:choose": "Vybrat",
+    "menu:choose_icon_coords": "Vyberte ikonu souřadnic",
+
+    "menu:requires_a_job": "Vyžaduje práci",
+    "menu:allowed_jobs": "Povolené úlohy",
+    "menu:choose_jobs": "Vyberte si zaměstnání",
+    "menu:requires_an_item": "Vyžaduje položku",
+    "menu:required_item": "Požadovaná položka",
+    "menu:choose_item": "Vyberte položku",
+    "menu:requires_job_and_item": "Vyžaduje práci i předmět",
+
+    "menu:requires_a_code": "Vyžaduje kód",
+    "menu:code": "Kód",
+
+    "menu:auto_closure": "Automatické zavírání",
+    "menu:seconds_before_auto_closure": "Sekundy před automatickým zavřením",
+
+    "menu:doorlock_animation": "Animace zámku dveří",
+
+    "menu:new_building": "Nová budova",
+    "menu:building": "Budova",
+    "menu:none": "Žádný",
+    "menu:use_building_rules": "Používejte stavební pravidla",
+    "menu:choose_building": "Vyberte budovu",
+
+    "menu:jobs_dialog:title": "Seznam pracovních míst",
+    "menu:jobs_dialog:search_job": "Hledat práci",
+
+    "menu:items_dialog:title": "Seznam položek",
+    "menu:items_dialog:search_item": "Vyhledat položku",
+
+    "menu:building_dialog:title": "Seznam budov",
+    "menu:building_dialog:search_building": "Prohledejte budovu",
+
+    "menu:settings:language": "Language",
+    "menu:enable_doorlock_animation": "Povolit animaci zámku dveří",
+    "menu:animation_dictionary": "Animační slovník",
+    "menu:animation_name": "Název animace",
+    "menu:animation_duration": "Délka animace",
+    "menu:settings:doorlock_icon": "Ikona zámku dveří",
+    "menu:settings:icon_size": "Velikost ikony",
+    "menu:item_to_lockpick_doors": "Položka k zamykání dveří",
+    "menu:lockpick_name": "Jméno šperháku",
+    "menu:minimum_quantity": "Minimální kvantita",
+    "menu:lose_on_use": "Ztráta při používání",
+
+    "menu:apply_changes": "Aplikuj změny",
+
+    "menu:not_allowed:you_are_not_allowed": "Toto menu nemáte povoleno používat",
+    "menu:not_allowed:if_you_are_admin": "Pokud jste správcem serveru, musíte zkopírovat a vložit následující kód do souboru server.cfg"
+}

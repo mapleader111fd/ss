@@ -1,0 +1,115 @@
+{
+    "menu:doors": "<i class=\"bi bi-door-open-fill\"></i> Durys",
+    "menu:buildings": "<i class=\"bi bi-building\"></i> pastatai",
+    "menu:settings": "<i class=\"bi bi-gear-fill\"></i> Nustatymai",
+
+    "menu:door": "Durys",
+    "menu:new_door": "Naujos durys",
+    "menu:ID": "ID",
+    "menu:label": "Etiketė",
+    "menu:doors_count": "Durys skaičiuojamos",
+    "menu:default": "Numatytasis",
+    "menu:maximum_distance": "Maksimalus atstumas",
+    "menu:distance": "Atstumas",
+    "menu:model": "Modelis",
+    "menu:choose_doors": "Pasirinkite duris",
+
+    "menu:delete": "Ištrinti",
+    "menu:close": "Uždaryti",
+    "menu:create": "Sukurti",
+    "menu:save": "Išsaugoti",
+
+    "menu:used_doors": "Naudotos durys",
+    "menu:default_doors_state": "Numatytoji durų būsena",
+    "menu:unlocked": "Atrakinta",
+    "menu:locked": "Užrakinta",
+    "menu:icon_coordinates": "Piktogramos koordinatės",
+    "menu:choose": "Pasirinkti",
+    "menu:choose_icon_coords": "Pasirinkite piktogramos koordinates",
+
+    "menu:requires_a_job": "Reikalingas darbas",
+    "menu:allowed_jobs": "Leidžiami darbai",
+    "menu:choose_jobs": "Pasirinkti darbus",
+    "menu:requires_an_item": "Reikalingas elementas",
+    "menu:required_item": "Reikalingas elementas",
+    "menu:choose_item": "Pasirinkti elementą",
+    "menu:requires_job_and_item": "Reikalingas ir darbas, ir elementas",
+
+    "menu:requires_a_code": "Reikalingas kodas",
+    "menu:code": "Kodas",
+
+    "menu:auto_closure": "Automatinis uždarymas",
+    "menu:seconds_before_auto_closure": "Sekundės iki automatinio uždarymo",
+
+    "menu:doorlock_animation": "Durų užrakto animacija",
+
+    "menu:new_building": "Naujas pastatas",
+    "menu:building": "Pastatas",
+    "menu:none": "Nėra",
+    "menu:use_building_rules": "Naudoti kūrimo taisykles",
+    "menu:choose_building": "Pasirinkti pastatą",
+
+    "menu:jobs_dialog:title": "Darbų sąrašas",
+    "menu:jobs_dialog:search_job": "Ieškoti darbo",
+
+    "menu:items_dialog:title": "Prekių sąrašas",
+    "menu:items_dialog:search_item": "Ieškoti elemento",
+
+    "menu:building_dialog:title": "Pastatų sąrašas",
+    "menu:building_dialog:search_building": "Ieškoti pastato",
+
+    "menu:settings:language": "Kalba",
+    "menu:enable_doorlock_animation": "Įjungti durų užrakto animaciją",
+    "menu:animation_dictionary": "Animacijos žodynas",
+    "menu:animation_name": "Animacijos pavadinimas",
+    "menu:animation_duration": "Animacijos trukmė",
+    "menu:settings:doorlock_icon": "Durų užrakto piktograma",
+    "menu:settings:icon_size": "Piktogramos dydis",
+    "menu:item_to_lockpick_doors": "Prekė, kurią reikia užrakinti duris",
+    "menu:lockpick_name": "Lockpick pavadinimas",
+    "menu:minimum_quantity": "Minimalus kiekis",
+    "menu:lose_on_use": "Prarasti naudojant",
+
+    "menu:apply_changes": "Taikyti pakeitimus",
+
+    "menu:is_sliding_door": "Ar stumdomos durys",
+
+    "menu:not_allowed:you_are_not_allowed": "Jums neleidžiama naudoti šio meniu",
+    "menu:not_allowed:if_you_are_admin": "Jei esate serverio administratorius, turite nukopijuoti ir įklijuoti šį kodą į server.cfg",
+
+    "menu:requires_an_identifier": "Reikalingas identifikatorius",
+    "menu:identifier": "Identifier",
+    "menu:choose_player": "Pasirinkite grotuvą",
+    "menu:players_list": "Žaidėjų sąrašas",
+    "menu:search_player": "Ieškoti grotuvo",
+    "menu:add_identifier": "Pridėti identifikatorių",
+
+    "menu:is_vault_door": "Ar skliautos durys",
+    "menu:speed": "Greitis",
+    "menu:make_door_extremely_heavy": "Padarykite duris ypač sunkias",
+    "menu:custom_angles": "Pasirinktiniai kampai",
+    "menu:opened_angle": "Atviras kampas",
+    "menu:closed_angle": "Uždarytas kampas",
+
+    "menu:use_3d_text_instead_of_icon": "Vietoj piktogramos naudokite 3D tekstą",
+
+    "menu:ratio": "Santykis",
+    "menu:heading":"Antraštė",
+    "menu:vault_type":"Vault tipas",
+    "menu:save_door_lock_state": "Išsaugoti dabartinę durų užrakto būseną ir automatiškai pritaikyti ją paleidus serverį iš naujo",
+    "menu:ignore_default_door_lock_state_configuration": "nepaisyti numatytosios užrakto būsenos konfigūracijos",
+    "menu:can_be_lockpicked": "Gali būti užrakintas",
+    "menu:x": "X",
+    "menu:y": "Y",
+    "meniu:z": "Z",
+    "menu:inverted_direction": "Apversta kryptis",
+    "menu:confirm": "Patvirtinti",
+    "menu:alert_police_on_lockpick": "Įspėti policiją apie lockpick",
+    "menu:requires_a_gang": "Reikia gaujos",
+    "menu:allowed_gangs": "Leidžiamos gaujos",
+    "menu:choose_gangs": "Pasirinkite gaujas",
+    "menu:gangs_dialog:title": "Gangų sąrašas",
+    "menu:gangs_dialog:search_gang": "Ieškoti gaujos",
+    "menu:get_heading": "Gauti antraštę",
+    "menu:minim_police": "Minimalus policijos skaičius"
+}

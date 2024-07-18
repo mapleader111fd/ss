@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+
+<head>
+	<title>Robberies Creator</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<!-- Script CSS -->
+	<link href="index.css" rel="stylesheet" type="text/css" />
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+	<link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@700&display=swap" rel="stylesheet"> 	
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Bootstrap icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+	<!-- Datatables -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.css"/>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.js"></script>
+
+	<!-- Notifications -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+	<!-- Theme -->
+	<link rel="stylesheet" href="./assets/css/theme.bundle.css" id="stylesheetLTR">
+</head>
+
+<body style="background-color: transparent !important;">
+	<div id="robbery-creator" class="container-lg bg-white position-absolute top-50 start-50 translate-middle rounded" style="display: none;">
+        <div id="main-bar" class="d-inline-block col-12 text-center mt-2">
+			<p id="robbery-creator-label" class="d-inline script-name">Robberies Creator - <span id="robbery-creator-version" class="d-inline script-name"></span></p>
+			
+			<button id="close-main-btn" type="button" class="btn-close btn-close-white float-end mt-2"></button>
+		</div>
+
+		<div class="d-flex align-items-start my-2">
+			<div class="nav flex-column nav-pills me-3" role="tablist">
+				<button class="nav-link active" data-translation-id="menu:heist_tab" data-is-default="1" id="heist-tab" data-bs-toggle="pill" data-bs-target="#heist" type="button" role="tab"><i class="bi bi-bank"></i> Heist</button>
+				<button class="nav-link" data-translation-id="menu:npc_mugging" id="npc-mugging-tab" data-bs-toggle="pill" data-bs-target="#npc-mugging" type="button" role="tab"><i class="bi bi-wallet"></i> NPC mugging</button>
+				<button class="nav-link" data-translation-id="menu:cargo_robbery" id="cargo-robbery-tab" data-bs-toggle="pill" data-bs-target="#cargo-robbery" type="button" role="tab"><i class="bi bi-truck"></i> Cargo robbery</button>
+				<button class="nav-link" data-translation-id="menu:settings" id="settings-tab" data-bs-toggle="pill" data-bs-target="#settings" type="button" role="tab"><i class="bi bi-gear-fill"></i> Settings</button>
+			</div>
+
+			<div class="tab-content container">
+				<div class="tab-pane fade needs-validation show active" data-is-default="1" id="heist" role="tabpanel">
+					<div class="d-inline-block col-12 my-2">
+						<button id="new-heist-btn" type="button" class="btn btn-success float-end" data-translation-id="menu:new_heist">New heist</button>
+					</div>
+					
+					<table id="heists-container" class="table table-hover fs-4 mb-2">
+						<thead>
+							<tr>
+                                <th scope="col" data-translation-id="menu:id">ID</th>
+                                <th scope="col" data-translation-id="menu:label">Label</th>
+                                <th scope="col" data-translation-id="menu:stages">Stages</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+
+				<div id="cargo-robbery" class="tab-pane fade needs-validation" role="tabpanel">
+					<ul class="nav nav-pills mb-4 justify-content-center" role="tablist">
+                        <li class="nav-item" role="presentation" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:plannings:description">
+                          <button class="nav-link show active" data-is-default="1" data-translation-id="menu:planning" id="cargo-planning-tab" data-bs-toggle="pill" data-bs-target="#cargo-planning" type="button" role="tab">Planning</button>
+                        </li>
+                        <li class="nav-item" role="presentation" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:cargo_robberies:description">
+                          <button class="nav-link" data-translation-id="menu:robberies" id="cargo-robberies-tab" data-bs-toggle="pill" data-bs-target="#cargo-robberies" type="button" role="tab">Robberies</button>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content container" style="max-height: 70vh; overflow-y:auto">
+                        <div id="cargo-planning" class="tab-pane fade show active" data-is-default="1" role="tabpanel">
+							<div class="d-inline-block col-12 my-2">
+								<button id="new-planning-btn" type="button" class="btn btn-success float-end" data-translation-id="menu:new_planning">New planning</button>
+							</div>
+
+							<table id="plannings-container" class="table table-hover fs-4 mb-2">
+								<thead>
+									<tr>
+										<th scope="col" data-translation-id="menu:id">ID</th>
+										<th scope="col" data-translation-id="menu:label">Label</th>
+										<th scope="col" data-translation-id="menu:cargo_robbery_name">Cargo robbery name</th>
+										<th scope="col" data-translation-id="menu:remaining_minutes">Remaining minutes</th>
+									</tr>
+								</thead>
+		
+								<tbody>
+		
+								</tbody>
+							</table>
+                        </div>
+
+                        <div id="cargo-robberies" class="tab-pane fade" role="tabpanel">
+							<div class="d-inline-block col-12 my-2">
+								<button id="new-cargo-robbery-btn" type="button" class="btn btn-success float-end" data-translation-id="menu:new_cargo_robbery">New cargo robbery</button>
+							</div>
+
+							<table id="cargo-robberies-container" class="table table-hover fs-4 mb-2">
+								<thead>
+									<tr>
+										<th scope="col" data-translation-id="menu:id">ID</th>
+										<th scope="col" data-translation-id="menu:label">Label</th>
+									</tr>
+								</thead>
+		
+								<tbody>
+		
+								</tbody>
+							</table>
+                        </div>
+					</div>
+				</div>
+
+				<form class="tab-pane fade needs-validation show" id="npc-mugging" role="tabpanel" novalidate>
+
+					<div class="container my-2 scrollbar" style="max-height: 60vh; overflow-y: auto" id="npc-mugging-options">
+						<div class="form-check form-switch mt-3">
+							<input class="form-check-input" type="checkbox" role="switch" id="enable-npc-mugging">
+							<label class="form-check-label" data-translation-id="menu:enable_npc_mugging">Enable NPC mugging</label>
+						</div>
+
+						<div class="form-check form-switch mt-3">
+							<input class="form-check-input" type="checkbox" role="switch" id="can-make-npc-to-follow">
+							<label class="form-check-label" data-translation-id="menu:can_make_npc_to_follow">Can make the NPC to follow</label>
+						</div>
+
+						<hr>
+
+						<div class="d-flex gap-3 mt-3">
+							<div class="form-floating col">
+								<input id="seconds-to-mug" type="number" class="form-control" placeholder="Time to mug (seconds)" required>
+								<label data-translation-id="menu:time_to_mug">Time to mug (seconds)</label>
+							</div>
+	
+							<div class="form-floating col">
+								<input id="minutes-before-automatically-run-away" type="number" class="form-control" placeholder="Minutes before automatically run away" required>
+								<label data-translation-id="menu:minutes_before_automatically_run_away">Minutes before automatically run away</label>
+							</div>
+						</div>
+
+						<hr>
+
+						<div>
+							<p class="text-center fs-2" data-translation-id="menu:amount_of_objects_can_give">Amount of objects the NPC can give</p>
+
+							<div class="row g-2 row-cols-auto align-items-center my-2">
+								<div class="form-floating col-6">
+									<input type="number" min="0" class="form-control" id="npc-mugging-minimum-objects-amount" placeholder="Minimum" required>
+									<label for="npc-mugging-minimum-objects-amount" data-translation-id="menu:min_quantity">Min quantity</label>
+								</div>
+							
+	
+								<div class="form-floating col-6">
+									<input type="number" min="0" class="form-control" id="npc-mugging-maximum-objects-amount" placeholder="Maximum" required>
+									<label for="npc-mugging-maximum-objects-amount" data-translation-id="menu:max_quantity">Max quantity</label>
+								</div>
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="my-3">
+							<p class="text-center fs-2" data-translation-id="menu:robbable_items">Robbable items</p>
+
+							<div id="npc-mugging-robbable-items" class="my-3">
+
+							</div>
+
+							<button id="npc-mugging-add-object" type="button" class="btn btn-secondary" data-translation-id="menu:add_object">Add object</button>
+						</div>
+
+						<hr>
+						
+						<div>
+							<p class="text-center fs-2" data-translation-id="menu:police">Police</p>
+
+							<div class="row g-2 row-cols-auto align-items-center my-2">
+								<div class="col-6">
+									<p class="text-center fs-5" data-translation-id="menu:minimum_police">Minimum police online</p>
+									
+									<div class="form-floating">
+										<input type="number" class="form-control" id="npc-mugging-minimum-police" placeholder="Minimum police" required>
+										<label for="npc-mugging-minimum-police" data-translation-id="menu:minimum_police">Minimum police online</label>
+									</div>
+								</div>
+								
+								<div class="col-6">
+									<p class="text-center fs-5" data-translation-id="menu:alert_police_chances">Probabilities that police will be alerted</p>
+		
+									<div class="form-floating">
+										<input type="number" min=0 max=100 class="form-control" id="npc-mugging-probability-police-alert" placeholder="40%" required>
+										<label for="npc-mugging-probability-police-alert" data-translation-id="menu:probability">Probability</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<hr>
+						
+						<div>
+							<p class="text-center fs-2" data-translation-id="menu:other">Other</p>
+
+							<div class="row g-2 row-cols-auto align-items-center my-2">
+								<div class="form-floating col-6">
+									<input type="number" class="form-control" id="npc-mugging-cooldown-on-mugging" placeholder="15" required>
+									<label for="npc-mugging-cooldown-on-mugging" data-translation-id="menu:seconds_cooldown_for_mugging">Seconds cooldown for mugging</label>
+								</div>
+									
+								<div class="form-floating col-6">
+									<input type="number" min=0 class="form-control" id="npc-mugging-max-npcs-following" placeholder="5" required>
+									<label for="npc-mugging-max-npcs-following" data-translation-id="menu:max_npc_following">Max NPC following simultaneously</label>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<button type="submit" class="btn btn-success float-end" data-translation-id="menu:apply_changes">Apply changes</button>
+				</form>
+
+				<form class="tab-pane fade needs-validation" id="settings" role="tabpanel" novalidate>
+					<div class="container my-2 scrollbar" style="max-height: 60vh; overflow-y: auto">
+						<div class="row align-items-center mt-2">
+							<p class="text-center my-auto" data-translation-id="menu:settings:language" style="width: auto;">Language</p>
+	
+							<select class="form-select w-25" id="settings_locale" data-select>
+								<option value="en">English</option>
+								<option value="de">Deutsch</option>
+								<option value="it">Italiano</option>
+								<option value="fr">Français</option>
+								<option value="es">Español</option>
+								<option value="pl">Polski</option>
+								<option value="cs">Česky</option>
+								<option value="hu">Magyar</option>
+							</select>
+						</div>
+
+                        <hr>
+
+						<div class="my-3">
+							<h2 class="text-center" data-translation-id="menu:generic">Generic</h2>
+
+							<div class="d-flex gap-3 align-items-center mt-2" data-translation-id="menu:probably_requires_script_restart" data-bs-toggle="tooltip" data-bs-placement="top">
+								<p class="text-center fs-4 my-auto" data-translation-id="menu:settings:targeting_script" style="width:auto">Targeting script</p>
+								
+								<select id="settings-targeting-script" class="form-select w-25" data-select>
+									<option data-translation-id="menu:none" value="none">None</option>
+									<option value="ox_target">OX Target</option>
+									<option value="qb_target">QB Target</option>
+								</select>	
+							</div>
+		
+							<div class="row align-items-center mt-2">
+								<p class="text-center translatable fs-4 my-auto" data-translation-id="menu:settings:help_notification" style="width:auto">Help notification</p>
+								
+								<select id="settings-help-notification-script" class="form-select w-25" data-select>
+									<option data-translation-id="menu:dynamic:default" value="none">Default</option>
+									<option value="esx_textui">ESX TextUI</option>
+								</select>
+							</div>
+
+							<div class="input-group mt-5">
+								<span class="input-group-text">ACE permission</span>
+								<input id="settings_acePermission" type="text" class="form-control" required>
+							</div>
+	
+							<div class="form-check form-switch my-3">
+								<input class="form-check-input" type="checkbox" role="switch" id="settings_can_always_carry">
+								<label class="form-check-label" data-translation-id="menu:can_always_carry_items" for="settings_can_always_carry">Can always carry</label>
+							</div>
+	
+							<div class="form-check form-switch my-3">
+								<input id="settings_can_receive_multiple_same_item" class="form-check-input" data-translation-id="menu:used_in_items_list"  type="checkbox" role="switch" data-bs-toggle="tooltip" data-bs-placement="top">
+								<label class="form-check-label" data-translation-id="menu:can_receive_multiple_times_the_same_item" for="settings_can_receive_multiple_same_item">Can receive multiple times the same item</label>
+							</div>
+
+							<div class="form-floating">
+								<input id="settings-global-timeout" type="number" min="0" class="form-control" placeholder="Global timeout (minutes)" required data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:global_timeout_description">
+								<label data-translation-id="menu:global_timeout">Global timeout (minutes)</label>
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="mt-4">
+							<h2 class="text-center" data-translation-id="menu:gas_mask">Gas mask</h2>
+
+							<div class="row g-2 row-cols-4 align-items-center my-2">
+								<div class="form-floating">
+									<input id="gas-mask-item-name" type="text" class="form-control" placeholder="Item name" required>
+									<label data-translation-id="menu:item_name">Item name</label>
+								</div>
+
+								<div class="form-floating">
+									<input id="gas-mask-item-duration" type="number" class="form-control" placeholder="Duration" required>
+									<label data-translation-id="menu:duration">Duration</label>
+								</div>
+	
+								<div class="form-check ms-3 col-auto mx-auto my-auto">
+									<input id="gas-mask-lose-on-use" class="form-check-input" type="checkbox" value="">
+									<label class="form-check-label" data-translation-id="menu:lose_on_use">Lose on use</label>
+								</div>
+
+								<div class="form-floating">
+									<input id="gas-mask-cloth-id" type="number" class="form-control" placeholder="Mask ID" required>
+									<label data-translation-id="menu:mask_id">Mask ID</label>
+								</div>
+							</div>
+						</div>
+						
+						<hr>
+
+						<div class="mt-3">
+							<h2 class="text-center" data-translation-id="menu:drill">Drill</h2>
+
+							<div class="row g-2 row-cols-3 align-items-center my-2">
+								<div class="form-check col-auto mx-auto my-auto">
+									<input id="drill-required-for-cargo-robbery" class="form-check-input" type="checkbox" value="">
+									<label class="form-check-label" data-translation-id="menu:required_for_cargo_robbery">Required for cargo robbery</label>
+								</div>
+
+								<div class="form-floating">
+									<input id="drill-item-name" type="text" class="form-control" placeholder="Item name" required>
+									<label data-translation-id="menu:item_name">Item name</label>
+								</div>
+	
+								<div class="form-check ms-3 col-auto mx-auto my-auto">
+									<input id="drill-lose-on-use" class="form-check-input" type="checkbox" value="">
+									<label class="form-check-label" data-translation-id="menu:lose_on_use">Lose on use</label>
+								</div>
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="mt-3">
+							<h2 class="text-center" data-translation-id="menu:npc_mugging_label">NPC Mugging</h2>
+
+							<div class="d-flex gap-3">
+								<div class="form-floating col">
+									<input id="npc-mugging-key-to-mug" type="number" data-dialog-type='control' class="form-control clickable" placeholder="Press to choose" required readonly>
+									<label data-translation-id="menu:key_to_mug"></label>
+								</div>
+
+								<div class="form-floating col">
+									<input id="npc-mugging-key-to-follow" type="number" data-dialog-type='control' class="form-control clickable" placeholder="Press to choose" required readonly>
+									<label data-translation-id="menu:key_to_follow"></label>
+								</div>
+
+								<div class="form-floating col">
+									<input id="npc-mugging-key-to-go-away" type="number" data-dialog-type='control' class="form-control clickable" placeholder="Press to choose" required readonly>
+									<label data-translation-id="menu:key_to_go_away"></label>
+								</div>
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="mt-3">
+							<h2 class="text-center" data-translation-id="menu:cargo_robbery_label">Cargo robbery</h2>
+
+							<div class="row g-2 row-cols-3 align-items-center my-2">
+								<div class="form-floating">
+									<input id="cargo-robbery-minutes-delete-after-robbed" type="number" min="1" class="form-control" placeholder="Deleting minutes after rob" required data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:after_robbed_description">
+									<label data-translation-id="menu:deleting_minutes_after_rob">Deleting minutes after rob</label>
+								</div>
+
+								<div class="form-floating">
+									<input id="cargo-robbery-minutes-delete-after-arrived" type="number" min="1" class="form-control" placeholder="Deleting minutes after destination" required data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:after_final_destination_description">
+									<label data-translation-id="menu:deleting_minutes_after_destination">Deleting minutes after destination</label>
+								</div>
+
+								<div class="form-floating">
+									<input id="cargo-robbery-max-minutes-difference-from-defined-date" type="number" min="1" class="form-control" placeholder="Max minutes difference from defined date" required data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:max_minutes_difference_from_defined_date_description">
+									<label data-translation-id="menu:max_minutes_difference_from_defined_date">Max minutes difference from defined date</label>
+								</div>
+							</div>
+
+							<div class="form-floating">
+								<input id="cargo-robbery-probability-police-alert" type="number" min="0" max="100" class="form-control" placeholder="Probabilities that police will be alerted" required>
+								<label data-translation-id="menu:alert_police_chances">Probabilities that police will be alerted</label>
+							</div>
+
+						</div>
+
+						<hr>
+
+						<h2 class="text-center" data-translation-id="menu:settings:discord"></h2>
+
+						<div class="form-check form-switch mt-4">
+							<input class="form-check-input" type="checkbox" role="switch" id="settings_isDiscordLogActive">
+							<label class="form-check-label" data-translation-id="menu:settings:enable_discord_logs" for="settings_isDiscordLogActive">Enable discord logs</label>
+						</div>
+	
+						<div>
+							<h4 class="text-center" data-translation-id="menu:settings:discord_webhooks">Discord webhooks</h4>
+	
+							<div class="input-group mt-1 mb-3 fs-5" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:main_webhook_description">
+								<span class="input-group-text col-3" data-translation-id="menu:settings:main_webhook">Main webhook</span>
+								<input id="settings_discordWebhook" type="text" class="form-control" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+							</div>
+	
+							<h4 class="text-center" data-translation-id="menu:settings:separated_webhooks">Separated webhooks</h4>
+
+							<div id="settings_specific_webhooks">
+								<div class="input-group my-1 fs-5">
+									<span class="input-group-text col-3" data-translation-id="menu:robbable_object">Robbable object</span>
+									<input type="text" class="form-control" data-log-type="robbable_object" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+								</div>
+								<div class="input-group my-1 fs-5">
+									<span class="input-group-text col-3" data-translation-id="menu:safe">Safe</span>
+									<input type="text" class="form-control" data-log-type="safe" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+								</div>
+								<div class="input-group my-1 fs-5">
+									<span class="input-group-text col-3" data-translation-id="menu:painting">Painting</span>
+									<input type="text" class="form-control" data-log-type="painting" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+								</div>
+								<div class="input-group my-1 fs-5">
+									<span class="input-group-text col-3" data-translation-id="menu:glass_display">Glass display</span>
+									<input type="text" class="form-control" data-log-type="glass_display" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+								</div>
+								<div class="input-group my-1 fs-5">
+									<span class="input-group-text col-3" data-translation-id="menu:laser_drill">Laser drill</span>
+									<input type="text" class="form-control" data-log-type="laser_drill" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+								</div>
+								<div class="input-group my-1 fs-5">
+									<span class="input-group-text col-3" data-translation-id="menu:npc_mugging_label">NPC Mugging</span>
+									<input type="text" class="form-control" data-log-type="npc_mugging" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+								</div>
+								<div class="input-group my-1 fs-5">
+									<span class="input-group-text col-3" data-translation-id="menu:cargo_robbery_label">Cargo robbery</span>
+									<input type="text" class="form-control" data-log-type="cargo_robbery" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<button type="submit" class="btn btn-success float-end" data-translation-id="menu:apply_changes">Apply changes</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="heist-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+            <form id="heist-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:heist">Heist</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body scrollbar">
+					<h1 class="text-center" data-translation-id="menu:generic">Generic</h1>
+
+					<div class="row g-2 row-cols-auto align-items-center my-2">
+						<div class="form-floating col-6">
+							<input type="text" class="form-control" id="heist-label" placeholder="Label" required>
+							<label for="heist-label" data-translation-id="menu:label">Label</label>
+						</div>
+
+						<div class="form-floating col-6">
+							<input type="number" min="0" class="form-control" id="heist-minimum-police" placeholder="Maximum" required>
+							<label for="heist-minimum-police" data-translation-id="menu:minimum_police">Minimum police online</label>
+						</div>
+					</div>
+
+					<div class="row g-2 row-cols-auto align-items-center my-2">
+						<div class="form-floating col-4">
+							<input type="number" min="0" class="form-control" id="heist-timeout" placeholder="Minutes timeout" required data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:minutes_before_the_heist_can_be_done_again">
+							<label for="heist-timeout" data-translation-id="menu:minutes_timeout">Minutes timeout</label>
+						</div>
+
+						<div class="form-floating col-4">
+							<input type="number" min="5" class="form-control" id="heist-reset" placeholder="Maximum" required data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:minutes_before_the_heist_will_reset">
+							<label for="heist-reset" data-translation-id="menu:minutes_reset">Minutes before reset</label>
+
+							<div class="invalid-tooltip" data-translation-id="menu:minimum_minutes_before_reset">Minimum 5 minutes before reset</div>
+						</div>
+
+						<div class="form-floating col-4">
+							<input type="number" min="0" class="form-control" id="heist-time-limit-minutes" placeholder="Maximum" required data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:time_limit_description">
+							<label for="heist-time-limit-minutes" data-translation-id="menu:time_limit">Time limit (minutes)</label>
+						</div>
+					</div>
+
+					<hr>
+					
+					<div>
+						<div class="row">
+							<h1 class="text-center col-4 offset-4" data-translation-id="menu:stages">Stages</h1>
+
+							<button id="heist-import-stages-from-heist-btn" type="button" class="btn btn-primary float-end offset-2 col-2 p-1 h-100" data-translation-id="menu:import_stages_from_heist">Import stages from heist</button>
+						</div>
+
+						<div id="heist-stages" class="mb-4">
+
+						</div>	
+						
+						<button id="heist-add-stage-btn" class="btn btn-info" type="button" data-translation-id="menu:add_stage">Add stage</button>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+                    <button id="delete-heist-btn" type="button" class="btn btn-danger me-auto" data-translation-id="menu:delete" data-bs-dismiss="modal">Delete</button>
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="save-heist-btn" type="submit" class="btn btn-success" data-translation-id="menu:create">Create</button>
+				</div>
+			</form>
+        </div>
+    </div>
+
+	<div id="cargo-robbery-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+            <form id="cargo-robbery-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:cargo_robbery_label">Cargo Robbery</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body scrollbar">
+					<p class="text-center fs-3" data-translation-id="menu:generic">Generic</p>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center">
+						<div class="form-floating">
+							<input type="text" class="form-control" id="cargo-robbery-label" placeholder="Label" required>
+							<label for="cargo-robbery-label" data-translation-id="menu:label">Label</label>
+						</div>
+	
+						<button id="cargo-robbery-customize-blip-btn" type="button" class="btn btn-secondary mx-3" data-translation-id="menu:customize_blip">Customize blip</button>
+
+						<div class="form-floating">
+							<input type="text" class="form-control" id="cargo-robbery-vehicle-model" placeholder="Vehicle model" required>
+							<label for="cargo-robbery-vehicle-model" data-translation-id="menu:vehicle_model">Vehicle model</label>
+						</div>
+
+						<div class="form-floating">
+							<input type="text" class="form-control" id="cargo-robbery-driver-model" placeholder="Label" required>
+							<label for="cargo-robbery-driver-model" data-translation-id="menu:driver_model">Driver model</label>
+						</div>
+					</div>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center mt-3">
+						<div class="form-floating">
+							<input type="text" class="form-control" id="cargo-robbery-max-speed" placeholder="Label" required>
+							<label for="cargo-robbery-max-speed" data-translation-id="menu:max_speed">Max speed</label>
+						</div>
+	
+						<div class="form-check ms-5">
+							<input id="cargo-robbery-bulletproof-wheels-checkbox" class="form-check-input" type="checkbox" value="">
+							<label class="form-check-label" data-translation-id="menu:bulletproof_wheels">Bulletproof wheels</label>
+						</div>
+
+						<div class="form-floating ms-5">
+							<input id="cargo-robbery-seconds-to-drill" type="number" class="form-control" placeholder="Time to drill (seconds)" required>
+							<label data-translation-id="menu:time_to_drill">Time to drill (seconds)</label>
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="my-5">
+						<p class="text-center fs-3" data-translation-id="menu:rewards">Rewards</p>
+				
+						<div class="my-4 row g-2 row-cols-auto align-items-center justify-content-center">
+							<p class="text-center fs-4 my-auto me-3" data-translation-id="menu:amount_of_objects">Amount of objects</p>
+			
+							<div class="form-floating col-3">
+								<input id="cargo-robbery-min-objects-quantity" type="number" min="1" class="form-control" placeholder="Min quantity" required>
+								<label data-translation-id="menu:min_quantity">Min quantity</label>
+							</div>
+			
+							<div class="form-floating col-3">
+								<input id="cargo-robbery-max-objects-quantity" type="number" min="1" class="form-control" placeholder="Max quantity" required>
+								<label data-translation-id="menu:max_quantity">Max quantity</label>
+							</div>
+						</div>
+			
+						<p class="text-center fs-5" data-translation-id="menu:rewards_list">Rewards list</p>
+
+						<div id="cargo-items-list">
+			
+						</div>
+			
+						<div class="d-inline-block col-12 my-2">
+							<button id="cargo-robbery-add-item-btn" type="button" class="btn btn-primary ms-3 float-end" data-translation-id="menu:add_item">Add item</button>
+						</div>			
+					</div>
+
+					<hr>
+
+					<div class="fs-3 text-center mx-auto">
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="cargo-drive-type" value="stops">
+							<label class="form-check-label" data-translation-id="menu:stops">Stops</label>
+						</div>
+	
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="cargo-drive-type" value="random">
+							<label class="form-check-label" data-translation-id="menu:drive_randomly">Drive randomly</label>
+						</div>
+					</div>
+
+					<div id="cargo-robbery-stops-container">
+						<p class="text-center fs-3 mt-3" data-translation-id="menu:stops">Stops</p>
+
+						<div id="cargo-robbery-stops" class="mb-4">
+	
+						</div>
+	
+						<button id="cargo-robbery-add-stop-btn" class="btn btn-info" type="button" data-translation-id="menu:add_stop">Add stop</button>
+					</div>
+
+					<div id="cargo-robbery-random-drive-container" class="mt-3">
+						<div class="row g-2 row-cols-auto align-items-center justify-content-center">
+							<div class="form-floating col-2">
+								<input id="cargo-robbery-random-drive-coords-x" type="number" step="0.01" class="form-control" placeholder="X" required data-translation-id="menu:x">
+								<label>X</label>
+							</div>
+			
+							<div class="form-floating col-2">
+								<input id="cargo-robbery-random-drive-coords-y" type="number" step="0.01" class="form-control" placeholder="Y" required data-translation-id="menu:y">
+								<label>Y</label>
+							</div>
+			
+							<div class="form-floating col-2">
+								<input id="cargo-robbery-random-drive-coords-z" type="number" step="0.01" class="form-control" placeholder="Z" required data-translation-id="menu:z">
+								<label>Z</label>
+							</div>
+			
+							<div class="form-floating col-2">
+								<input id="cargo-robbery-random-drive-heading" type="number" step="0.01" class="form-control" placeholder="Heading" required data-translation-id="menu:heading">
+								<label>Heading</label>
+							</div>
+			
+							<button id="cargo-robbery-random-drive-current-coords-btn" type="button" class="btn btn-secondary col-auto" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:current_coords_and_heading"><i class="bi bi-arrow-down-square"></i></button>	
+						
+							<div class="form-floating ms-2">
+								<input id="cargo-robbery-random-drive-minutes-before-despawn" type="number" min="1" class="form-control" placeholder="Minutes before despawn" required data-translation-id="menu:minutes_before_despawn">
+								<label>Minutes before despawn</label>
+							</div>
+						</div>			
+					</div>
+
+				</div>
+				<div class="modal-footer">
+                    <button id="delete-cargo-robbery-btn" type="button" class="btn btn-danger me-auto" data-translation-id="menu:delete" data-bs-dismiss="modal">Delete</button>
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="save-cargo-robbery-btn" type="submit" class="btn btn-success" data-translation-id="menu:create">Create</button>
+				</div>
+			</form>
+        </div>
+    </div>
+
+	<div id="planning-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+            <form id="planning-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:cargo_robbery_label">Cargo Robbery</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
+					
+					<p class="text-center fs-3" data-translation-id="menu:generic">Generic</p>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center">
+						<div class="form-floating">
+							<input type="text" class="form-control" id="planning-label" placeholder="Label" required>
+							<label for="planning-label" data-translation-id="menu:label">Label</label>
+						</div>
+
+						<div class="form-floating">
+							<input type="number" class="form-control" min="0" id="planning-min-police" placeholder="Minimum police" required>
+							<label for="planning-min-police" data-translation-id="menu:minimum_police">Minimum police</label>
+						</div>
+
+						<div class="form-floating ms-3">
+							<input type="text" class="form-control" id="planning-target-robbery" placeholder="Target robbery" disabled>
+							<label for="planning-target-robbery" data-translation-id="menu:target_robbery">Target robbery</label>
+						</div>
+					
+						<button id="planning-choose-robbery-btn" type="button" class="btn btn-secondary col-auto" data-translation-id="menu:choose_robbery" data-bs-toggle="tooltip" data-bs-placement="top"><i class="bi bi-list-ul"></i></button>	
+
+						<select class="form-select ms-4" style="width: auto;" id="planning-date-type">
+							<option data-translation-id="menu:now" value="now" selected>Now</option>
+							<option data-translation-id="menu:date" value="date">Date</option>
+							<option data-translation-id="menu:interval" value="interval">Interval</option>
+						</select>
+
+						<input id="planning-date" type="text" class="form-control ms-2" data-flatpickr='{
+							"enableTime": "true",
+							"dateFormat": "m/d/Y H:i",
+							"time_24hr": "true"
+						}' placeholder="mm/dd/yyyy" style="width:auto">
+
+						<div id="planning-interval-div" class="col-3">
+							<div class="input-group">
+								<span class="input-group-text" data-translation-id="menu:each">Each</span>
+								<input id="planning-interval" type="number" min="1" class="form-control">
+								<span class="input-group-text" data-translation-id="menu:minutes">Minutes</span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="modal-footer">
+                    <button id="delete-planning-btn" type="button" class="btn btn-danger me-auto" data-translation-id="menu:delete" data-bs-dismiss="modal">Delete</button>
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="save-planning-btn" type="submit" class="btn btn-success" data-translation-id="menu:create">Create</button>
+				</div>
+			</form>
+        </div>
+    </div>
+
+
+
+	<!-- Marker customization dialog -->
+	<div class="modal fade" id="marker-customization-dialog-modal" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<form id="marker-customization-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:marker_customization">Marker customization</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-floating">
+						<input type="number" class="form-control" id="marker-type" placeholder="Marker type" required>
+						<label for="marker-type" data-translation-id="menu:marker_type">Marker type</label>
+					</div>
+
+					<p class="fst-italic text-center">https://docs.fivem.net/docs/game-references/markers/</p>
+
+					<div class="mt-3">
+						<p class="text-center fs-4" data-translation-id="menu:marker_size">Marker size</p>
+
+						<div class="row g-2 row-cols-auto align-items-center">
+							<div class="form-floating col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-size-x" placeholder="X" required>
+								<label for="marker-size-x" data-translation-id="menu:x">X</label>
+							</div>
+
+							<div class="form-floating col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-size-y" placeholder="Y" required>
+								<label for="marker-size-y" data-translation-id="menu:y">Y</label>
+							</div>
+
+							<div class="form-floating col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-size-z" placeholder="Z" required>
+								<label for="marker-size-z" data-translation-id="menu:z">Z</label>
+							</div>		
+						</div>
+					</div>
+
+					<div class="mt-3">
+						<p class="text-center fs-4" data-translation-id="menu:marker_rotation">Marker rotation</p>
+
+						<div class="row g-2 row-cols-auto align-items-center">
+							<div class="form-floating col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-rotation-x" placeholder="X" required>
+								<label for="marker-rotation-x" data-translation-id="menu:x">X</label>
+							</div>
+
+							<div class="form-floating col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-rotation-y" placeholder="Y" required>
+								<label for="marker-rotation-y" data-translation-id="menu:y">Y</label>
+							</div>
+
+							<div class="form-floating col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-rotation-z" placeholder="Z" required>
+								<label for="marker-rotation-z" data-translation-id="menu:z">Z</label>
+							</div>		
+						</div>
+					</div>
+
+					<div class="mt-3">
+						<p class="text-center fs-4" data-translation-id="menu:marker_color">Color</p>
+
+						<div class="row g-2 row-cols-auto align-items-center">
+							<div class="form-floating col-3">
+								<input type="number" min="0" max="255" class="form-control" id="marker-color-red" placeholder="Red" required>
+								<label for="marker-color-red" data-translation-id="menu:red">Red</label>
+							</div>
+
+							<div class="form-floating col-3">
+								<input type="number" min="0" max="255" class="form-control" id="marker-color-green" placeholder="Green" required>
+								<label for="marker-color-green" data-translation-id="menu:green">Green</label>
+							</div>
+
+							<div class="form-floating col-3">
+								<input type="number" min="0" max="255" class="form-control" id="marker-color-blue" placeholder="Blue" required>
+								<label for="marker-color-blue" data-translation-id="menu:blue">Blue</label>
+							</div>
+
+							<div class="form-floating col-3">
+								<input type="number" min="0" max="255" class="form-control" id="marker-color-opacity" placeholder="0-255" required>
+								<label for="marker-color-opacity" data-translation-id="menu:opacity">Opacity</label>
+							</div>		
+						</div>
+					</div>
+
+					<div class="mt-3">
+						<p class="text-center fs-4" data-translation-id="menu:other">Other</p>
+
+						<div class="row g-2 row-cols-auto">
+                            <div class="form-check form-switch col-4">
+                                <input class="form-check-input" type="checkbox" role="switch" id="marker-bounce">
+                                <label class="form-check-label" data-translation-id="menu:bounce" for="marker-bounce">Bounce</label>
+                            </div>
+                            <div class="form-check form-switch col-4">
+                                <input class="form-check-input" type="checkbox" role="switch" id="marker-follow-camera">
+                                <label class="form-check-label" data-translation-id="menu:follow_camera" for="marker-follow-camera">Follow camera</label>
+                            </div>
+                            <div class="form-check form-switch col-4">
+                                <input class="form-check-input" type="checkbox" role="switch" id="marker-rotate">
+                                <label class="form-check-label" data-translation-id="menu:rotate" for="marker-rotate">Rotate</label>
+                            </div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</form>
+		</div>
+	</div>
+
+	<!-- Blip customization dialog -->
+	<div class="modal fade" id="blip-customization-dialog-modal" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<form id="blip-customization-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:blip_customization">Blip customization</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-check form-switch mb-3">
+						<input class="form-check-input" type="checkbox" role="switch" id="blip-enabled">
+						<label class="form-check-label" data-translation-id="menu:blip_enabled" for="blip-enabled">Blip enabled</label>
+					</div>
+
+					<div class="form-floating">
+						<input type="number" class="form-control" id="blip-sprite" placeholder="Blip sprite" required>
+						<label for="blip-sprite" data-translation-id="menu:blip_sprite">Blip sprite</label>
+					</div>
+
+					<p class="fst-italic text-center">https://docs.fivem.net/docs/game-references/blips/</p>
+
+					<div class="form-floating mt-4">
+						<input type="text" class="form-control" id="blip-name" placeholder="Blip name" required>
+						<label for="blip-name" data-translation-id="menu:blip_name">Blip name</label>
+					</div>
+
+					<div class="mt-3">
+						<p class="text-center fs-4" data-translation-id="menu:other">Other</p>
+
+						<div class="row g-2 row-cols-auto align-items-center">
+							<div class="form-floating col-6">
+								<input type="number" step="0.1" class="form-control" id="blip-scale" placeholder="Blip scale" required>
+								<label for="blip-scale" data-translation-id="menu:blip_scale">Blip scale</label>
+							</div>
+
+							<div class="form-floating col-6">
+								<input type="number" step="0.1" class="form-control" id="blip-color" placeholder="Blip color" required>
+								<label for="blip-color" data-translation-id="menu:blip_color">Blip color</label>
+							</div>
+						</div>
+
+						<select id="blip-display" class="form-select col-12 mt-3">
+							<option data-translation-id="menu:minimap_only" value="5" selected>Minimap only</option>
+							<option data-translation-id="menu:mainmap_only" value="3">Main map only</option>
+							<option data-translation-id="menu:main_and_minimap" value="2">Main map + minimap</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</form>
+		</div>
+	</div>	
+
+	<!-- Jobs input dialog -->
+	<div class="modal fade" id="input-jobs-dialog-modal" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:jobs_dialog:title">Jobs List</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body" style="max-height: 60vh; overflow-y: auto">
+					<div class="input-group">
+						<span class="input-group-text" data-translation-id="menu:jobs_dialog:search_job">Search job</span>
+						<input id="input-job-search" type="text" class="form-control">
+					</div>
+
+					<div id="jobs-list" class="mt-2">
+
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="input-jobs-confirm-btn" type="button" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</div>
+		</div>
+	</div>
+
+	<!-- Heists input dialog -->
+	<div class="modal fade" id="input-heists-dialog-modal" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:heists_dialog:title">Heists List</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
+					<div class="input-group">
+						<span class="input-group-text" data-translation-id="menu:heists_dialog:search_heist">Search heist</span>
+						<input id="input-heist-search" type="text" class="form-control">
+					</div>
+
+					<ul id="heists-list" class="list-group mt-2 scrollbar" style="overflow: auto; max-height: 70vh">
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Cargo robberies input dialog -->
+	<div class="modal fade" id="input-cargo-robberies-dialog-modal" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:cargo_robberies_dialog:title">Cargo robberies List</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
+					<div class="input-group">
+						<span class="input-group-text" data-translation-id="menu:cargo_robberies_dialog:search_heist">Search robbery</span>
+						<input id="input-cargo-robbery-search" type="text" class="form-control">
+					</div>
+
+					<ul id="cargo-robberies-list" class="list-group mt-2 scrollbar" style="overflow: auto; max-height: 70vh">
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+	<!-- Alarms input dialog -->
+	<div class="modal fade" id="input-alarms-dialog-modal" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+			<form class="modal-content needs-validation" novalidate id="input-alarms-form">
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:alarms_dialog:title">Alarms List</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
+					<div id="alarms-list" class="scrollbar" style="overflow-x: hidden; overflow-y: auto; max-height: 70vh">
+
+					</div>
+				</div>
+				
+				<div class="modal-footer">
+					<button id="input-alarms-new-alarm-btn" type="button" class="btn btn-primary me-auto" data-translation-id="menu:new_alarm">New alarm</button>
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="input-alarms-confirm-btn" type="submit" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</form>
+		</div>
+	</div>	
+	
+	<!-- Doors input dialog -->
+	<div class="modal fade" id="input-doors-dialog-modal" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:doors_dialog:title">Doors List</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body scrollbar" style="max-height: 60vh; overflow-y: auto">
+					<div class="input-group">
+						<span class="input-group-text" data-translation-id="menu:doors_dialog:search_door">Search door</span>
+						<input id="input-door-search" type="text" class="form-control">
+					</div>
+
+					<div id="doors-list" class="mt-2">
+
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="input-doors-confirm-btn" type="button" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</div>
+		</div>
+	</div>
+	
+	<script src="./assets/js/theme.bundle.js"></script>
+	<script src="index.js"></script>
+	<script src="../utils/dialogs/dialogs.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+{
+  "hello_there": "Hello There !",
+  "decline": "Decline",
+  "accept": "Accept offer",
+
+  "end_job": "End job",
+  "find_another_mission": "Find another mission",
+
+  "clean_weeds_message": "Hello! I need to clean this weeds could you do it ?",
+  "lawnmower_message": "Hello! I need to lawn my lawn could you do it ?",
+  "water_plants_message": "Hello! I need to water my plants could you do it ?",
+  "rake_leafs_message": "Hello! I need to rake these piles of leaves. Could you do it ?",
+  "tree_plant_message": "Hello! I need to plant some tree saplings. Can you do it ?",
+  "new_mission_message": "New mission is marked on your map !",
+
+  "end_mission_message": "What to do now ? If you want choose other type of mission end and get it again",
+
+  "clean_weeds_around": "Clean weeds around house.",
+  "water_plants_around": "Water plants around my house.",
+  "rake_piles_of_leafs": "Rake pile of leafs around house.",
+  "lawn_land": "Lawn land",
+
+  "getting_money": "Getting money",
+  "cleaning_weeds": "Cleaning weeds",
+  "watering_plants": "Watering plants",
+  "raking_leafs": "Raking leafs",
+  "planting_tree": "Planting sapling",
+
+  "progress%": "Progress: %.0f%%",
+  "progress": "Progress: 0",
+  "go_get_money": "Go get money now !",
+
+  
+  "return_hoe": "Return hoe !",
+  "return_lawnmower": "Return lawnmower !",
+  "return_wateringcan": "Return Watering can !",
+  "return_rake": "Return rake !",
+  "return_sapling": "Return sapling !",
+
+  "get_money": "Collect Paycheck",
+
+  "you_need_to_hold_tool": "You need to hold too to return tool !",
+  "you_need_hoe": "You need hoe to clean this !",
+  "you_need_watering_can": "You need watering can !",
+  "no_rake": "You need rake !",
+  "you_need_sapling": "You need sapling !",
+
+  "talk_to_npc": "Talk to customer",
+  "customer": "Customer",
+  "rake_leafs": "Rake leaf",
+  "return_vehicle": "Go return vehicle",
+  "return_vehicle_blip": "Return vehicle",
+  "press_e": "[E] Return vehicle",
+  "you_must_sit_in_vehicle": "You must sit in vehicle !",
+
+  "hoe_weeds": "Clean weeds",
+  "water_plants": "Water plants",
+  "rake_piles": "Rake piles",
+  "plant_sapling": "Plant sapling",
+  "check_tools": "Check Tools",
+  "gardener_job": "Gardener Job",
+
+  "tools": "Tools",
+
+  "return_tool": "Gardener return tool",
+  "returning": "Returning tool",
+
+  "rake": "Rake",
+  "getting_rake": "Getting Rake",
+
+  "sapling": "Sapling",
+  "getting_sapling": "Getting sapling",
+
+  "lawnmower": "Lawnmower",
+  "getting_mower": "Getting mower",
+
+  "hoe": "Hoe",
+  "getting_hoe": "Getting hoe",
+
+  "watering_can": "Watering can",
+  "getting_watering_can": "Getting watering can",
+ 
+  
+  "this_mission_is_occupied": "All mission are occupied please wait or choose other mission."
+}
